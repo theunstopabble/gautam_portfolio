@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Briefcase, Calendar, MapPin, ExternalLink } from "lucide-react";
 
 const experiences = [
   {
@@ -11,6 +11,8 @@ const experiences = [
     location: "Remote",
     color: "from-blue-500 to-cyan-500",
     logo: "M",
+    certificate:
+      "https://drive.google.com/file/d/1ZDyJBjn9AgeQEfppbwgAeAyoPS5ADgwn/view?usp=drive_link",
     highlights: [
       "Built Satark-AI, a deepfake detection platform using Microsoft Azure, FastAPI, PyTorch, and SpeechBrain as the capstone project.",
       "Designed a 3-tier microservice architecture and deployed an AI-powered audio forensics engine processing MFCC/Spectral analysis for real-time threat detection.",
@@ -23,6 +25,8 @@ const experiences = [
     location: "Remote",
     color: "from-indigo-500 to-purple-500",
     logo: "E",
+    certificate:
+      "https://drive.google.com/file/d/1_ZL-2ghlWanTam-9ftSBHnTtZb6Im3vu/view?usp=drive_link",
     highlights: [
       "Engineered responsive UIs using HTML5, CSS3, JavaScript, achieving a 95+ Lighthouse score and 100% cross-browser compatibility.",
       "Optimized frontend asset loading, resulting in a 30% reduction in initial page load time.",
@@ -35,6 +39,8 @@ const experiences = [
     location: "Remote",
     color: "from-violet-500 to-pink-500",
     logo: "Y",
+    certificate:
+      "https://drive.google.com/file/d/1iPIKxZXLxYtsQKYTnrVtYLo-inKc17Gg/view?usp=drive_link",
     highlights: [
       "Developed a scalable full-stack application using the MERN Stack, architecting RESTful APIs for seamless client-server data flow.",
       "Built dynamic frontend components using React.js, improving user engagement by 25%.",
@@ -143,6 +149,17 @@ export function Experience() {
                       <MapPin className="h-3.5 w-3.5" />
                       {exp.location}
                     </span>
+                    {exp.certificate && (
+                      <a
+                        href={exp.certificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                        View Credential
+                      </a>
+                    )}
                   </div>
 
                   {/* Highlights */}
