@@ -7,7 +7,7 @@ import { Menu, Download } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const RESUME_LINK =
-  "https://drive.google.com/file/d/1xSIqwDfhbyDflrht9o78DHN26G5SQdD-/view?usp=drive_link";
+  "https://drive.google.com/file/d/191fz-YwJ2hYtrl9Oo75ChrZ5d_WFYZ4c/view?usp=drive_link";
 
 export function Navbar() {
   const { scrollY } = useScroll();
