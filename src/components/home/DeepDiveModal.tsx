@@ -6,7 +6,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, AlertTriangle, Layers, Code2 } from "lucide-react";
 import { Project } from "@/types";
@@ -20,7 +19,7 @@ export function DeepDiveModal({ project, children }: DeepDiveModalProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col">
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col bg-zinc-950 border-white/10">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold flex items-center gap-2">
             {project.title} <Badge variant="outline">Deep Dive</Badge>
@@ -30,7 +29,7 @@ export function DeepDiveModal({ project, children }: DeepDiveModalProps) {
           </DialogDescription>
         </DialogHeader>
 
-        <ScrollArea className="flex-1 pr-4">
+        <div className="flex-1 overflow-y-auto pr-4">
           <div className="space-y-8 py-4">
             {/* Stats Grid */}
             <div className="grid grid-cols-3 gap-4">
@@ -71,7 +70,7 @@ export function DeepDiveModal({ project, children }: DeepDiveModalProps) {
               <h3 className="flex items-center gap-2 text-lg font-semibold text-primary">
                 <Code2 className="h-5 w-5 text-indigo-500" /> Tech Stack
               </h3>
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-3">
                 {project.deepDive.techStack.map(
                   (stack: { name: string; tools: string }) => (
                     <div key={stack.name} className="rounded-md border p-3">
@@ -104,7 +103,7 @@ export function DeepDiveModal({ project, children }: DeepDiveModalProps) {
               </ul>
             </div>
           </div>
-        </ScrollArea>
+        </div>
       </DialogContent>
     </Dialog>
   );
