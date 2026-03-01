@@ -120,7 +120,7 @@ Live URL: [https://gautam-kr.vercel.app/](https://gautam-kr.vercel.app/)
 
 ## 📬 Contact
 
-- **Email:** gautamkumar43421@gmail.com
+- **Email:** [gautamkumar43421@gmail.com](mailto:gautamkumar43421@gmail.com)
 - **Phone:** +91-6207793196
 - **LinkedIn:** [linkedin.com/in/gautamkr62](https://linkedin.com/in/gautamkr62)
 - **GitHub:** [github.com/theunstopabble](https://github.com/theunstopabble)
