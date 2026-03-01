@@ -36,13 +36,9 @@ A premium, recruiter-friendly portfolio built with Next.js 16, React 19 & Framer
 
 ## 📸 Preview
 
-### Hero Section
+![Gautam Kumar Portfolio](public/gautam-portfolio.png)
 
-![Hero](public/projects/InterviewMinds.png)
-
-### Featured Projects (with Real Screenshots)
-
-Each project card displays an actual screenshot of the deployed application with a smooth hover-zoom effect.
+Each project card displays an actual screenshot of the deployed application with a smooth hover-zoom effect. Visit the [live demo](https://gautam-kr.vercel.app/) to explore.
 
 ---
 
