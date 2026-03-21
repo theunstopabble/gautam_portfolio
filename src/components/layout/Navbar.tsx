@@ -102,7 +102,7 @@ export function Navbar() {
     className="mt-4 w-full gap-2 rounded-full bg-gradient-to-r from-primary to-accent text-white"
     onClick={() => window.open(RESUME_LINK, "_blank", "noopener,noreferrer")}
   >
-    <Download className="h-4 w-4" /> Download Resume
+    <Download className="h-4 w-4" /> View Resume
   </Button>
 </SheetClose>
             </nav>
