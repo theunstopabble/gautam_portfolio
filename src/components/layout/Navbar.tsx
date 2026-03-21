@@ -1,10 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, useScroll } from "framer-motion";
+import { useState } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, Download } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 
 const RESUME_LINK =
   "https://drive.google.com/file/d/191fz-YwJ2hYtrl9Oo75ChrZ5d_WFYZ4c/view?usp=drive_link";
@@ -13,11 +18,10 @@ export function Navbar() {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    return scrollY.onChange((latest) => {
-      setIsScrolled(latest > 20);
-    });
-  }, [scrollY]);
+  // ✅ Fix 1: useMotionValueEvent instead of deprecated scrollY.onChange
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 20);
+  });
 
   const links = [
     { name: "Home", href: "#" },
@@ -81,23 +85,27 @@ export function Navbar() {
             className="bg-background/95 border-l border-white/5 backdrop-blur-xl"
           >
             <nav className="flex flex-col gap-6 mt-10">
+              {/* ✅ Fix 2: SheetClose wraps each link so sheet auto-closes on tap */}
               {links.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-lg font-medium text-muted-foreground transition-colors hover:text-primary"
-                >
-                  {link.name}
-                </a>
+                <SheetClose asChild key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-lg font-medium text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    {link.name}
+                  </a>
+                </SheetClose>
               ))}
-              <Button
-                className="mt-4 w-full gap-2 rounded-full bg-gradient-to-r from-primary to-accent text-white"
-                asChild
-              >
-                <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
-                  <Download className="h-4 w-4" /> Download Resume
-                </a>
-              </Button>
+              <SheetClose asChild>
+                <Button
+                  className="mt-4 w-full gap-2 rounded-full bg-gradient-to-r from-primary to-accent text-white"
+                  asChild
+                >
+                  <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
+                    <Download className="h-4 w-4" /> Download Resume
+                  </a>
+                </Button>
+              </SheetClose>
             </nav>
           </SheetContent>
         </Sheet>
