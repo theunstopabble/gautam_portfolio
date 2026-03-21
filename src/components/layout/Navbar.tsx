@@ -97,15 +97,13 @@ export function Navbar() {
                 </SheetClose>
               ))}
               <SheetClose asChild>
-                <Button
-                  className="mt-4 w-full gap-2 rounded-full bg-gradient-to-r from-primary to-accent text-white"
-                  asChild
-                >
-                  <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
-                    <Download className="h-4 w-4" /> Download Resume
-                  </a>
-                </Button>
-              </SheetClose>
+  <Button
+    className="mt-4 w-full gap-2 rounded-full bg-gradient-to-r from-primary to-accent text-white"
+    onClick={() => window.open(RESUME_LINK, "_blank", "noopener,noreferrer")}
+  >
+    <Download className="h-4 w-4" /> Download Resume
+  </Button>
+</SheetClose>
             </nav>
           </SheetContent>
         </Sheet>
