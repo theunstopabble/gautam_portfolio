@@ -31,17 +31,17 @@ export function DeepDiveModal({ project, children }: DeepDiveModalProps) {
 
         <div className="flex-1 overflow-y-auto pr-4">
           <div className="space-y-8 py-4">
-            {/* Stats Grid */}
-            <div className="grid grid-cols-3 gap-4">
+            {/* Stats Grid — Fixed overflow */}
+            <div className="grid grid-cols-3 gap-3">
               {Object.entries(project.stats).map(([key, value]) => (
                 <div
                   key={key}
-                  className="rounded-lg border bg-muted/50 p-3 text-center"
+                  className="rounded-lg border bg-muted/50 p-3 text-center overflow-hidden"
                 >
-                  <div className="text-xs font-semibold uppercase text-muted-foreground">
+                  <div className="text-xs font-semibold uppercase text-muted-foreground truncate">
                     {key}
                   </div>
-                  <div className="mt-1 text-lg font-bold">
+                  <div className="mt-1 text-sm font-bold break-words leading-tight">
                     {value as string}
                   </div>
                 </div>
@@ -107,4 +107,4 @@ export function DeepDiveModal({ project, children }: DeepDiveModalProps) {
       </DialogContent>
     </Dialog>
   );
-}
+              }
