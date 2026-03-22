@@ -16,9 +16,9 @@ export const projects: Project[] = [
     featured: true,
     color: "from-purple-500 to-indigo-600",
     stats: {
-      users: "1000+",
-      interviews: "5000+",
-      latency: "<500ms",
+      personas: "3 AI",       
+proctoring: "Real-time", 
+latency: "<500ms",       
     },
     deepDive: {
       problem:
