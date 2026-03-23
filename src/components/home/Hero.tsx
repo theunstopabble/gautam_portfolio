@@ -72,12 +72,21 @@ export function Hero() {
           </span>
         </motion.div>
 
+        {/* Greeting */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mt-6 text-lg font-medium text-muted-foreground"
+        >
+          Hello, World! 👋
+        </motion.p>
+
         {/* Name + Title */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-8 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           <span className="block text-foreground">Hi, I&apos;m</span>
           <span className="gradient-text mt-2 block">Gautam Kumar</span>
