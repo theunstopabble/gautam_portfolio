@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sheet";
 
 const RESUME_LINK =
-  "https://drive.google.com/file/d/13cBfBlMeeyioUnzJWQa2iACWIj5UmQM-/view?usp=drivesdk";
+  "https://drive.google.com/file/d/1ZoO_i2ZcUP6YMlda_NhYt0DEaOJy82ZB/view?usp=sharing";
 
 export function Navbar() {
   const { scrollY } = useScroll();
