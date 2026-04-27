@@ -16,9 +16,9 @@ export const projects: Project[] = [
     featured: true,
     color: "from-purple-500 to-indigo-600",
     stats: {
-      personas: "3 AI",       
-proctoring: "Real-time", 
-latency: "<500ms",       
+      personas: "3 AI",
+      proctoring: "Real-time",
+      latency: "<500ms",
     },
     deepDive: {
       problem:
@@ -41,11 +41,21 @@ latency: "<500ms",
   {
     id: "satark-ai",
     title: "Satark-AI",
-    tagline: "Deepfake Detection & Defense System",
+    tagline: "Multi-Modal Deepfake Detection Platform",
     description:
-      "Advanced multimedia forensics platform capable of detecting deepfake audio and verifying speaker identity in real-time.",
+      "A production-grade, full-stack deepfake detection platform built as a Turborepo monorepo. Detects synthetic audio (Wav2Vec2 + MFCC forensics), deepfake images (NVIDIA NIM Llama 3.2-90B Vision via Cloudflare Worker), and verifies speaker identity in real-time via voice biometrics (ECAPA-TDNN). Ships as a PWA with multilingual support and PDF report exports.",
     icon: Share2,
-    tags: ["Python", "FastAPI", "PyTorch", "React", "SpeechBrain"],
+    tags: [
+      "React 18",
+      "TypeScript",
+      "FastAPI",
+      "PyTorch",
+      "Hono",
+      "PostgreSQL",
+      "NVIDIA NIM",
+      "Cloudflare",
+      "TurboRepo",
+    ],
     github: "https://github.com/theunstopabble/Satark-AI",
     demo: "https://satark-deepfake.vercel.app/",
     image: "/projects/Satark-AI.png",
@@ -53,23 +63,42 @@ latency: "<500ms",
     color: "from-red-500 to-rose-600",
     stats: {
       accuracy: "94%",
-      models: "ECAPA-TDNN",
-      processing: "Real-time",
+      models: "3 AI Models",
+      pipeline: "Multi-Modal",
     },
     deepDive: {
       problem:
-        "The rise of generative AI has made it easy to clone voices and spread misinformation. Existing detection tools are often offline or require expensive hardware.",
+        "Generative AI has made it trivially easy to clone voices, fabricate images, and spread synthetic media. Existing detection tools are siloed — they handle either audio or images, never both — and often require expensive infrastructure or remain offline.",
       solution:
-        "Developed a hybrid system with a lightweight React frontend and a powerful Python (FastAPI) backend. Utilized SpeechBrain and PyTorch for spectral analysis and deep learning models to detect synthetic audio signatures.",
+        "Architected a scalable Turborepo monorepo with three independent microservices: a React 18 PWA frontend, a Hono (Node.js) API gateway backed by PostgreSQL via Drizzle ORM with Clerk JWT auth, and a Python 3.11 FastAPI AI engine for audio deepfake detection and speaker biometrics. Image deepfake detection runs on a fully serverless Cloudflare Worker proxy that forwards requests to NVIDIA NIM (Llama 3.2-90B Vision), completely independent of the Python engine. A GitHub Actions cron job pings both Render services every 14 minutes to prevent free-tier cold starts.",
       challenges: [
-        "Optimizing heavy PyTorch models to run efficiently on standard cloud instances.",
-        "Handling real-time audio streams via WebSockets for live monitoring.",
-        "Reducing false positives in noisy environments.",
+        "Designing a serverless image detection pipeline via Cloudflare Workers with strict CORS whitelisting, 5MB double-layer size enforcement, and 30s AbortController timeout against NVIDIA NIM — all without touching the Python engine.",
+        "Implementing lazy model loading and thread executor offloading in FastAPI to prevent OOM crashes and keep the async event loop non-blocking on free-tier Render instances.",
+        "Building per-user scoped speaker isolation — users can only verify against their own enrolled voice prints — with 192-dim ECAPA-TDNN embeddings stored in PostgreSQL and cosine similarity computed server-side.",
       ],
       techStack: [
-        { name: "Frontend", tools: "React, Vite, Framer Motion" },
-        { name: "AI Engine", tools: "Python, FastAPI, PyTorch, Librosa" },
-        { name: "Models", tools: "SpeechBrain, ECAPA-TDNN, Wav2Vec" },
+        {
+          name: "Frontend",
+          tools:
+            "React 18, Vite, TypeScript, Tailwind CSS, Framer Motion, Recharts, Wavesurfer.js, PWA (Workbox)",
+        },
+        {
+          name: "API Gateway",
+          tools: "Hono (Node.js), PostgreSQL, Drizzle ORM, Clerk JWT Auth",
+        },
+        {
+          name: "AI Engine",
+          tools:
+            "Python 3.11, FastAPI, PyTorch, Librosa, Wav2Vec2, SpeechBrain",
+        },
+        {
+          name: "Vision Pipeline",
+          tools: "NVIDIA NIM (Llama 3.2-90B Vision), Cloudflare Workers",
+        },
+        {
+          name: "Infrastructure",
+          tools: "Turborepo, Docker Compose, Vercel, Render, GitHub Actions",
+        },
       ],
     },
   },
