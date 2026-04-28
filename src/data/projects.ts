@@ -41,7 +41,7 @@ export const projects: Project[] = [
   {
     id: "satark-ai",
     title: "Satark-AI",
-    tagline: "Multi-Modal Deepfake Detection Platform",
+    tagline: "Multi-Model Deepfake Detection Platform",
     description:
       "A production-grade, full-stack deepfake detection platform built as a Turborepo monorepo. Detects synthetic audio (Wav2Vec2 + MFCC forensics), deepfake images (NVIDIA NIM Llama 3.2-90B Vision via Cloudflare Worker), and verifies speaker identity in real-time via voice biometrics (ECAPA-TDNN). Ships as a PWA with multilingual support and PDF report exports.",
     icon: Share2,
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     stats: {
       accuracy: "94%",
       models: "3 AI Models",
-      pipeline: "Multi-Modal",
+      pipeline: "Multi-Model",
     },
     deepDive: {
       problem:
