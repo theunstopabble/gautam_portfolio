@@ -86,22 +86,22 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="glass-strong rounded-2xl p-8 md:p-10"
+            className="glass-strong rounded-2xl p-5 sm:p-8 md:p-10"
           >
             {/* Contact Info */}
-            <div className="mb-8 grid gap-4 sm:grid-cols-2">
+            <div className="mb-8 grid gap-4 grid-cols-1 sm:grid-cols-2">
               <a
                 href="mailto:gautamkumar43421@gmail.com"
-                className="group flex items-center gap-4 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-primary/30 hover:bg-white/[0.05]"
+                className="group flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/[0.05] overflow-hidden"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent shadow-lg">
-                  <Mail className="h-5 w-5 text-white" />
+                <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent shadow-lg">
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <p className="text-xs font-medium text-muted-foreground">
                     Email
                   </p>
-                  <p className="truncate text-sm font-semibold text-foreground">
+                  <p className="truncate text-xs sm:text-sm font-semibold text-foreground">
                     gautamkumar43421@gmail.com
                   </p>
                 </div>
@@ -109,16 +109,16 @@ export function Contact() {
 
               <a
                 href="tel:+916207793196"
-                className="group flex items-center gap-4 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:border-primary/30 hover:bg-white/[0.05]"
+                className="group flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/[0.05] overflow-hidden"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 shadow-lg">
-                  <Phone className="h-5 w-5 text-white" />
+                <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 shadow-lg">
+                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <p className="text-xs font-medium text-muted-foreground">
                     Phone
                   </p>
-                  <p className="truncate text-sm font-semibold text-foreground">
+                  <p className="truncate text-xs sm:text-sm font-semibold text-foreground">
                     +91-6207793196
                   </p>
                 </div>
@@ -132,7 +132,7 @@ export function Contact() {
             </div>
 
             {/* Social Links */}
-            <div className="mb-8 grid gap-3 sm:grid-cols-3">
+            <div className="mb-8 grid gap-3 grid-cols-1 sm:grid-cols-3">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
