@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
@@ -103,7 +104,7 @@ export default function RootLayout({
               "jobTitle": "Full-Stack Developer & AI Engineer",
               "description": "Full-Stack Developer and AI Engineer specializing in enterprise-grade web applications. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate Intern. Expert in React, Node.js, TypeScript, Python, MongoDB, and LLM integration.",
               "email": "gautamkumar43421@gmail.com",
-              "image": "https://gautam-kr.vercel.app/profile.jpg",
+              "image": "https://gautam-kr.vercel.app/og-image.png",
               "sameAs": [
                 "https://github.com/theunstopabble",
                 "https://www.linkedin.com/in/gautamkr62",
@@ -153,6 +154,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
