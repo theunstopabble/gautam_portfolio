@@ -87,7 +87,7 @@ export function Navbar() {
             className="bg-background/95 border-l border-white/5 backdrop-blur-xl"
           >
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-            <nav className="flex flex-col gap-6 mt-10">
+            <nav className="flex flex-col items-center gap-6 mt-10">
               {/* ✅ Fix 2: SheetClose wraps each link so sheet auto-closes on tap */}
               {links.map((link) => (
                 <SheetClose asChild key={link.name}>
