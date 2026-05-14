@@ -8,7 +8,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 export const metadata: Metadata = {
   title: "Gautam Kumar | Full Stack Developer & AI Engineer — Portfolio",
   description:
-    "Portfolio of Gautam Kumar — Full Stack Developer & AI Engineer with Microsoft Elevate internship experience. Creator of InterviewMinds (AI interview platform) and SwadKart (food delivery). Expert in React, Node.js, TypeScript, Python, MongoDB, and LLM integration. Building enterprise-grade SaaS products with real-time systems, ML pipelines, and microservice architecture.",
+    "Portfolio of Gautam Kumar — Full Stack Developer & AI Engineer with Microsoft Elevate internship experience. Creator of InterviewMinds (AI interview platform), SwadKart (food delivery), Satark AI (AI safety/security), and TexFolio (resume/portfolio builder). Expert in React, Node.js, TypeScript, Python, MongoDB, and LLM integration. Building enterprise-grade SaaS products with real-time systems, ML pipelines, and microservice architecture.",
   keywords: [
     "Gautam Kumar",
     "Gautam Kumar developer",
@@ -17,6 +17,8 @@ export const metadata: Metadata = {
     "AI Engineer",
     "InterviewMinds developer",
     "SwadKart developer",
+    "Satark AI developer",
+    "TexFolio developer",
     "React developer",
     "Node.js developer",
     "TypeScript",
@@ -29,6 +31,10 @@ export const metadata: Metadata = {
     "MERN stack developer",
     "AI SaaS developer",
     "gautam-kr.vercel.app",
+    "Satark AI",
+    "TexFolio",
+    "InterviewMinds",
+    "SwadKart",
   ],
   authors: [{ name: "Gautam Kumar", url: "https://gautam-kr.vercel.app" }],
   creator: "Gautam Kumar",
@@ -40,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gautam Kumar | Full Stack Developer & AI Engineer",
     description:
-      "Built 4+ AI-integrated SaaS products including InterviewMinds and SwadKart. Microsoft Elevate Intern. React, Node.js, TypeScript, Python & LLMs specialist.",
+      "Built 4+ AI-integrated SaaS products including InterviewMinds, SwadKart, Satark AI, and TexFolio. Microsoft Elevate Intern. React, Node.js, TypeScript, Python & LLMs specialist.",
     type: "website",
     locale: "en_US",
     url: "https://gautam-kr.vercel.app",
@@ -50,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gautam Kumar | Full Stack Developer & AI Engineer",
     description:
-      "Creator of InterviewMinds & SwadKart. Microsoft Elevate Intern. Building enterprise AI products.",
+      "Creator of InterviewMinds, SwadKart, Satark AI & TexFolio. Microsoft Elevate Intern. Building enterprise AI products.",
     creator: "@_unstopabble",
   },
   robots: {
