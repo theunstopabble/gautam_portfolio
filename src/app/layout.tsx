@@ -84,6 +84,61 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://gautam-kr.vercel.app" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Gautam Kumar",
+              "url": "https://gautam-kr.vercel.app",
+              "jobTitle": "Full-Stack Developer & AI Engineer",
+              "description": "Full-Stack Developer and AI Engineer specializing in enterprise-grade web applications. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate Intern. Expert in React, Node.js, TypeScript, Python, MongoDB, and LLM integration.",
+              "email": "gautamkumar43421@gmail.com",
+              "image": "https://gautam-kr.vercel.app/profile.jpg",
+              "sameAs": [
+                "https://github.com/theunstopabble",
+                "https://www.linkedin.com/in/gautamkr62",
+                "https://x.com/_unstopabble",
+                "https://interviewminds.vercel.app",
+                "https://swadkart.vercel.app",
+                "https://satark-deepfake.vercel.app",
+                "https://texfolio.vercel.app"
+              ],
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Jagannath University, Jaipur"
+              },
+              "knowsAbout": ["React", "Node.js", "TypeScript", "Python", "MongoDB", "PostgreSQL", "Redis", "Docker", "AI/ML", "LLM", "Groq", "TensorFlow.js", "FastAPI", "WebRTC", "Socket.IO"],
+              "makesOffer": [
+                {
+                  "@type": "CreativeWork",
+                  "name": "InterviewMinds",
+                  "url": "https://interviewminds.vercel.app",
+                  "description": "Enterprise AI Mock Interview Platform with ML proctoring and CRDT collaboration"
+                },
+                {
+                  "@type": "CreativeWork",
+                  "name": "SwadKart",
+                  "url": "https://swadkart.vercel.app",
+                  "description": "Multi-vendor food delivery platform with AI chatbot and biometric auth"
+                },
+                {
+                  "@type": "CreativeWork",
+                  "name": "Satark-AI",
+                  "url": "https://satark-deepfake.vercel.app",
+                  "description": "Deepfake detection and speaker verification platform with Wav2Vec2 and NVIDIA NIM"
+                },
+                {
+                  "@type": "CreativeWork",
+                  "name": "TexFolio",
+                  "url": "https://texfolio.vercel.app",
+                  "description": "AI-powered LaTeX resume builder with LangGraph coach and RBAC organizations"
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body
         className={`${outfit.variable} font-sans antialiased text-foreground bg-background`}
