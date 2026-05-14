@@ -104,7 +104,7 @@ export default function RootLayout({
               "jobTitle": "Full-Stack Developer & AI Engineer",
               "description": "Full-Stack Developer and AI Engineer specializing in enterprise-grade web applications. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate Intern. Expert in React, Node.js, TypeScript, Python, MongoDB, and LLM integration.",
               "email": "gautamkumar43421@gmail.com",
-              "image": "https://gautam-kr.vercel.app/og-image.png",
+              "image": "https://gautam-kr.vercel.app/profile.png",
               "sameAs": [
                 "https://github.com/theunstopabble",
                 "https://www.linkedin.com/in/gautamkr62",
