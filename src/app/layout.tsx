@@ -51,6 +51,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://gautam-kr.vercel.app",
     siteName: "Gautam Kumar Portfolio",
+    images: [
+      {
+        url: "https://gautam-kr.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Gautam Kumar — Full Stack Developer & AI Engineer Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

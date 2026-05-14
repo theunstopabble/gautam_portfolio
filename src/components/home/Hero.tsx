@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
-  Github,
-  Linkedin,
+  GitFork,
+  LinkedinIcon,
   Mail,
-  Twitter,
+  TwitterIcon,
   ChevronDown,
   Sparkles,
 } from "lucide-react";
@@ -23,17 +23,17 @@ const socialLinks = [
   {
     name: "GitHub",
     href: "https://github.com/theunstopabble",
-    icon: Github,
+    icon: GitFork,
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/in/gautamkr62",
-    icon: Linkedin,
+    icon: LinkedinIcon,
   },
   {
     name: "Twitter",
     href: "https://x.com/_unstopabble",
-    icon: Twitter,
+    icon: TwitterIcon,
   },
   {
     name: "Email",
