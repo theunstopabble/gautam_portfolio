@@ -98,6 +98,57 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Who is Gautam Kumar?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gautam Kumar is a Full-Stack Developer and AI Engineer based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building enterprise-grade SaaS products with React, Node.js, TypeScript, Python, and LLM integration."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What projects has Gautam Kumar built?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gautam Kumar has built 4 major production SaaS products: InterviewMinds (AI mock interview platform at interviewminds.vercel.app), SwadKart (multi-vendor food delivery platform at swadkart.vercel.app), Satark-AI (deepfake detection platform at satark-deepfake.vercel.app), and TexFolio (AI-powered LaTeX resume builder at texfolio.vercel.app)."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is Gautam Kumar's tech stack?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gautam Kumar's tech stack includes React, Next.js, Node.js, TypeScript, Python, MongoDB, PostgreSQL, Redis, Docker, Tailwind CSS, Socket.IO, GraphQL, FastAPI, Hono, and AI/ML tools like Groq LLM, NVIDIA NIM, LangChain, LangGraph, TensorFlow.js, and PyTorch."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Where does Gautam Kumar study?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gautam Kumar studies at Jagannath University in Jaipur, Rajasthan, India. He is also a Microsoft Elevate Intern through the AICTE program."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How to contact Gautam Kumar?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can contact Gautam Kumar via email at gautamkumar43421@gmail.com, on LinkedIn at linkedin.com/in/gautamkr62, on GitHub at github.com/theunstopabble, or on Twitter/X at x.com/_unstopabble. His portfolio is at gautam-kr.vercel.app."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
               "@type": "Person",
               "name": "Gautam Kumar",
               "url": "https://gautam-kr.vercel.app",
