@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, GitFork, BookOpen } from "lucide-react";
-import { DeepDiveModal } from "@/components/home/DeepDiveModal";
 import { Project } from "@/types";
 
 interface ProjectCardProps {
@@ -166,23 +165,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <GitFork className="h-4 w-4" /> Code
               </a>
             </Button>
-            <DeepDiveModal project={project}>
-              <Button
-                size="sm"
-                variant="secondary"
-                className="min-w-[100px] flex-1 gap-2 bg-white/5 text-zinc-200 hover:bg-white/10 border border-white/10"
-              >
-                Case Study <ArrowUpRight className="h-3.5 w-3.5" />
-              </Button>
-            </DeepDiveModal>
             <Button
               size="sm"
-              variant="ghost"
-              className="min-w-[100px] flex-1 gap-2 text-zinc-300 hover:text-white hover:bg-white/5"
+              variant="secondary"
+              className="min-w-[100px] flex-1 gap-2 bg-white/5 text-zinc-200 hover:bg-white/10 border border-white/10"
               asChild
             >
               <Link href={`/projects/${project.id}`}>
-                <BookOpen className="h-4 w-4" /> Full Case Study
+                <BookOpen className="h-4 w-4" /> Case Study
               </Link>
             </Button>
             <Button
