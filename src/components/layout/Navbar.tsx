@@ -25,13 +25,13 @@ export function Navbar() {
   });
 
   const links = [
-    { name: "Home", href: "#" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Education", href: "#education" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Experience", href: "/#experience" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Education", href: "/#education" },
+    { name: "About", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -47,7 +47,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-6 md:px-12">
         <a
-          href="#"
+          href="/"
           className="text-xl font-bold tracking-tighter text-foreground"
         >
           Gautam Kumar<span className="gradient-text">.</span>
