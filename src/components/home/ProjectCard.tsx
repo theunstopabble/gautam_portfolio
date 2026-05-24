@@ -2,6 +2,7 @@
 
 import { useRef, useState, MouseEvent } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -12,7 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, GitFork } from "lucide-react";
+import { ArrowUpRight, GitFork, BookOpen } from "lucide-react";
 import { DeepDiveModal } from "@/components/home/DeepDiveModal";
 import { Project } from "@/types";
 
@@ -174,6 +175,16 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 Case Study <ArrowUpRight className="h-3.5 w-3.5" />
               </Button>
             </DeepDiveModal>
+            <Button
+              size="sm"
+              variant="ghost"
+              className="min-w-[100px] flex-1 gap-2 text-zinc-300 hover:text-white hover:bg-white/5"
+              asChild
+            >
+              <Link href={`/projects/${project.id}`}>
+                <BookOpen className="h-4 w-4" /> Full Case Study
+              </Link>
+            </Button>
             <Button
               size="sm"
               className="min-w-[80px] flex-1 gap-2 bg-gradient-to-r from-primary to-accent text-white shadow-lg shadow-primary/20 font-medium hover:brightness-110"
