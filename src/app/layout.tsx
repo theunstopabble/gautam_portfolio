@@ -231,6 +231,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${outfit.variable} font-sans antialiased text-foreground bg-background`}
+        suppressHydrationWarning
       >
         <Navbar />
         {children}
