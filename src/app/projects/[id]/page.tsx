@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { projects } from "@/data/projects";
 import { buildProjectSchema } from "@/lib/structured-data";
 
@@ -67,6 +68,14 @@ export default async function ProjectPage({
       />
 
       <section className="mx-auto max-w-4xl px-6 py-20">
+        {/* Back to portfolio */}
+        <Link
+          href="/#projects"
+          className="mb-8 inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
+        >
+          ← Back to Portfolio
+        </Link>
+
         {/* Header */}
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
           {project.title}
