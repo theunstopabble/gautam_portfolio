@@ -99,49 +99,49 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": [
+              mainEntity: [
                 {
                   "@type": "Question",
-                  "name": "Who is Gautam Kumar?",
-                  "acceptedAnswer": {
+                  name: "Who is Gautam Kumar?",
+                  acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "Gautam Kumar is a Full-Stack Developer and AI Engineer based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building enterprise-grade SaaS products with React, Node.js, TypeScript, Python, and LLM integration."
-                  }
+                    text: "Gautam Kumar is a Full-Stack Developer and AI Engineer based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building enterprise-grade SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
+                  },
                 },
                 {
                   "@type": "Question",
-                  "name": "What projects has Gautam Kumar built?",
-                  "acceptedAnswer": {
+                  name: "What projects has Gautam Kumar built?",
+                  acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "Gautam Kumar has built 4 major production SaaS products: InterviewMinds (AI mock interview platform at interviewminds.vercel.app), SwadKart (multi-vendor food delivery platform at swadkart.vercel.app), Satark-AI (deepfake detection platform at satark-deepfake.vercel.app), and TexFolio (AI-powered LaTeX resume builder at texfolio.vercel.app)."
-                  }
+                    text: "Gautam Kumar has built 4 major production SaaS products: InterviewMinds (AI mock interview platform at interviewminds.vercel.app), SwadKart (multi-vendor food delivery platform at swadkart.vercel.app), Satark-AI (deepfake detection platform at satark-deepfake.vercel.app), and TexFolio (AI-powered LaTeX resume builder at texfolio.vercel.app).",
+                  },
                 },
                 {
                   "@type": "Question",
-                  "name": "What is Gautam Kumar's tech stack?",
-                  "acceptedAnswer": {
+                  name: "What is Gautam Kumar's tech stack?",
+                  acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "Gautam Kumar's tech stack includes React, Next.js, Node.js, TypeScript, Python, MongoDB, PostgreSQL, Redis, Docker, Tailwind CSS, Socket.IO, GraphQL, FastAPI, Hono, and AI/ML tools like Groq LLM, NVIDIA NIM, LangChain, LangGraph, TensorFlow.js, and PyTorch."
-                  }
+                    text: "Gautam Kumar's tech stack includes React, Next.js, Node.js, TypeScript, Python, MongoDB, PostgreSQL, Redis, Docker, Tailwind CSS, Socket.IO, GraphQL, FastAPI, Hono, and AI/ML tools like Groq LLM, NVIDIA NIM, LangChain, LangGraph, TensorFlow.js, and PyTorch.",
+                  },
                 },
                 {
                   "@type": "Question",
-                  "name": "Where does Gautam Kumar study?",
-                  "acceptedAnswer": {
+                  name: "Where does Gautam Kumar study?",
+                  acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "Gautam Kumar studies at Jagannath University in Jaipur, Rajasthan, India. He is also a Microsoft Elevate Intern through the AICTE program."
-                  }
+                    text: "Gautam Kumar studies at Jagannath University in Jaipur, Rajasthan, India. He is also a Microsoft Elevate Intern through the AICTE program.",
+                  },
                 },
                 {
                   "@type": "Question",
-                  "name": "How to contact Gautam Kumar?",
-                  "acceptedAnswer": {
+                  name: "How to contact Gautam Kumar?",
+                  acceptedAnswer: {
                     "@type": "Answer",
-                    "text": "You can contact Gautam Kumar via email at gautamkumar43421@gmail.com, on LinkedIn at linkedin.com/in/gautamkr62, on GitHub at github.com/theunstopabble, or on Twitter/X at x.com/_unstopabble. His portfolio is at gautam-kr.vercel.app."
-                  }
-                }
-              ]
-            })
+                    text: "You can contact Gautam Kumar via email at gautamkumar43421@gmail.com, on LinkedIn at linkedin.com/in/gautamkr62, on GitHub at github.com/theunstopabble, or on Twitter/X at x.com/_unstopabble. His portfolio is at gautam-kr.vercel.app.",
+                  },
+                },
+              ],
+            }),
           }}
         />
         <script
@@ -153,79 +153,105 @@ export default function RootLayout({
                 {
                   "@type": "Person",
                   "@id": "https://gautam-kr.vercel.app/#person",
-                  "name": "Gautam Kumar",
-                  "url": "https://gautam-kr.vercel.app",
-                  "jobTitle": "Full-Stack Developer & AI Engineer",
-                  "description": "Full-Stack Developer and AI Engineer specializing in enterprise-grade web applications and AI systems. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate × AICTE Intern. B.Tech Computer Science student at Jagannath University, Jaipur (2023–2027).",
-                  "email": "gautamkumar43421@gmail.com",
-                  "image": "https://gautam-kr.vercel.app/profile.png",
-                  "alumniOf": {
+                  name: "Gautam Kumar",
+                  url: "https://gautam-kr.vercel.app",
+                  jobTitle: "Full-Stack Developer & AI Engineer",
+                  description:
+                    "Full-Stack Developer and AI Engineer specializing in enterprise-grade web applications and AI systems. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate × AICTE Intern. B.Tech Computer Science student at Jagannath University, Jaipur (2023–2027).",
+                  email: "gautamkumar43421@gmail.com",
+                  image: "https://gautam-kr.vercel.app/profile.png",
+                  alumniOf: {
                     "@type": "EducationalOrganization",
-                    "name": "Jagannath University, Jaipur"
+                    name: "Jagannath University, Jaipur",
                   },
-                  "sameAs": [
+                  sameAs: [
                     "https://github.com/theunstopabble",
                     "https://www.linkedin.com/in/gautamkr62",
-                    "https://x.com/_unstopabble"
+                    "https://x.com/_unstopabble",
                   ],
-                  "knowsAbout": [
-                    "React", "Node.js", "TypeScript", "Python", "FastAPI",
-                    "MongoDB", "PostgreSQL", "Redis", "Docker", "LangChain",
-                    "LangGraph", "NVIDIA NIM", "PyTorch", "TensorFlow.js",
-                    "Deepfake Detection", "AI Safety", "Full-Stack Development",
-                    "WebRTC", "Socket.IO", "Turborepo", "Vercel"
-                  ]
+                  knowsAbout: [
+                    "React",
+                    "Node.js",
+                    "TypeScript",
+                    "Python",
+                    "FastAPI",
+                    "MongoDB",
+                    "PostgreSQL",
+                    "Redis",
+                    "Docker",
+                    "LangChain",
+                    "LangGraph",
+                    "NVIDIA NIM",
+                    "PyTorch",
+                    "TensorFlow.js",
+                    "Deepfake Detection",
+                    "AI Safety",
+                    "Full-Stack Development",
+                    "WebRTC",
+                    "Socket.IO",
+                    "Turborepo",
+                    "Vercel",
+                  ],
                 },
                 {
                   "@type": "SoftwareApplication",
-                  "name": "InterviewMinds",
-                  "url": "https://interviewminds.vercel.app",
-                  "applicationCategory": "BusinessApplication",
-                  "operatingSystem": "Web",
-                  "description": "Enterprise AI mock interview platform with real-time ML video proctoring (TensorFlow.js), CRDT collaborative code editor, WebRTC video calls, and Groq Llama 3.3-70b AI interviewer. Built as a Turborepo monorepo with 81 service modules.",
-                  "author": { "@id": "https://gautam-kr.vercel.app/#person" },
-                  "programmingLanguage": ["TypeScript", "JavaScript"],
-                  "codeRepository": "https://github.com/theunstopabble/InterviewMinds",
-                  "keywords": "AI interview, mock interview, ML proctoring, collaborative coding, WebRTC"
+                  name: "InterviewMinds",
+                  url: "https://interviewminds.vercel.app",
+                  applicationCategory: "BusinessApplication",
+                  operatingSystem: "Web",
+                  description:
+                    "Enterprise AI mock interview platform with real-time ML video proctoring (TensorFlow.js), CRDT collaborative code editor, WebRTC video calls, and Groq Llama 3.3-70b AI interviewer. Built as a Turborepo monorepo with 81 service modules.",
+                  author: { "@id": "https://gautam-kr.vercel.app/#person" },
+                  programmingLanguage: ["TypeScript", "JavaScript"],
+                  codeRepository:
+                    "https://github.com/theunstopabble/InterviewMinds",
+                  keywords:
+                    "AI interview, mock interview, ML proctoring, collaborative coding, WebRTC",
                 },
                 {
                   "@type": "SoftwareApplication",
-                  "name": "Satark-AI",
-                  "url": "https://satark-deepfake.vercel.app",
-                  "applicationCategory": "SecurityApplication",
-                  "operatingSystem": "Web",
-                  "description": "Multi-model deepfake detection platform. Detects synthetic audio via Wav2Vec2, deepfake images via NVIDIA NIM (Llama 3.2-90B Vision) through Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN biometrics with 192-dim embeddings.",
-                  "author": { "@id": "https://gautam-kr.vercel.app/#person" },
-                  "programmingLanguage": ["TypeScript", "Python"],
-                  "codeRepository": "https://github.com/theunstopabble/Satark-AI",
-                  "keywords": "deepfake detection, speaker verification, NVIDIA NIM, Wav2Vec2, AI safety, voice biometrics"
+                  name: "Satark-AI",
+                  url: "https://satark-deepfake.vercel.app",
+                  applicationCategory: "SecurityApplication",
+                  operatingSystem: "Web",
+                  description:
+                    "Multi-model deepfake detection platform. Detects synthetic audio via Wav2Vec2, deepfake images via NVIDIA NIM (Llama 3.2-90B Vision) through Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN biometrics with 192-dim embeddings.",
+                  author: { "@id": "https://gautam-kr.vercel.app/#person" },
+                  programmingLanguage: ["TypeScript", "Python"],
+                  codeRepository: "https://github.com/theunstopabble/Satark-AI",
+                  keywords:
+                    "deepfake detection, speaker verification, NVIDIA NIM, Wav2Vec2, AI safety, voice biometrics",
                 },
                 {
                   "@type": "SoftwareApplication",
-                  "name": "TexFolio",
-                  "url": "https://texfolio.vercel.app",
-                  "applicationCategory": "ProductivityApplication",
-                  "operatingSystem": "Web",
-                  "description": "AI-powered LaTeX resume builder SaaS with LangGraph multi-agent resume coach (4-stage ATS scoring), LinkedIn PDF import via Llama 3.3, FAANG-ready templates, drag-and-drop editor, Organizations with RBAC, BullMQ async PDF generation, and Razorpay payments.",
-                  "author": { "@id": "https://gautam-kr.vercel.app/#person" },
-                  "programmingLanguage": ["TypeScript", "JavaScript"],
-                  "codeRepository": "https://github.com/theunstopabble/TexFolio",
-                  "keywords": "LaTeX resume builder, AI resume, LangGraph, ATS optimizer, resume SaaS, RBAC"
+                  name: "TexFolio",
+                  url: "https://texfolio.vercel.app",
+                  applicationCategory: "ProductivityApplication",
+                  operatingSystem: "Web",
+                  description:
+                    "AI-powered LaTeX resume builder SaaS with LangGraph multi-agent resume coach (4-stage ATS scoring), LinkedIn PDF import via Llama 3.3, FAANG-ready templates, drag-and-drop editor, Organizations with RBAC, BullMQ async PDF generation, and Razorpay payments.",
+                  author: { "@id": "https://gautam-kr.vercel.app/#person" },
+                  programmingLanguage: ["TypeScript", "JavaScript"],
+                  codeRepository: "https://github.com/theunstopabble/TexFolio",
+                  keywords:
+                    "LaTeX resume builder, AI resume, LangGraph, ATS optimizer, resume SaaS, RBAC",
                 },
                 {
                   "@type": "SoftwareApplication",
-                  "name": "SwadKart",
-                  "url": "https://swadkart.vercel.app",
-                  "applicationCategory": "FoodApplication",
-                  "operatingSystem": "Web",
-                  "description": "Production-grade multi-vendor food delivery platform with 4-role ecosystem. Features AI chatbot (Groq LLM), voice search in English and Hindi, biometric auth (WebAuthn), real-time GPS delivery tracking via Socket.io, Razorpay payments, gamification with SwadCoins, and PWA with offline support.",
-                  "author": { "@id": "https://gautam-kr.vercel.app/#person" },
-                  "programmingLanguage": ["TypeScript", "JavaScript"],
-                  "codeRepository": "https://github.com/theunstopabble/SwadKart-pro",
-                  "keywords": "food delivery app, multi-vendor platform, WebAuthn biometric, real-time tracking, voice search"
-                }
-              ]
-            })
+                  name: "SwadKart",
+                  url: "https://swadkart.vercel.app",
+                  applicationCategory: "FoodApplication",
+                  operatingSystem: "Web",
+                  description:
+                    "Production-grade multi-vendor food delivery platform with 4-role ecosystem. Features AI chatbot (Groq LLM), voice search in English and Hindi, biometric auth (WebAuthn), real-time GPS delivery tracking via Socket.io, Razorpay payments, gamification with SwadCoins, and PWA with offline support.",
+                  author: { "@id": "https://gautam-kr.vercel.app/#person" },
+                  programmingLanguage: ["TypeScript", "JavaScript"],
+                  codeRepository: "https://github.com/theunstopabble/swadkart",
+                  keywords:
+                    "food delivery app, multi-vendor platform, WebAuthn biometric, real-time tracking, voice search",
+                },
+              ],
+            }),
           }}
         />
       </head>

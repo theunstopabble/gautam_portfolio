@@ -216,7 +216,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "swadkart-pro",
+    id: "swadkart",
     title: "SwadKart",
     tagline: "Multi-Vendor Food Delivery Ecosystem",
     description:
@@ -236,7 +236,7 @@ export const projects: Project[] = [
       "PWA",
       "i18next",
     ],
-    github: "https://github.com/theunstopabble/SwadKart-pro",
+    github: "https://github.com/theunstopabble/swadkart",
     demo: "https://swadkart.vercel.app/",
     image: "/projects/SwadKart.png",
     featured: true,

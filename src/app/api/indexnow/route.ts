@@ -8,7 +8,7 @@ const ALL_URLS = [
   `https://${HOST}/projects/interview-minds`,
   `https://${HOST}/projects/satark-ai`,
   `https://${HOST}/projects/texfolio`,
-  `https://${HOST}/projects/swadkart-pro`,
+  `https://${HOST}/projects/swadkart`,
 ];
 
 export async function GET() {
@@ -35,7 +35,7 @@ export async function GET() {
   } catch (error) {
     return NextResponse.json(
       { success: false, error: String(error) },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/projects/swadkart-pro`,
+      url: `${baseUrl}/projects/swadkart`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
