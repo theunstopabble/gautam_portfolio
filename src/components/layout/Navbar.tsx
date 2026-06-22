@@ -31,6 +31,7 @@ export function Navbar() {
     { name: "Skills", href: "/#skills" },
     { name: "Education", href: "/#education" },
     { name: "About", href: "/#about" },
+    { name: "FAQ", href: "/#faq" },
     { name: "Contact", href: "/#contact" },
   ];
 

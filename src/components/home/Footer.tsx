@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Education", href: "#education" },
   { name: "About", href: "#about" },
+  { name: "FAQ", href: "#faq" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -79,6 +80,10 @@ export function Footer() {
             <Heart className="h-3.5 w-3.5 fill-red-500 text-red-500" /> by
             Gautam Kumar
             <span className="mx-1">•</span>© {new Date().getFullYear()}
+            <span className="mx-1">•</span>
+            <a href="/privacy" className="hover:text-primary transition-colors">
+              Privacy
+            </a>
           </p>
 
           {/* Social */}

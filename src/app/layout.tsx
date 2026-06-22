@@ -149,6 +149,46 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://gautam-kr.vercel.app" },
+                { "@type": "ListItem", position: 2, name: "Projects", item: "https://gautam-kr.vercel.app/#projects" },
+                { "@type": "ListItem", position: 3, name: "Contact", item: "https://gautam-kr.vercel.app/#contact" },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Gautam Kumar",
+              description: "Full-Stack Developer & AI Engineer",
+              url: "https://gautam-kr.vercel.app",
+              email: "gautamkumar43421@gmail.com",
+              telephone: "+91-6207793196",
+              image: "https://gautam-kr.vercel.app/profile.png",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Jaipur",
+                addressRegion: "Rajasthan",
+                addressCountry: "IN",
+              },
+              founder: {
+                "@type": "Person",
+                name: "Gautam Kumar",
+                url: "https://gautam-kr.vercel.app",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
               "@graph": [
                 {
                   "@type": "Person",
