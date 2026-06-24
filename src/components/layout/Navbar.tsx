@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, Eye } from "lucide-react";
@@ -47,12 +48,12 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 md:px-12">
-        <a
+        <Link
           href="/"
           className="text-xl font-bold tracking-tighter text-foreground"
         >
           Gautam Kumar<span className="gradient-text">.</span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
@@ -69,7 +70,7 @@ export function Navbar() {
             href={RESUME_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent transition-all hover:brightness-110"
+            className="text-sm font-semibold text-transparent bg-clip-text bg-linear-to-r from-primary to-accent transition-all hover:brightness-110"
           >
             Resume
           </a>
@@ -84,7 +85,7 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="bg-background/95 border-l border-white/5 backdrop-blur-xl w-[60%] sm:max-w-[280px]"
+            className="bg-background/95 border-l border-white/5 backdrop-blur-xl w-[60%] sm:max-w-70"
           >
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             <nav className="flex flex-col items-center gap-6 mt-10">
@@ -101,7 +102,7 @@ export function Navbar() {
               ))}
               <SheetClose asChild>
   <Button
-    className="mt-4 w-full gap-2 rounded-full bg-gradient-to-r from-primary to-accent text-white"
+    className="mt-4 w-full gap-2 rounded-full bg-linear-to-r from-primary to-accent text-white"
     onClick={() => window.open(RESUME_LINK, "_blank", "noopener,noreferrer")}
   >
                 <Eye className="h-4 w-4" /> View Resume

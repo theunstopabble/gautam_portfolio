@@ -42,7 +42,7 @@ export function Contact() {
     <section id="contact" className="section-padding relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[150px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-125 w-125 rounded-full bg-primary/5 blur-[150px]" />
 
       <div className="container relative mx-auto px-4 md:px-8">
         {/* Section Header */}
@@ -92,9 +92,9 @@ export function Contact() {
             <div className="mb-8 grid gap-4 grid-cols-1 sm:grid-cols-2">
               <a
                 href="mailto:gautamkumar43421@gmail.com"
-                className="group flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/[0.05] overflow-hidden"
+                className="group flex items-center gap-3 rounded-xl border border-white/5 bg-white/2 p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/5 overflow-hidden"
               >
-                <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent shadow-lg">
+                <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-primary to-accent shadow-lg">
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <div className="min-w-0 flex-1">
@@ -109,9 +109,9 @@ export function Contact() {
 
               <a
                 href="tel:+916207793196"
-                className="group flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/[0.05] overflow-hidden"
+                className="group flex items-center gap-3 rounded-xl border border-white/5 bg-white/2 p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/5 overflow-hidden"
               >
-                <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 shadow-lg">
+                <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-emerald-500 to-teal-500 shadow-lg">
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <div className="min-w-0 flex-1">
@@ -141,7 +141,7 @@ export function Contact() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-all hover:bg-white/[0.05] ${link.color}`}
+                    className={`group flex items-center gap-3 rounded-xl border border-white/5 bg-white/2 p-4 transition-all hover:bg-white/5 ${link.color}`}
                   >
                     <Icon className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-foreground" />
                     <div>
@@ -161,7 +161,7 @@ export function Contact() {
             <div className="text-center">
               <Button
                 size="lg"
-                className="h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+                className="h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
                 asChild
               >
                 <a href="mailto:gautamkumar43421@gmail.com">

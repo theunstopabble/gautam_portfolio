@@ -48,13 +48,13 @@ export function Hero() {
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-24 md:px-8">
       {/* Animated background orbs */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full bg-primary/15 blur-[120px] animate-pulse-glow" />
-        <div className="absolute right-1/4 top-1/4 h-[250px] w-[250px] rounded-full bg-accent/10 blur-[100px] animate-float-slow" />
-        <div className="absolute left-1/4 bottom-1/3 h-[200px] w-[200px] rounded-full bg-blue-500/10 blur-[100px] animate-float" />
+        <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-100 w-100 rounded-full bg-primary/15 blur-[120px] animate-pulse-glow" />
+        <div className="absolute right-1/4 top-1/4 h-62.5 w-62.5 rounded-full bg-accent/10 blur-[100px] animate-float-slow" />
+        <div className="absolute left-1/4 bottom-1/3 h-50 w-50 rounded-full bg-blue-500/10 blur-[100px] animate-float" />
       </div>
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-grid-pattern mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
       {/* Content */}
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
@@ -112,7 +112,7 @@ export function Hero() {
           {/* Mobile: Resume | Desktop: View My Work */}
           <Button
             size="lg"
-            className="sm:hidden h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+            className="sm:hidden h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
             asChild
           >
             <a
@@ -125,7 +125,7 @@ export function Hero() {
           </Button>
           <Button
             size="lg"
-            className="hidden sm:inline-flex h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+            className="hidden sm:inline-flex h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
             asChild
           >
             <a href="#projects">
@@ -185,7 +185,7 @@ export function Hero() {
                 target={link.name !== "Email" ? "_blank" : undefined}
                 rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
                 aria-label={link.name}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-muted-foreground transition-all hover:border-primary/30 hover:bg-primary/10 hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition-all hover:border-primary/30 hover:bg-primary/10 hover:text-primary"
               >
                 <Icon className="h-4 w-4" />
               </a>
