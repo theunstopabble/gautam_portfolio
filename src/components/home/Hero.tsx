@@ -10,6 +10,7 @@ import {
   TwitterIcon,
   ChevronDown,
   Sparkles,
+  Download,
 } from "lucide-react";
 
 const stats = [
@@ -115,6 +116,20 @@ export function Hero() {
           >
             <a href="#projects">
               <Sparkles className="h-4 w-4" /> View My Work
+            </a>
+          </Button>
+          <Button
+            size="lg"
+            variant="secondary"
+            className="h-13 gap-2 rounded-xl border border-white/10 bg-white/5 px-8 text-base font-semibold text-zinc-200 shadow-lg backdrop-blur-sm transition-all hover:bg-white/10 hover:brightness-110"
+            asChild
+          >
+            <a
+              href="https://drive.google.com/file/d/12F5GfuBqgwUaTbbWNnx7YHUIHJ5L1NxF/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download className="h-4 w-4" /> Resume
             </a>
           </Button>
           <Button
