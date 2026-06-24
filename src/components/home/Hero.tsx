@@ -9,7 +9,7 @@ import {
   Mail,
   TwitterIcon,
   ChevronDown,
-  Download,
+  Eye,
 } from "lucide-react";
 
 const stats = [
@@ -110,8 +110,7 @@ export function Hero() {
         >
           <Button
             size="lg"
-            variant="outline"
-            className="group relative h-13 rounded-xl border-primary/30 bg-transparent px-8 text-base font-semibold text-white shadow-lg backdrop-blur-sm transition-all hover:border-primary/60 hover:bg-primary/10 hover:shadow-primary/20"
+            className="h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
             asChild
           >
             <a
@@ -119,12 +118,13 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Download className="h-4 w-4 text-primary" /> Resume
+              <Eye className="h-4 w-4" /> View Resume
             </a>
           </Button>
           <Button
             size="lg"
-            className="h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+            variant="outline"
+            className="h-13 rounded-xl border-white/10 px-8 text-base backdrop-blur-sm hover:bg-white/5"
             asChild
           >
             <a href="#contact">

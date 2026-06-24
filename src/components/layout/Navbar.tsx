@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, Download } from "lucide-react";
+import { Menu, Eye } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -71,7 +71,7 @@ export function Navbar() {
             asChild
           >
             <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
-              <Download className="h-3.5 w-3.5" /> Resume
+              <Eye className="h-3.5 w-3.5" /> View Resume
             </a>
           </Button>
         </nav>
@@ -105,7 +105,7 @@ export function Navbar() {
     className="mt-4 w-full gap-2 rounded-full bg-gradient-to-r from-primary to-accent text-white"
     onClick={() => window.open(RESUME_LINK, "_blank", "noopener,noreferrer")}
   >
-    <Download className="h-4 w-4" /> View Resume
+                <Eye className="h-4 w-4" /> View Resume
   </Button>
 </SheetClose>
             </nav>
