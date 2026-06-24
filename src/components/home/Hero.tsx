@@ -10,6 +10,7 @@ import {
   TwitterIcon,
   ChevronDown,
   Eye,
+  Sparkles,
 } from "lucide-react";
 
 const stats = [
@@ -108,9 +109,10 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
         >
+          {/* Mobile: Resume | Desktop: View My Work */}
           <Button
             size="lg"
-            className="h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+            className="sm:hidden h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
             asChild
           >
             <a
@@ -119,6 +121,15 @@ export function Hero() {
               rel="noopener noreferrer"
             >
               <Eye className="h-4 w-4" /> View Resume
+            </a>
+          </Button>
+          <Button
+            size="lg"
+            className="hidden sm:inline-flex h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+            asChild
+          >
+            <a href="#projects">
+              <Sparkles className="h-4 w-4" /> View My Work
             </a>
           </Button>
           <Button
