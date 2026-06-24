@@ -70,8 +70,8 @@ export function Navbar() {
             className="gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-5 text-white shadow-lg shadow-primary/20 hover:brightness-110"
             asChild
           >
-            <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
-              <Eye className="h-3.5 w-3.5" /> Resume
+                        <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
+              Resume
             </a>
           </Button>
         </nav>
