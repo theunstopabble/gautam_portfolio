@@ -120,8 +120,7 @@ export function Hero() {
           </Button>
           <Button
             size="lg"
-            variant="secondary"
-            className="h-13 gap-2 rounded-xl border border-white/10 bg-white/5 px-8 text-base font-semibold text-zinc-200 shadow-lg backdrop-blur-sm transition-all hover:bg-white/10 hover:brightness-110"
+            className="h-13 gap-2 rounded-xl bg-gradient-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
             asChild
           >
             <a
