@@ -55,7 +55,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {links.map((link) => (
             <a
               key={link.name}
@@ -67,10 +67,10 @@ export function Navbar() {
           ))}
           <Button
             size="sm"
-            className="gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-5 text-white shadow-lg shadow-primary/20 hover:brightness-110"
+            className="rounded-full bg-gradient-to-r from-primary to-accent px-4 text-sm font-semibold text-white shadow-lg shadow-primary/20 hover:brightness-110"
             asChild
           >
-                        <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </Button>
