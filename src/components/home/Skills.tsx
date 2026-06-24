@@ -129,12 +129,12 @@ export function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group glass rounded-xl p-6 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.04]"
+                className="group glass rounded-xl p-6 transition-all duration-300 hover:border-primary/20 hover:bg-white/4"
               >
                 {/* Header */}
                 <div className="mb-5 flex items-center gap-3">
                   <div
-                    className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${category.color} shadow-lg`}
+                    className={`flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br ${category.color} shadow-lg`}
                   >
                     <Icon className="h-5 w-5 text-white" />
                   </div>
@@ -149,7 +149,7 @@ export function Skills() {
                     <Badge
                       key={skill}
                       variant="secondary"
-                      className="border border-white/5 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:bg-white/[0.08] hover:text-white"
+                      className="border border-white/5 bg-white/4 px-3 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:bg-white/8 hover:text-white"
                     >
                       {skill}
                     </Badge>

@@ -42,12 +42,12 @@ export function Education() {
           viewport={{ once: true }}
           className="mx-auto max-w-2xl"
         >
-          <div className="group glass rounded-2xl p-8 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.04]">
+          <div className="group glass rounded-2xl p-8 transition-all duration-300 hover:border-primary/20 hover:bg-white/4">
             {/* Gradient accent top */}
-            <div className="mb-6 h-1 w-20 rounded-full bg-gradient-to-r from-primary to-accent" />
+            <div className="mb-6 h-1 w-20 rounded-full bg-linear-to-r from-primary to-accent" />
 
             <div className="flex items-start gap-5">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-2xl shadow-lg">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-primary to-accent text-2xl shadow-lg">
                 🎓
               </div>
               <div>

@@ -105,7 +105,7 @@ export function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 + i * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-4"
+                    className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/2 p-4"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                       <Icon className="h-5 w-5 text-primary" />

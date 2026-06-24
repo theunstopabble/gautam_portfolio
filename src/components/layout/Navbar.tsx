@@ -66,14 +66,15 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <a
-            href={RESUME_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold text-transparent bg-clip-text bg-linear-to-r from-primary to-accent transition-all hover:brightness-110"
+          <Button
+            size="sm"
+            className="rounded-full bg-linear-to-r from-primary to-accent text-sm font-semibold text-white shadow-lg shadow-primary/20 hover:brightness-110 -ml-1.5"
+            asChild
           >
-            Resume
-          </a>
+            <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+          </Button>
         </nav>
 
         {/* Mobile Nav */}

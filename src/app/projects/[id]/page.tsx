@@ -105,7 +105,7 @@ export default async function ProjectPage({
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-accent px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-primary/20 hover:brightness-110 transition"
+            className="inline-flex items-center gap-2 rounded-lg bg-linear-to-r from-primary to-accent px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-primary/20 hover:brightness-110 transition"
           >
             Live Demo ↗
           </a>
@@ -164,7 +164,7 @@ export default async function ProjectPage({
               {project.deepDive.techStack.map((layer) => (
                 <div
                   key={layer.name}
-                  className="rounded-lg border border-white/5 bg-white/[0.02] p-4"
+                  className="rounded-lg border border-white/5 bg-white/2 p-4"
                 >
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-300">
                     {layer.name}

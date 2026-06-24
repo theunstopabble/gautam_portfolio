@@ -93,7 +93,7 @@ export function Experience() {
         {/* Timeline */}
         <div className="relative mx-auto max-w-3xl">
           {/* Vertical line */}
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-accent/30 to-transparent md:left-1/2 md:-translate-x-px" />
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-linear-to-b from-primary/50 via-accent/30 to-transparent md:left-1/2 md:-translate-x-px" />
 
           {experiences.map((exp, index) => (
             <motion.div
@@ -109,9 +109,9 @@ export function Experience() {
               {/* Timeline dot */}
               <div className="absolute left-8 top-6 z-10 md:left-1/2 md:-translate-x-1/2">
                 <div
-                  className={`h-4 w-4 rounded-full bg-gradient-to-br ${exp.color} shadow-lg`}
+                  className={`h-4 w-4 rounded-full bg-linear-to-br ${exp.color} shadow-lg`}
                 >
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent" />
+                  <div className="absolute inset-0 rounded-full bg-linear-to-br from-white/20 to-transparent" />
                 </div>
               </div>
 
@@ -121,11 +121,11 @@ export function Experience() {
                   index % 2 === 0 ? "md:pr-8" : "md:pl-8"
                 }`}
               >
-                <div className="group glass rounded-xl p-6 transition-all duration-300 hover:border-primary/20 hover:bg-white/[0.04]">
+                <div className="group glass rounded-xl p-6 transition-all duration-300 hover:border-primary/20 hover:bg-white/4">
                   {/* Company logo + name */}
                   <div className="mb-4 flex items-start gap-4">
                     <div
-                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${exp.color} text-lg font-bold text-white shadow-lg`}
+                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-linear-to-br ${exp.color} text-lg font-bold text-white shadow-lg`}
                     >
                       {exp.logo}
                     </div>

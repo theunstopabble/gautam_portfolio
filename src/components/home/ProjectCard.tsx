@@ -44,7 +44,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setOpacity(1)}
       onMouseLeave={() => setOpacity(0)}
-      className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02]"
+      className="group relative overflow-hidden rounded-2xl border border-white/6 bg-white/2"
     >
       {/* Cursor glow effect */}
       <div
@@ -56,14 +56,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       />
 
       {/* Gradient top accent */}
-      <div className={`h-1 w-full bg-gradient-to-r ${project.color}`} />
+      <div className={`h-1 w-full bg-linear-to-r ${project.color}`} />
 
       <div className="relative h-full">
         <Card className="h-full border-0 bg-transparent flex flex-col">
           <CardHeader className="pb-4 p-0">
             {project.image ? (
               <div className="relative h-48 w-full overflow-hidden rounded-t-2xl">
-                <div className="absolute inset-0 z-10 bg-gradient-to-t from-background/90 to-transparent" />
+                <div className="absolute inset-0 z-10 bg-linear-to-t from-background/90 to-transparent" />
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -82,7 +82,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                   )}
                 </div>
                 <div
-                  className={`absolute left-4 top-4 z-20 rounded-xl bg-gradient-to-br ${project.color} p-2 text-white shadow-lg`}
+                  className={`absolute left-4 top-4 z-20 rounded-xl bg-linear-to-br ${project.color} p-2 text-white shadow-lg`}
                 >
                   <Icon className="h-5 w-5" />
                 </div>
@@ -90,7 +90,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             ) : (
               <div className="flex items-center justify-between p-6 pb-2">
                 <div
-                  className={`rounded-xl bg-gradient-to-br ${project.color} p-3 text-white shadow-lg`}
+                  className={`rounded-xl bg-linear-to-br ${project.color} p-3 text-white shadow-lg`}
                 >
                   <Icon className="h-6 w-6" />
                 </div>
@@ -124,7 +124,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               {Object.entries(project.stats).map(([key, value]) => (
                 <div
                   key={key}
-                  className="rounded-lg border border-white/5 bg-white/[0.02] px-2 py-2 text-center"
+                  className="rounded-lg border border-white/5 bg-white/2 px-2 py-2 text-center"
                 >
                   <div className="text-xs font-bold text-foreground">
                     {value as string}
@@ -142,7 +142,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <Badge
                   key={tag}
                   variant="outline"
-                  className="border-white/5 bg-white/[0.03] text-zinc-400 text-xs py-0.5 px-2 hover:bg-white/[0.06]"
+                  className="border-white/5 bg-white/3 text-zinc-400 text-xs py-0.5 px-2 hover:bg-white/6"
                 >
                   {tag}
                 </Badge>
@@ -177,7 +177,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </Button>
             <Button
               size="sm"
-              className="min-w-[80px] flex-1 gap-2 bg-gradient-to-r from-primary to-accent text-white shadow-lg shadow-primary/20 font-medium hover:brightness-110"
+              className="min-w-[80px] flex-1 gap-2 bg-linear-to-r from-primary to-accent text-white shadow-lg shadow-primary/20 font-medium hover:brightness-110"
               asChild
             >
               <a href={project.demo} target="_blank" rel="noopener noreferrer">
