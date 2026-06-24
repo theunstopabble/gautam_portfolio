@@ -71,7 +71,7 @@ export function Navbar() {
             asChild
           >
             <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
-              <Eye className="h-3.5 w-3.5" /> View Resume
+              <Eye className="h-3.5 w-3.5" /> Resume
             </a>
           </Button>
         </nav>
