@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, Eye } from "lucide-react";
+import { trackResumeClick } from "@/components/Analytics";
 import {
   Sheet,
   SheetContent,
@@ -70,6 +71,7 @@ export function Navbar() {
             size="sm"
             className="rounded-full bg-linear-to-r from-primary to-accent text-sm font-semibold text-white shadow-lg shadow-primary/20 hover:brightness-110 -ml-1.5"
             asChild
+            onClick={trackResumeClick}
           >
             <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
               Resume
@@ -104,7 +106,10 @@ export function Navbar() {
               <SheetClose asChild>
   <Button
     className="mt-4 w-full gap-2 rounded-full bg-linear-to-r from-primary to-accent text-white"
-    onClick={() => window.open(RESUME_LINK, "_blank", "noopener,noreferrer")}
+    onClick={() => {
+      trackResumeClick();
+      window.open(RESUME_LINK, "_blank", "noopener,noreferrer");
+    }}
   >
                 <Eye className="h-4 w-4" /> View Resume
   </Button>

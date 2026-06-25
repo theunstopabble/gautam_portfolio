@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import { AnalyticsProvider } from "@/components/Analytics";
 import { Analytics } from "@vercel/analytics/react";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -305,6 +306,7 @@ export default function RootLayout({
         <meta itemProp="jobTitle" content="Full-Stack Developer and AI Engineer" />
         <Navbar />
         {children}
+        <AnalyticsProvider />
         <Analytics />
       </body>
     </html>
