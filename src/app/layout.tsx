@@ -9,7 +9,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 export const metadata: Metadata = {
   title: "Gautam Kumar | Full Stack Developer & AI Engineer — Portfolio",
   description:
-    "Full-Stack Developer & AI Engineer · Microsoft Elevate Intern. Built InterviewMinds, SwadKart, Satark AI & TexFolio — 4 production SaaS products with React, Node.js, Python & LLMs.",
+    "Full-Stack Developer and AI Engineer · Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio — React, Node, Python & LLMs.",
   keywords: [
     "Gautam Kumar",
     "Gautam Kumar developer",
@@ -296,8 +296,13 @@ export default function RootLayout({
       </head>
       <body
         className={`${outfit.variable} font-sans antialiased text-foreground bg-background`}
+        itemScope
+        itemType="http://schema.org/Person"
         suppressHydrationWarning
       >
+        <meta itemProp="name" content="Gautam Kumar" />
+        <meta itemProp="url" content="https://gautam-kr.vercel.app" />
+        <meta itemProp="jobTitle" content="Full-Stack Developer and AI Engineer" />
         <Navbar />
         {children}
         <Analytics />
