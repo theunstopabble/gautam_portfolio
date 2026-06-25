@@ -9,7 +9,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 export const metadata: Metadata = {
   title: "Gautam Kumar | Full Stack Developer & AI Engineer — Portfolio",
   description:
-    "Portfolio of Gautam Kumar — Full Stack Developer & AI Engineer with Microsoft Elevate internship experience. Creator of InterviewMinds (AI interview platform), SwadKart (food delivery), Satark AI (AI safety/security), and TexFolio (resume/portfolio builder). Expert in React, Node.js, TypeScript, Python, MongoDB, and LLM integration. Building enterprise-grade SaaS products with real-time systems, ML pipelines, and microservice architecture.",
+    "Full-Stack Developer & AI Engineer · Microsoft Elevate Intern. Built InterviewMinds, SwadKart, Satark AI & TexFolio — 4 production SaaS products with React, Node.js, Python & LLMs.",
   keywords: [
     "Gautam Kumar",
     "Gautam Kumar developer",
@@ -92,7 +92,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://gautam-kr.vercel.app" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
