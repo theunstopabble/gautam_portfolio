@@ -3,7 +3,7 @@ export const personSchema = {
   "@id": "https://gautam-kr.vercel.app/#person",
   "name": "Gautam Kumar",
   "url": "https://gautam-kr.vercel.app",
-  "jobTitle": "Full-Stack Developer & AI Engineer",
+  "jobTitle": "Full-Stack Developer | Solo-shipped 4 SaaS products | AI integration",
   "alumniOf": {
     "@type": "EducationalOrganization",
     "name": "Jagannath University, Jaipur",
