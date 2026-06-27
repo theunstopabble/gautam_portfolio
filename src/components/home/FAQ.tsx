@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "Who is Gautam Kumar?",
     answer:
-      "Gautam Kumar is a Full-Stack Developer and AI Engineer based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building enterprise-grade SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
+      "Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
   },
   {
     question: "What projects has Gautam Kumar built?",
