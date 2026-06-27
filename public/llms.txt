@@ -15,7 +15,7 @@ Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS ap
 ### InterviewMinds
 - URL: https://interviewminds.vercel.app
 - GitHub: https://github.com/theunstopabble/InterviewMinds
-- Description: Enterprise AI Mock Interview Platform with real-time ML proctoring, CRDT collaborative coding, multimodal voice analysis, and WebRTC video calls.
+- Description: Production-grade AI Mock Interview Platform with real-time ML proctoring, CRDT collaborative coding, multimodal voice analysis, and WebRTC video calls.
 - Tech Stack: React 18, TypeScript, Node.js, Express, MongoDB, Redis, Socket.IO, Groq LLM (Llama 3.3-70b), face-api.js, TensorFlow.js, BullMQ, Clerk Auth, Turborepo
 - Key Features: AI-powered interview chat, resume parsing with vector embeddings, ML face detection and eye tracking, sandboxed code execution (Piston API), CRDT three-way merge editor, WebRTC video calls, E2E encryption (RSA-4096 + AES-256-GCM), GraphQL API, 81 service modules
 

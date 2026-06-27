@@ -5,9 +5,9 @@ export const projects: Project[] = [
   {
     id: "interview-minds",
     title: "InterviewMinds",
-    tagline: "Enterprise AI Mock Interview Platform",
+    tagline: "Production-grade AI Mock Interview Platform",
     description:
-      "A production-grade enterprise interview platform with 91 features across 18 phases. Features AI-powered interviews via Groq Llama 3.3-70b, real-time ML video proctoring (face-api.js with TensorFlow.js), CRDT collaborative code editor with three-way merge, WebRTC video calls with STUN/TURN + SFU, sandboxed code execution via Piston API, and multimodal voice tone analysis. Built as a Turborepo monorepo with 81 service modules, 38 route files, and 7 MongoDB models.",
+      "A Production-grade AI Mock Interview Platform with 91 features across 18 phases. Features AI-powered interviews via Groq Llama 3.3-70b, real-time ML video proctoring (face-api.js with TensorFlow.js), CRDT collaborative code editor with three-way merge, WebRTC video calls with STUN/TURN + SFU, sandboxed code execution via Piston API, and multimodal voice tone analysis. Built as a Turborepo monorepo with 81 service modules, 38 route files, and 7 MongoDB models.",
     icon: UserCheck,
     tags: [
       "React 18",
