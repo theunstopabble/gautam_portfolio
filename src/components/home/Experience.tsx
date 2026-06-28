@@ -154,6 +154,7 @@ export function Experience() {
                         href={exp.certificate}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`View Credential for ${exp.company} ${exp.role}`}
                         className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary backdrop-blur-sm transition-all hover:bg-primary/20 hover:border-primary/50 hover:shadow-[0_0_12px_hsl(250_100%_67%_/0.25)]"
                       >
                         <ExternalLink className="h-3.5 w-3.5" />

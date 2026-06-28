@@ -12,6 +12,7 @@ import {
   Eye,
   Sparkles,
 } from "lucide-react";
+import Link from "next/link";
 import { trackResumeClick, trackContactClick } from "@/components/Analytics";
 
 const stats = [
@@ -130,9 +131,9 @@ export function Hero() {
             className="hidden sm:inline-flex h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
             asChild
           >
-            <a href="/projects">
+            <Link href="/projects">
               <Sparkles className="h-4 w-4" /> View My Work
-            </a>
+            </Link>
           </Button>
           <Button
             size="lg"

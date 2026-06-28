@@ -5,40 +5,50 @@
 - Title: Full-Stack Developer | Solo-shipped 4 SaaS Products | AI Integration
 - Location: Jaipur, Rajasthan, India
 - University: Jagannath University, Jaipur
-- Portfolio: https://gautam-kr.vercel.app
+- [Portfolio](https://gautam-kr.vercel.app)
 
 ## Summary
-Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a Microsoft Elevate × AICTE internship and has experience with real-time systems and microservice architecture.
+Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/#experience) and has experience with real-time systems and microservice architecture.
 
 ## Projects
 
-### InterviewMinds
-- URL: https://interviewminds.vercel.app
-- GitHub: https://github.com/theunstopabble/InterviewMinds
+### [InterviewMinds](https://interviewminds.vercel.app)
+- GitHub: [github.com/theunstopabble/InterviewMinds](https://github.com/theunstopabble/InterviewMinds)
 - Description: Production-grade AI Mock Interview Platform with real-time ML proctoring, CRDT collaborative coding, multimodal voice analysis, and WebRTC video calls.
 - Tech Stack: React 18, TypeScript, Node.js, Express, MongoDB, Redis, Socket.IO, Groq LLM (Llama 3.3-70b), face-api.js, TensorFlow.js, BullMQ, Clerk Auth, Turborepo
 - Key Features: AI-powered interview chat, resume parsing with vector embeddings, ML face detection and eye tracking, sandboxed code execution (Piston API), CRDT three-way merge editor, WebRTC video calls, E2E encryption (RSA-4096 + AES-256-GCM), GraphQL API, 81 service modules
+- [Portfolio Page](https://gautam-kr.vercel.app/projects/interviewminds)
 
-### SwadKart
-- URL: https://swadkart.vercel.app
-- GitHub: https://github.com/theunstopabble/SwadKart
+### [SwadKart](https://swadkart.vercel.app)
+- GitHub: [github.com/theunstopabble/SwadKart](https://github.com/theunstopabble/SwadKart)
 - Description: Production-grade multi-vendor food delivery platform with AI chatbot, biometric auth, real-time GPS tracking, and gamification.
 - Tech Stack: React 19, Vite, Redux Toolkit, Node.js 22, Express 5, MongoDB, Redis, Socket.IO, Razorpay, Firebase Auth, WebAuthn, Groq SDK, Tailwind CSS, PWA
 - Key Features: AI-powered food recommendations via Groq LLM with function-calling tools, voice search (English & Hindi), biometric login (WebAuthn), live GPS driver tracking, surge pricing, group ordering, SwadPass subscription, gamification (streaks, coins, badges), GDPR compliance, multi-language i18n
+- [Portfolio Page](https://gautam-kr.vercel.app/projects/swadkart)
 
-### Satark-AI
-- URL: https://satark-deepfake.vercel.app
-- GitHub: https://github.com/theunstopabble/Satark-AI
+### [Satark-AI](https://satark-deepfake.vercel.app)
+- GitHub: [github.com/theunstopabble/Satark-AI](https://github.com/theunstopabble/Satark-AI)
 - Description: Production-grade deepfake detection and speaker verification platform using Wav2Vec2, NVIDIA NIM (Llama 3.2-90B Vision), and ECAPA-TDNN voice biometrics.
 - Tech Stack: React 18, TypeScript, Vite, FastAPI, Python, PyTorch, Hono, PostgreSQL, Drizzle ORM, Cloudflare Workers, Clerk Auth, Turborepo, Docker
 - Key Features: Audio deepfake detection (Wav2Vec2 + MFCC + Spectral Analysis), image deepfake detection (NVIDIA NIM Llama 3.2-90B Vision), speaker verification (ECAPA-TDNN 192-dim embeddings), live microphone monitoring, explainable AI results, PDF report generation, PWA support
+- [Portfolio Page](https://gautam-kr.vercel.app/projects/satark-ai)
 
-### TexFolio
-- URL: https://texfolio.vercel.app
-- GitHub: https://github.com/theunstopabble/TexFolio
+### [TexFolio](https://texfolio.vercel.app)
+- GitHub: [github.com/theunstopabble/TexFolio](https://github.com/theunstopabble/TexFolio)
 - Description: AI-powered LaTeX resume builder SaaS with LangGraph multi-agent resume coach, real LaTeX PDF rendering, Organizations with RBAC, and GDPR compliance.
 - Tech Stack: React 19, Vite, TypeScript, Hono, MongoDB, Redis, BullMQ, LangChain, LangGraph, NVIDIA NIM, Groq, Clerk Auth, Razorpay, Tailwind CSS, Docker
 - Key Features: LangGraph resume coach (Content, Impact, Format, ATS scoring), real pdflatex compilation, FAANG-ready templates, drag-and-drop editor, Organizations with RBAC (Owner/Admin/Editor/Viewer), BullMQ async PDF generation, distributed Redis rate limiting, API key auth (HMAC), GDPR data export and erasure, Razorpay payments
+- [Portfolio Page](https://gautam-kr.vercel.app/projects/texfolio)
+
+## Navigation
+- [Home](https://gautam-kr.vercel.app)
+- All Projects: [gautam-kr.vercel.app/projects](https://gautam-kr.vercel.app/projects)
+- [Experience & Internships](https://gautam-kr.vercel.app/#experience)
+- [Skills & Technologies](https://gautam-kr.vercel.app/#skills)
+- [Education](https://gautam-kr.vercel.app/#education)
+- [About Gautam Kumar](https://gautam-kr.vercel.app/#about)
+- [FAQ](https://gautam-kr.vercel.app/#faq)
+- [Contact](https://gautam-kr.vercel.app/#contact)
 
 ## Skills & Expertise
 
@@ -67,15 +77,15 @@ Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS ap
 - Razorpay, Brevo (Email), Cloudinary, WebRTC
 
 ## Contact
-- Email: gautamkumar43421@gmail.com
-- LinkedIn: https://www.linkedin.com/in/gautamkr62
-- GitHub: https://github.com/theunstopabble
-- Twitter/X: https://x.com/_unstopabble
-- Portfolio: https://gautam-kr.vercel.app
+- Email: [gautamkumar43421@gmail.com](mailto:gautamkumar43421@gmail.com)
+- LinkedIn: [linkedin.com/in/gautamkr62](https://www.linkedin.com/in/gautamkr62)
+- GitHub: [github.com/theunstopabble](https://github.com/theunstopabble)
+- Twitter/X: [x.com/_unstopabble](https://x.com/_unstopabble)
+- Portfolio: [gautam-kr.vercel.app](https://gautam-kr.vercel.app)
 
 ## Education
-- University: Jagannath University, Jaipur
+- University: [Jagannath University, Jaipur](https://www.jagannathuniversity.org)
 - Location: Jaipur, Rajasthan, India
 
 ## Experience
-- Microsoft Elevate Internship (AICTE)
+- [Microsoft Elevate Internship (AICTE)](https://gautam-kr.vercel.app/#experience)

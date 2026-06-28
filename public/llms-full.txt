@@ -4,63 +4,74 @@
 - Name: Gautam Kumar
 - Title: Full-Stack Developer | Solo-shipped 4 SaaS Products | AI Integration
 - Location: Jaipur, Rajasthan, India
-- University: Jagannath University, Jaipur (B.Tech CSE, 2023-2027)
-- Portfolio: https://gautam-kr.vercel.app
-- Email: gautamkumar43421@gmail.com
+- University: [Jagannath University, Jaipur](https://www.jagannathuniversity.org) (B.Tech CSE, 2023-2027)
+- [Portfolio](https://gautam-kr.vercel.app)
+- Email: [gautamkumar43421@gmail.com](mailto:gautamkumar43421@gmail.com)
 - Phone: +91-6207793196
-- GitHub: https://github.com/theunstopabble
-- LinkedIn: https://www.linkedin.com/in/gautamkr62
-- Twitter/X: https://x.com/_unstopabble
+- GitHub: [github.com/theunstopabble](https://github.com/theunstopabble)
+- LinkedIn: [linkedin.com/in/gautamkr62](https://www.linkedin.com/in/gautamkr62)
+- Twitter/X: [x.com/_unstopabble](https://x.com/_unstopabble)
 
 ## Summary
-Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a Microsoft Elevate × AICTE internship and has experience with real-time systems and microservice architecture.
+Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/#experience) and has experience with real-time systems and microservice architecture.
+
+## Navigation
+- [Home](https://gautam-kr.vercel.app)
+- All Projects: [gautam-kr.vercel.app/projects](https://gautam-kr.vercel.app/projects)
+- [Experience & Internships](https://gautam-kr.vercel.app/#experience)
+- [Skills & Technologies](https://gautam-kr.vercel.app/#skills)
+- [Education](https://gautam-kr.vercel.app/#education)
+- [About Gautam Kumar](https://gautam-kr.vercel.app/#about)
+- [FAQ](https://gautam-kr.vercel.app/#faq)
+- [Contact](https://gautam-kr.vercel.app/#contact)
+- [Privacy Policy](https://gautam-kr.vercel.app/privacy)
 
 ## Education
 - **Jagannath University, Jaipur** — B.Tech in Computer Science (Jul 2023 – Jul 2027)
 
 ## Work Experience
 
-### Microsoft Elevate × AICTE — Emerging Technologies Intern (Jan 2026 – Feb 2026)
+### [Microsoft Elevate × AICTE](https://gautam-kr.vercel.app/#experience) — Emerging Technologies Intern (Jan 2026 – Feb 2026)
 - Built Satark-AI, a deepfake detection platform using Microsoft Azure, FastAPI, PyTorch, and SpeechBrain
 - Designed a 3-tier microservice architecture with an AI-powered audio forensics engine
-- Certificate: https://drive.google.com/file/d/1ZDyJBjn9AgeQEfppbwgAeAyoPS5ADgwn/view
+- [Certificate](https://drive.google.com/file/d/1ZDyJBjn9AgeQEfppbwgAeAyoPS5ADgwn/view)
 
-### Edunet Foundation (AICTE × IBM SkillsBuild) — Frontend Web Development Intern (Aug 2025 – Sep 2025)
+### [Edunet Foundation (AICTE × IBM SkillsBuild)](https://gautam-kr.vercel.app/#experience) — Frontend Web Development Intern (Aug 2025 – Sep 2025)
 - Engineered responsive UIs achieving 95+ Lighthouse score and 100% cross-browser compatibility
 - Optimized frontend asset loading resulting in 30% reduction in initial page load time
-- Certificate: https://drive.google.com/file/d/1_ZL-2ghlWanTam-9ftSBHnTtZb6Im3vu/view
+- [Certificate](https://drive.google.com/file/d/1_ZL-2ghlWanTam-9ftSBHnTtZb6Im3vu/view)
 
-### YHills — Full-Stack Web Development Intern (Mar 2024 – Jun 2024)
+### [YHills](https://gautam-kr.vercel.app/#experience) — Full-Stack Web Development Intern (Mar 2024 – Jun 2024)
 - Developed scalable full-stack application using MERN Stack with RESTful APIs
 - Built dynamic React.js frontend components improving user engagement by 25%
-- Certificate: https://drive.google.com/file/d/1iPIKxZXLxYtsQKYTnrVtYLo-inKc17Gg/view
+- [Certificate](https://drive.google.com/file/d/1iPIKxZXLxYtsQKYTnrVtYLo-inKc17Gg/view)
 
 ## Projects
 
-### InterviewMinds
-- URL: https://interviewminds.vercel.app
-- GitHub: https://github.com/theunstopabble/InterviewMinds
+### [InterviewMinds](https://interviewminds.vercel.app)
+- GitHub: [github.com/theunstopabble/InterviewMinds](https://github.com/theunstopabble/InterviewMinds)
+- [Portfolio Page](https://gautam-kr.vercel.app/projects/interviewminds)
 - Type: Production-grade AI Mock Interview Platform
 - Description: Production-grade platform with 91 features across 18 phases. AI-powered interviews via Groq Llama 3.3-70b, real-time ML video proctoring (face-api.js + TensorFlow.js), CRDT collaborative code editor with three-way merge, WebRTC video calls with STUN/TURN + SFU, sandboxed code execution via Piston API, and multimodal voice tone analysis. Built as Turborepo monorepo with 81 service modules, 38 route files, and 7 MongoDB models.
 - Tech Stack: React 18, TypeScript, Node.js 20, Express, MongoDB, Redis, Groq LLM (Llama 3.3-70b), face-api.js, TensorFlow.js, WebRTC, Socket.IO, GraphQL (Apollo), BullMQ, Clerk Auth, Turborepo, Docker
 
-### SwadKart
-- URL: https://swadkart.vercel.app
-- GitHub: https://github.com/theunstopabble/SwadKart
+### [SwadKart](https://swadkart.vercel.app)
+- GitHub: [github.com/theunstopabble/SwadKart](https://github.com/theunstopabble/SwadKart)
+- [Portfolio Page](https://gautam-kr.vercel.app/projects/swadkart)
 - Type: Multi-Vendor Food Delivery Platform
 - Description: Production-grade platform with 4-role ecosystem (Admin, Restaurant, Delivery, Customer). AI chatbot (Groq LLM) for food recommendations, voice search in English & Hindi, biometric auth (WebAuthn fingerprint/FaceID), real-time GPS delivery tracking via Socket.io, Razorpay payments (UPI/Cards/Wallets/COD), gamification (streaks, SwadCoins, badges), group ordering with bill splitting, PWA with offline support. Features 30+ API routes, 14 Mongoose schemas, fraud detection, rate limiting, GDPR compliance.
 - Tech Stack: React 19, Vite, Redux Toolkit 2, Node.js 22, Express 5, MongoDB, Redis, Socket.IO, Razorpay, Firebase Auth, WebAuthn, Groq SDK, Tailwind CSS, PWA, i18next
 
-### Satark-AI
-- URL: https://satark-deepfake.vercel.app
-- GitHub: https://github.com/theunstopabble/Satark-AI
+### [Satark-AI](https://satark-deepfake.vercel.app)
+- GitHub: [github.com/theunstopabble/Satark-AI](https://github.com/theunstopabble/Satark-AI)
+- [Portfolio Page](https://gautam-kr.vercel.app/projects/satark-ai)
 - Type: Deepfake Detection & Speaker Verification Platform
 - Description: Multi-model deepfake detection as Turborepo microservices monorepo. Detects synthetic audio via Wav2Vec2 + MFCC spectral forensics, deepfake images via NVIDIA NIM (Llama 3.2-90B Vision) through Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN voice biometrics with 192-dim embeddings and cosine similarity matching (threshold: 0.75). PWA with real-time microphone monitoring, analytics dashboard, PDF report exports. Per-user scoped speaker isolation.
 - Tech Stack: React 18, TypeScript, Vite, FastAPI (Python), PyTorch, Hono (Node.js), PostgreSQL, Drizzle ORM, NVIDIA NIM, Cloudflare Workers, Turborepo, Docker, ECAPA-TDNN, Wav2Vec2, SpeechBrain
 
-### TexFolio
-- URL: https://texfolio.vercel.app
-- GitHub: https://github.com/theunstopabble/TexFolio
+### [TexFolio](https://texfolio.vercel.app)
+- GitHub: [github.com/theunstopabble/TexFolio](https://github.com/theunstopabble/TexFolio)
+- [Portfolio Page](https://gautam-kr.vercel.app/projects/texfolio)
 - Type: AI-Powered LaTeX Resume Builder SaaS
 - Description: Combines real LaTeX PDF rendering with LLM intelligence. LangGraph multi-agent resume coach (4-stage: Content, Impact, Format, ATS scoring), LinkedIn PDF import via Llama 3.3, FAANG-ready templates, drag-and-drop editor, Organizations with RBAC (Owner/Admin/Editor/Viewer), BullMQ async PDF generation with progress tracking, distributed Redis rate limiting, Razorpay payments, GDPR compliance (data export + PII anonymization). Sandboxed LaTeX compilation using spawn.
 - Tech Stack: React 19, Vite, TypeScript, Hono (Node.js), MongoDB, Redis, BullMQ, LangChain, LangGraph, NVIDIA NIM, Groq, Clerk Auth, Razorpay, Tailwind CSS, Docker, pdflatex
@@ -95,14 +106,14 @@ Razorpay (UPI/Card/Wallet/COD), Brevo (Email), Cloudinary, Firebase Cloud Messag
 Git, npm workspaces, CI/CD pipelines, microservice architecture, circuit breaker pattern, CRDT algorithms, E2E encryption, PWA (Workbox), i18n (i18next), BullMQ job queues
 
 ## Certifications
-- Microsoft Elevate Internship — https://drive.google.com/file/d/1ZDyJBjn9AgeQEfppbwgAeAyoPS5ADgwn/view
-- Edunet × IBM SkillsBuild — https://drive.google.com/file/d/1_ZL-2ghlWanTam-9ftSBHnTtZb6Im3vu/view
-- YHills Full-Stack Internship — https://drive.google.com/file/d/1iPIKxZXLxYtsQKYTnrVtYLo-inKc17Gg/view
+- [Microsoft Elevate Internship](https://drive.google.com/file/d/1ZDyJBjn9AgeQEfppbwgAeAyoPS5ADgwn/view)
+- [Edunet × IBM SkillsBuild](https://drive.google.com/file/d/1_ZL-2ghlWanTam-9ftSBHnTtZb6Im3vu/view)
+- [YHills Full-Stack Internship](https://drive.google.com/file/d/1iPIKxZXLxYtsQKYTnrVtYLo-inKc17Gg/view)
 
 ## Contact
-- Email: gautamkumar43421@gmail.com
+- Email: [gautamkumar43421@gmail.com](mailto:gautamkumar43421@gmail.com)
 - Phone: +91-6207793196
-- LinkedIn: https://www.linkedin.com/in/gautamkr62
-- GitHub: https://github.com/theunstopabble
-- Twitter/X: https://x.com/_unstopabble
-- Portfolio: https://gautam-kr.vercel.app
+- LinkedIn: [linkedin.com/in/gautamkr62](https://www.linkedin.com/in/gautamkr62)
+- GitHub: [github.com/theunstopabble](https://github.com/theunstopabble)
+- Twitter/X: [x.com/_unstopabble](https://x.com/_unstopabble)
+- Portfolio: [gautam-kr.vercel.app](https://gautam-kr.vercel.app)
