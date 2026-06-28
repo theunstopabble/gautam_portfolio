@@ -9,7 +9,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   title:
-    "Gautam Kumar | Full-Stack Developer | Solo-shipped 4 SaaS products | AI integration — Portfolio",
+    "Gautam Kumar | Full-Stack Developer | AI-Integrated SaaS — Portfolio",
   description:
     "Full-Stack Developer · Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio — React, Node, Python & LLMs.",
   keywords: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Gautam Kumar | Full-Stack Developer | Solo-shipped 4 SaaS products | AI integration",
+      "Gautam Kumar | Full-Stack Developer | AI-Integrated SaaS",
     description:
       "Built 4+ AI-integrated SaaS products including InterviewMinds, SwadKart, Satark AI, and TexFolio. Microsoft Elevate Intern. React, Node.js, TypeScript, Python & LLMs specialist.",
     type: "website",
@@ -59,14 +59,14 @@ export const metadata: Metadata = {
         url: "https://gautam-kr.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Gautam Kumar — Full-Stack Developer | Solo-shipped 4 SaaS products | AI integration, Portfolio",
+        alt: "Gautam Kumar — Full-Stack Developer | AI-Integrated SaaS, Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Gautam Kumar | Full-Stack Developer | Solo-shipped 4 SaaS products | AI integration",
+      "Gautam Kumar | Full-Stack Developer | AI-Integrated SaaS",
     description:
       "Creator of InterviewMinds, SwadKart, Satark AI & TexFolio. Microsoft Elevate Intern. Building production AI products.",
     creator: "@_unstopabble",
