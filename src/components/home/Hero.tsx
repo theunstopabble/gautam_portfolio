@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -60,12 +59,8 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
-        {/* Status badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        {/* Status badge — CSS animation */}
+        <div className="animate-hero-fade-in">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
@@ -73,25 +68,16 @@ export function Hero() {
             </span>
             Available for Opportunities
           </span>
-        </motion.div>
+        </div>
 
-        {/* Name + Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-8 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
-        >
+        {/* Name + Title — transform-only CSS animation, no opacity flash */}
+        <h1 className="mt-8 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl animate-hero-rise [animation-delay:0.1s]">
           <span className="block text-foreground">Hi, I&apos;m</span>
           <span className="gradient-text mt-2 block">Gautam Kumar</span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
-        >
+        {/* Subtitle (LCP element) — ALWAYS visible, no JS dependency */}
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
           Full Stack Developer with a{" "}
           <span className="font-semibold text-foreground">
             Microsoft Elevate
@@ -102,15 +88,10 @@ export function Hero() {
           </span>{" "}
           using React, Node.js, Python & LLMs — from deepfake detectors to LaTeX
           resume builders.
-        </motion.p>
+        </p>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
-        >
+        {/* CTA Buttons — CSS animation */}
+        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 animate-hero-fade-in-fast [animation-delay:0.2s]">
           {/* Mobile: Resume | Desktop: View My Work */}
           <Button
             size="lg"
@@ -146,21 +127,13 @@ export function Hero() {
               Contact Me <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>
-        </motion.div>
+        </div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-10"
-        >
-          {stats.map((stat, i) => (
-            <motion.div
+        {/* Stats — CSS animation */}
+        <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-10 animate-hero-fade-in-fast [animation-delay:0.3s]">
+          {stats.map((stat) => (
+            <div
               key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 + i * 0.1 }}
               className="text-center"
             >
               <div className="text-2xl font-extrabold text-foreground md:text-3xl">
@@ -169,17 +142,12 @@ export function Hero() {
               <div className="mt-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 {stat.label}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Social Links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-14 flex gap-4"
-        >
+        {/* Social Links — CSS animation */}
+        <div className="mt-14 flex gap-4 animate-hero-fade-in-fast [animation-delay:0.4s]">
           {socialLinks.map((link) => {
             const Icon = link.icon;
             return (
@@ -195,20 +163,17 @@ export function Hero() {
               </a>
             );
           })}
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.a
+      <a
         href="#experience"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50 hover:text-muted-foreground transition-colors"
       >
         <span className="text-xs uppercase tracking-widest">Scroll</span>
         <ChevronDown className="h-4 w-4 animate-scroll-indicator" />
-      </motion.a>
+      </a>
     </section>
   );
 }
