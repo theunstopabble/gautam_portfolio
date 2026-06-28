@@ -2,13 +2,13 @@
 
 ## Identity
 - Name: Gautam Kumar
-- Title: Full-Stack Developer & AI Engineer
+- Title: Full-Stack Developer | Solo-shipped 4 SaaS Products | AI Integration
 - Location: Jaipur, Rajasthan, India
 - University: Jagannath University, Jaipur
 - Portfolio: https://gautam-kr.vercel.app
 
 ## Summary
-Gautam Kumar is a Full-Stack Developer and AI Engineer who builds production-grade SaaS applications, deepfake detection models, and smart web solutions. He completed a Microsoft Elevate × AICTE internship and has experience with real-time systems and microservice architecture.
+Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a Microsoft Elevate × AICTE internship and has experience with real-time systems and microservice architecture.
 
 ## Projects
 

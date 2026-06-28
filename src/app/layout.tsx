@@ -9,9 +9,9 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   title:
-    "Gautam Kumar | Full-Stack Developer & AI Engineer Portfolio",
+    "Gautam Kumar | Full-Stack Developer | Solo-shipped 4 SaaS | AI Integration — Portfolio",
   description:
-    "Explore the professional portfolio of Gautam Kumar, a MERN stack developer and AI enthusiast building production-grade SaaS applications, deepfake detection models, and smart web solutions.",
+    "Full-Stack Developer · Solo-shipped 4 SaaS Products · Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio — React, Node, Python & LLMs.",
   keywords: [
     "Gautam Kumar",
     "Gautam Kumar developer",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Gautam Kumar | Full-Stack Developer & AI Engineer Portfolio",
+      "Gautam Kumar | Full-Stack Developer | Solo-shipped 4 SaaS | AI Integration",
     description:
-      "Explore the professional portfolio of Gautam Kumar, a MERN stack developer and AI enthusiast building production-grade SaaS applications, deepfake detection models, and smart web solutions.",
+      "Full-Stack Developer · Solo-shipped 4 SaaS Products · Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio — React, Node, Python & LLMs.",
     type: "website",
     locale: "en_US",
     url: "https://gautam-kr.vercel.app",
@@ -59,16 +59,16 @@ export const metadata: Metadata = {
         url: "https://gautam-kr.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Gautam Kumar — Full-Stack Developer & AI Engineer Portfolio",
+        alt: "Gautam Kumar — Full-Stack Developer | Solo-shipped 4 SaaS | AI Integration, Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Gautam Kumar | Full-Stack Developer & AI Engineer",
+      "Gautam Kumar | Full-Stack Developer | Solo-shipped 4 SaaS | AI Integration",
     description:
-      "Explore the professional portfolio of Gautam Kumar, a MERN stack developer and AI enthusiast building production-grade SaaS applications, deepfake detection models, and smart web solutions.",
+      "Full-Stack Developer · Solo-shipped 4 SaaS Products · Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio — React, Node, Python & LLMs.",
     creator: "@_unstopabble",
   },
   robots: {
@@ -107,7 +107,7 @@ export default function RootLayout({
                   name: "Who is Gautam Kumar?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Gautam Kumar is a Full-Stack Developer and AI Engineer based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building production-grade SaaS applications with React, Node.js, TypeScript, Python, and LLM integration.",
+                    text: "Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building production-grade SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
                   },
                 },
                 {
@@ -183,7 +183,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Gautam Kumar",
               description:
-                "Full-Stack Developer & AI Engineer who builds production-grade SaaS applications, deepfake detection models, and smart web solutions.",
+                "Full-Stack Developer who has solo-shipped 4 SaaS products with AI integration.",
               url: "https://gautam-kr.vercel.app",
               email: "gautamkumar43421@gmail.com",
               telephone: "+91-6207793196",
@@ -213,9 +213,9 @@ export default function RootLayout({
                   "@id": "https://gautam-kr.vercel.app/#person",
                   name: "Gautam Kumar",
                   url: "https://gautam-kr.vercel.app",
-                  jobTitle: "Full-Stack Developer & AI Engineer",
+                  jobTitle: "Full-Stack Developer",
                   description:
-                    "Gautam Kumar is a Full-Stack Developer and AI Engineer who builds production-grade SaaS applications, deepfake detection models, and smart web solutions. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate × AICTE Intern. B.Tech Computer Science student at Jagannath University, Jaipur (2023–2027).",
+                    "Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate × AICTE Intern. B.Tech Computer Science student at Jagannath University, Jaipur (2023–2027).",
                   email: "gautamkumar43421@gmail.com",
                   image: "https://gautam-kr.vercel.app/profile.png",
                   alumniOf: {
@@ -321,7 +321,7 @@ export default function RootLayout({
       >
         <meta itemProp="name" content="Gautam Kumar" />
         <meta itemProp="url" content="https://gautam-kr.vercel.app" />
-        <meta itemProp="jobTitle" content="Full-Stack Developer & AI Engineer" />
+        <meta itemProp="jobTitle" content="Full-Stack Developer" />
         <Navbar />
         {children}
         <AnalyticsProvider />
