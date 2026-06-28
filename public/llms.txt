@@ -8,7 +8,7 @@
 - [Portfolio](https://gautam-kr.vercel.app)
 
 ## Summary
-Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/#experience) and has experience with real-time systems and microservice architecture.
+Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/experience) and has experience with real-time systems and microservice architecture.
 
 ## Projects
 
@@ -43,12 +43,12 @@ Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS ap
 ## Navigation
 - [Home](https://gautam-kr.vercel.app)
 - All Projects: [gautam-kr.vercel.app/projects](https://gautam-kr.vercel.app/projects)
-- [Experience & Internships](https://gautam-kr.vercel.app/#experience)
-- [Skills & Technologies](https://gautam-kr.vercel.app/#skills)
-- [Education](https://gautam-kr.vercel.app/#education)
-- [About Gautam Kumar](https://gautam-kr.vercel.app/#about)
-- [FAQ](https://gautam-kr.vercel.app/#faq)
-- [Contact](https://gautam-kr.vercel.app/#contact)
+- [Experience & Internships](https://gautam-kr.vercel.app/experience)
+- [Skills & Technologies](https://gautam-kr.vercel.app/skills)
+- [Education](https://gautam-kr.vercel.app/education)
+- [About Gautam Kumar](https://gautam-kr.vercel.app/about)
+- [FAQ](https://gautam-kr.vercel.app/faq)
+- [Contact](https://gautam-kr.vercel.app/contact)
 
 ## Skills & Expertise
 
@@ -88,4 +88,4 @@ Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS ap
 - Location: Jaipur, Rajasthan, India
 
 ## Experience
-- [Microsoft Elevate Internship (AICTE)](https://gautam-kr.vercel.app/#experience)
+- [Microsoft Elevate Internship (AICTE)](https://gautam-kr.vercel.app/experience)

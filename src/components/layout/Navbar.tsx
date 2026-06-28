@@ -28,13 +28,13 @@ export function Navbar() {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Experience", href: "/#experience" },
+    { name: "Experience", href: "/experience" },
     { name: "Projects", href: "/projects" },
-    { name: "Skills", href: "/#skills" },
-    { name: "Education", href: "/#education" },
-    { name: "About", href: "/#about" },
-    { name: "FAQ", href: "/#faq" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Skills", href: "/skills" },
+    { name: "Education", href: "/education" },
+    { name: "About", href: "/about" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (

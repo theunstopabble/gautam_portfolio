@@ -142,7 +142,7 @@ export function Hero() {
             asChild
             onClick={trackContactClick}
           >
-            <a href="#contact">
+            <a href="/contact">
               Contact Me <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>

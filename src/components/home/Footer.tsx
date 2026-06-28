@@ -1,16 +1,17 @@
 "use client";
 
 import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
+import Link from "next/link";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Experience", href: "#experience" },
+  { name: "Home", href: "/" },
+  { name: "Experience", href: "/experience" },
   { name: "Projects", href: "/projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Education", href: "#education" },
-  { name: "About", href: "#about" },
-  { name: "FAQ", href: "#faq" },
-  { name: "Contact", href: "#contact" },
+  { name: "Skills", href: "/skills" },
+  { name: "Education", href: "/education" },
+  { name: "About", href: "/about" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const socialLinks = [
@@ -44,12 +45,12 @@ export function Footer() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-xl font-bold tracking-tighter text-foreground"
             >
               Gautam Kumar<span className="gradient-text">.</span>
-            </a>
+            </Link>
             <p className="mx-auto mt-2 max-w-xs text-sm text-muted-foreground md:mx-0">
               Full Stack Developer crafting production-grade SaaS products with
               AI integration.
@@ -59,13 +60,13 @@ export function Footer() {
           {/* Nav links */}
           <nav className="flex flex-wrap items-center justify-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="text-sm text-muted-foreground transition-colors hover:text-primary"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

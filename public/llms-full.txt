@@ -13,17 +13,17 @@
 - Twitter/X: [x.com/_unstopabble](https://x.com/_unstopabble)
 
 ## Summary
-Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/#experience) and has experience with real-time systems and microservice architecture.
+Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/experience) and has experience with real-time systems and microservice architecture.
 
 ## Navigation
 - [Home](https://gautam-kr.vercel.app)
 - All Projects: [gautam-kr.vercel.app/projects](https://gautam-kr.vercel.app/projects)
-- [Experience & Internships](https://gautam-kr.vercel.app/#experience)
-- [Skills & Technologies](https://gautam-kr.vercel.app/#skills)
-- [Education](https://gautam-kr.vercel.app/#education)
-- [About Gautam Kumar](https://gautam-kr.vercel.app/#about)
-- [FAQ](https://gautam-kr.vercel.app/#faq)
-- [Contact](https://gautam-kr.vercel.app/#contact)
+- [Experience & Internships](https://gautam-kr.vercel.app/experience)
+- [Skills & Technologies](https://gautam-kr.vercel.app/skills)
+- [Education](https://gautam-kr.vercel.app/education)
+- [About Gautam Kumar](https://gautam-kr.vercel.app/about)
+- [FAQ](https://gautam-kr.vercel.app/faq)
+- [Contact](https://gautam-kr.vercel.app/contact)
 - [Privacy Policy](https://gautam-kr.vercel.app/privacy)
 
 ## Education
@@ -31,17 +31,17 @@ Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS ap
 
 ## Work Experience
 
-### [Microsoft Elevate × AICTE](https://gautam-kr.vercel.app/#experience) — Emerging Technologies Intern (Jan 2026 – Feb 2026)
+### [Microsoft Elevate × AICTE](https://gautam-kr.vercel.app/experience) — Emerging Technologies Intern (Jan 2026 – Feb 2026)
 - Built Satark-AI, a deepfake detection platform using Microsoft Azure, FastAPI, PyTorch, and SpeechBrain
 - Designed a 3-tier microservice architecture with an AI-powered audio forensics engine
 - [Certificate](https://drive.google.com/file/d/1ZDyJBjn9AgeQEfppbwgAeAyoPS5ADgwn/view)
 
-### [Edunet Foundation (AICTE × IBM SkillsBuild)](https://gautam-kr.vercel.app/#experience) — Frontend Web Development Intern (Aug 2025 – Sep 2025)
+### [Edunet Foundation (AICTE × IBM SkillsBuild)](https://gautam-kr.vercel.app/experience) — Frontend Web Development Intern (Aug 2025 – Sep 2025)
 - Engineered responsive UIs achieving 95+ Lighthouse score and 100% cross-browser compatibility
 - Optimized frontend asset loading resulting in 30% reduction in initial page load time
 - [Certificate](https://drive.google.com/file/d/1_ZL-2ghlWanTam-9ftSBHnTtZb6Im3vu/view)
 
-### [YHills](https://gautam-kr.vercel.app/#experience) — Full-Stack Web Development Intern (Mar 2024 – Jun 2024)
+### [YHills](https://gautam-kr.vercel.app/experience) — Full-Stack Web Development Intern (Mar 2024 – Jun 2024)
 - Developed scalable full-stack application using MERN Stack with RESTful APIs
 - Built dynamic React.js frontend components improving user engagement by 25%
 - [Certificate](https://drive.google.com/file/d/1iPIKxZXLxYtsQKYTnrVtYLo-inKc17Gg/view)
