@@ -5,7 +5,10 @@ export const projects: Project[] = [
   {
     id: "interviewminds",
     title: "InterviewMinds",
-    tagline: "Production-grade AI Mock Interview Platform",
+    tagline: "AI-Powered Mock Interview Platform",
+    seoTitle: "InterviewMinds - AI-Powered Mock Interview Platform",
+    seoDescription:
+      "A production-grade AI mock interview platform featuring a custom automated proctoring system and a live built-in code compiler to replace generic chatbots with realistic tech assessments.",
     description:
       "A Production-grade AI Mock Interview Platform with 91 features across 18 phases. Features AI-powered interviews via Groq Llama 3.3-70b, real-time ML video proctoring (face-api.js with TensorFlow.js), CRDT collaborative code editor with three-way merge, WebRTC video calls with STUN/TURN + SFU, sandboxed code execution via Piston API, and multimodal voice tone analysis. Built as a Turborepo monorepo with 81 service modules, 38 route files, and 7 MongoDB models.",
     icon: UserCheck,
@@ -77,7 +80,10 @@ export const projects: Project[] = [
   {
     id: "satark-ai",
     title: "Satark-AI",
-    tagline: "Multi-Model Deepfake Detection & Speaker Verification",
+    tagline: "Deepfake Audio Detection & Voice Verification",
+    seoTitle: "Satark-AI - Deepfake Audio Detection & Voice Verification",
+    seoDescription:
+      "A comprehensive AI-driven security platform built with Python, FastAPI, and Supabase for real-time deepfake audio detection, synthetic voice identification, and secure voice verification.",
     description:
       "A production-grade deepfake detection platform built as a Turborepo microservices monorepo. Detects synthetic audio via Wav2Vec2 + MFCC spectral forensics, deepfake images via NVIDIA NIM (Llama 3.2-90B Vision) through a Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN voice biometrics with 192-dim embeddings and cosine similarity matching. Ships as a PWA with real-time microphone monitoring, analytics dashboard, and PDF report exports.",
     icon: Share2,
@@ -146,7 +152,10 @@ export const projects: Project[] = [
   {
     id: "texfolio",
     title: "TexFolio",
-    tagline: "AI-Powered LaTeX Resume Builder SaaS",
+    tagline: "Premium AI-Powered LaTeX Resume Builder",
+    seoTitle: "TexFolio - Premium AI-Powered LaTeX Resume Builder",
+    seoDescription:
+      "Craft industry-standard, ATS-friendly resumes effortlessly. TexFolio is an AI-driven SaaS application that natively renders beautiful, professional resumes in pure LaTeX format.",
     description:
       "A modern SaaS that combines real LaTeX PDF rendering with LLM intelligence. Features a LangGraph multi-agent resume coach (ATS scoring), LinkedIn PDF import via Llama 3.3, FAANG-ready templates, drag-and-drop editor, Organizations with RBAC (Owner → Admin → Editor → Viewer), BullMQ async PDF generation with progress tracking, distributed Redis rate limiting, Razorpay payments, and GDPR compliance (data export + PII anonymization).",
     icon: FileText,
@@ -218,7 +227,10 @@ export const projects: Project[] = [
   {
     id: "swadkart",
     title: "SwadKart",
-    tagline: "Multi-Vendor Food Delivery Ecosystem",
+    tagline: "Hyper-Local Food Delivery PWA",
+    seoTitle: "SwadKart - Hyper-Local Food Delivery PWA",
+    seoDescription:
+      "A highly responsive, hyper-local food delivery progressive web application developed using the MERN stack, offering real-time tracking, slick animations, and seamless user experience.",
     description:
       "A production-grade multi-vendor food delivery platform with 4-role ecosystem (Admin, Restaurant, Delivery, Customer). Features AI chatbot (Groq LLM) for food recommendations, voice search in English & Hindi, biometric auth (WebAuthn fingerprint/FaceID), real-time GPS delivery tracking via Socket.io, Razorpay payments (UPI/Cards/Wallets/COD), gamification (streaks, SwadCoins, badges), group ordering with bill splitting, and PWA with offline support. Built with 30+ API routes, 14 Mongoose schemas, and enterprise security (fraud detection, rate limiting, GDPR).",
     icon: ShoppingCart,

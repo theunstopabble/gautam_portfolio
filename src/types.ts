@@ -4,6 +4,8 @@ export interface Project {
   id: string;
   title: string;
   tagline: string;
+  seoTitle?: string;
+  seoDescription?: string;
   description: string;
   icon: LucideIcon;
   tags: string[];

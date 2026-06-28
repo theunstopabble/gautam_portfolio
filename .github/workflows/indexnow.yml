@@ -1,0 +1,28 @@
+name: IndexNow Auto-Submit
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify IndexNow (Bing)
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "gautam-kr.vercel.app",
+              "key": "ba4f5665b216c947e572f1846cfc2f11",
+              "keyLocation": "https://gautam-kr.vercel.app/ba4f5665b216c947e572f1846cfc2f11.txt",
+              "urlList": [
+                "https://gautam-kr.vercel.app",
+                "https://gautam-kr.vercel.app/projects",
+                "https://gautam-kr.vercel.app/projects/interviewminds",
+                "https://gautam-kr.vercel.app/projects/satark-ai",
+                "https://gautam-kr.vercel.app/projects/texfolio",
+                "https://gautam-kr.vercel.app/projects/swadkart",
+                "https://gautam-kr.vercel.app/privacy"
+              ]
+            }' -w "\nHTTP %{http_code}"

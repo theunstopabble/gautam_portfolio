@@ -20,12 +20,12 @@ export async function generateMetadata({
   if (!project) return {};
 
   return {
-    title: `${project.title} — ${project.tagline} | Gautam Kumar`,
-    description: project.description,
+    title: project.seoTitle || `${project.title} — ${project.tagline} | Gautam Kumar`,
+    description: project.seoDescription || project.description,
     keywords: project.tags,
     openGraph: {
-      title: `${project.title} — ${project.tagline}`,
-      description: project.description,
+      title: project.seoTitle || `${project.title} — ${project.tagline}`,
+      description: project.seoDescription || project.description,
       url: `https://gautam-kr.vercel.app/projects/${project.id}`,
       images: project.image
         ? [
