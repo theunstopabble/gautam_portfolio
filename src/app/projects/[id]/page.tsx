@@ -70,7 +70,7 @@ export default async function ProjectPage({
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://gautam-kr.vercel.app" },
-              { "@type": "ListItem", position: 2, name: "Projects", item: "https://gautam-kr.vercel.app/#projects" },
+              { "@type": "ListItem", position: 2, name: "Projects", item: "https://gautam-kr.vercel.app/projects" },
               { "@type": "ListItem", position: 3, name: project.title, item: `https://gautam-kr.vercel.app/projects/${project.id}` },
             ],
           }),
@@ -84,7 +84,7 @@ export default async function ProjectPage({
       <section className="mx-auto max-w-4xl px-6 py-20">
         {/* Back to portfolio */}
         <Link
-          href="/#projects"
+          href="/projects"
           className="mb-8 inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
         >
           ← Back to Portfolio

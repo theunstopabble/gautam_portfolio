@@ -163,7 +163,7 @@ export default function RootLayout({
                   "@type": "ListItem",
                   position: 2,
                   name: "Projects",
-                  item: "https://gautam-kr.vercel.app/#projects",
+                  item: "https://gautam-kr.vercel.app/projects",
                 },
                 {
                   "@type": "ListItem",
