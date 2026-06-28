@@ -3,7 +3,7 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    id: "interview-minds",
+    id: "interviewminds",
     title: "InterviewMinds",
     tagline: "Production-grade AI Mock Interview Platform",
     description:

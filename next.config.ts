@@ -2,6 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  async redirects() {
+    return [
+      {
+        source: "/projects/interview-minds",
+        destination: "/projects/interviewminds",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

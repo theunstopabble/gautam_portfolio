@@ -5,7 +5,7 @@ const HOST = "gautam-kr.vercel.app";
 
 const ALL_URLS = [
   `https://${HOST}`,
-  `https://${HOST}/projects/interview-minds`,
+  `https://${HOST}/projects/interviewminds`,
   `https://${HOST}/projects/satark-ai`,
   `https://${HOST}/projects/texfolio`,
   `https://${HOST}/projects/swadkart`,
