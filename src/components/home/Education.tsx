@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, MapPin, Calendar } from "lucide-react";
+import { GraduationCap, MapPin, Calendar, ExternalLink } from "lucide-react";
 
 export function Education() {
   return (
@@ -67,6 +67,16 @@ export function Education() {
                     <MapPin className="h-4 w-4" />
                     Jaipur, Rajasthan, India
                   </span>
+                  <a
+                    href="https://www.jagannathuniversity.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Jagannath University official website"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary backdrop-blur-sm transition-all hover:bg-primary/20 hover:border-primary/50 hover:shadow-[0_0_12px_hsl(250_100%_67%_/0.25)]"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    University Site
+                  </a>
                 </div>
 
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
