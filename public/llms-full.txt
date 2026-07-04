@@ -2,7 +2,7 @@
 
 ## Identity
 - Name: Gautam Kumar
-- Title: Full-Stack Developer | Solo-shipped 4 SaaS Products | AI Integration
+- Title: Full-Stack Developer | Solo-shipped 4 SaaS products | AI integration
 - Location: Jaipur, Rajasthan, India
 - University: [Jagannath University, Jaipur](https://www.jagannathuniversity.org) (B.Tech CSE, 2023-2027)
 - [Portfolio](https://gautam-kr.vercel.app)
