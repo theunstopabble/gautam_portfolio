@@ -117,7 +117,7 @@ export function Hero() {
           <span className="font-semibold text-foreground">
             AI-integrated SaaS products
           </span>{" "}
-          using React, Node.js, Python & LLMs — from deepfake detectors to LaTeX
+          using React, Node.js & TypeScript — from deepfake detectors to LaTeX
           resume builders.
         </motion.p>
 
