@@ -19,7 +19,7 @@ import { trackResumeClick, trackContactClick } from "@/components/Analytics";
 const stats = [
   { label: "Projects Built", value: "4+" },
   { label: "Internships", value: "3" },
-  { label: "AI Models", value: "5+" },
+  { label: "SaaS Shipped", value: "4" },
   { label: "Tech Stack", value: "30+" },
 ];
 
@@ -62,20 +62,23 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
         {/* Profile Photo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Image
-            src="/profile.webp"
-            alt="Gautam Kumar"
-            width={120}
-            height={120}
-            priority
-            className="mb-6 h-28 w-28 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 md:h-32 md:w-32"
-          />
-        </motion.div>
+        <div className="relative mb-8">
+          <div className="absolute inset-0 rounded-full bg-primary/20 blur-3xl" />
+          <motion.div
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Image
+              src="/profile.webp"
+              alt="Gautam Kumar"
+              width={160}
+              height={160}
+              priority
+              className="relative h-36 w-36 rounded-full border-[3px] border-primary/40 object-cover shadow-2xl shadow-primary/30 transition-transform duration-300 hover:scale-105 md:h-40 md:w-40"
+            />
+          </motion.div>
+        </div>
 
         {/* Status badge */}
         <motion.div
