@@ -48,7 +48,7 @@ const socialLinks = [
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[80dvh] flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-8 md:py-24">
+    <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-24 md:py-24">
       {/* Animated background orbs */}
       <div className="absolute inset-0 z-0">
         <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-100 w-100 rounded-full bg-primary/15 blur-[120px] animate-pulse-glow" />
@@ -195,7 +195,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-6 md:mt-14 flex gap-3"
+          className="mt-4 md:mt-14 flex gap-3"
         >
           {socialLinks.map((link) => {
             const Icon = link.icon;
