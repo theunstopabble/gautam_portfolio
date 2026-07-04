@@ -73,6 +73,7 @@ export function Hero() {
             width={120}
             height={120}
             priority
+            unoptimized
             className="mb-3 h-20 w-20 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 ring-2 ring-primary/20 ring-offset-2 ring-offset-background md:h-32 md:w-32"
           />
         </motion.div>
