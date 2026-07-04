@@ -48,7 +48,7 @@ const socialLinks = [
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 py-12 md:py-24">
+    <section className="relative flex min-h-[80dvh] flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-8 md:py-24">
       {/* Animated background orbs */}
       <div className="absolute inset-0 z-0">
         <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-100 w-100 rounded-full bg-primary/15 blur-[120px] animate-pulse-glow" />
@@ -61,52 +61,47 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
-        {/* Photo + Badge + Name — row on mobile, centered stack on desktop */}
-        <div className="flex w-full flex-col items-center text-center md:flex-col md:items-center md:text-center sm:flex-row sm:items-center sm:gap-5 sm:text-left sm:justify-center">
-          {/* Profile Photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Image
-              src="/profile.webp"
-              alt="Gautam Kumar"
-              width={120}
-              height={120}
-              priority
-              className="mb-3 sm:mb-0 h-20 w-20 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 md:h-32 md:w-32"
-            />
-          </motion.div>
+        {/* Profile Photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src="/profile.webp"
+            alt="Gautam Kumar"
+            width={120}
+            height={120}
+            priority
+            className="mb-3 h-20 w-20 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 md:h-32 md:w-32"
+          />
+        </motion.div>
 
-          <div className="flex flex-col items-center sm:items-start">
-            {/* Status badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="mb-3 md:mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary backdrop-blur-sm">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-                </span>
-                Available for Opportunities
-              </span>
-            </motion.div>
+        {/* Status badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <span className="mb-3 md:mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary backdrop-blur-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+            </span>
+            Available for Opportunities
+          </span>
+        </motion.div>
 
-            {/* Name */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
-            >
-              <span className="block text-foreground">Hi, I&apos;m</span>
-              <span className="gradient-text mt-2 block">Gautam Kumar</span>
-            </motion.h1>
-          </div>
-        </div>
+        {/* Name */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-3xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
+        >
+          <span className="block text-foreground">Hi, I&apos;m</span>
+          <span className="gradient-text mt-2 block">Gautam Kumar</span>
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
