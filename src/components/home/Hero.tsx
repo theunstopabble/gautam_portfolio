@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { trackResumeClick, trackContactClick } from "@/components/Analytics";
 
 const stats = [
@@ -60,6 +61,22 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center text-center">
+        {/* Profile Photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src="/profile.webp"
+            alt="Gautam Kumar"
+            width={120}
+            height={120}
+            priority
+            className="mb-6 h-28 w-28 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 md:h-32 md:w-32"
+          />
+        </motion.div>
+
         {/* Status badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

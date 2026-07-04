@@ -217,7 +217,7 @@ export default function RootLayout({
               url: "https://gautam-kr.vercel.app",
               email: "gautamkumar43421@gmail.com",
               telephone: "+91-6207793196",
-              image: "https://gautam-kr.vercel.app/profile.png",
+              image: "https://gautam-kr.vercel.app/profile.webp",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Jaipur",
@@ -247,7 +247,7 @@ export default function RootLayout({
                   description:
                     "Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate × AICTE Intern. B.Tech Computer Science student at Jagannath University, Jaipur (2023–2027).",
                   email: "gautamkumar43421@gmail.com",
-                  image: "https://gautam-kr.vercel.app/profile.png",
+                  image: "https://gautam-kr.vercel.app/profile.webp",
                   alumniOf: {
                     "@type": "EducationalOrganization",
                     name: "Jagannath University, Jaipur",
