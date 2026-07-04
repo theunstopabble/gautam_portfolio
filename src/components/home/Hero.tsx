@@ -19,7 +19,7 @@ import { trackResumeClick, trackContactClick } from "@/components/Analytics";
 const stats = [
   { label: "Projects Built", value: "4+" },
   { label: "Internships", value: "3" },
-  { label: "AI Models", value: "5+" },
+  { label: "SaaS Shipped", value: "4" },
   { label: "Tech Stack", value: "30+" },
 ];
 
@@ -48,7 +48,7 @@ const socialLinks = [
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-24 md:px-8">
+    <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 py-16 md:py-24">
       {/* Animated background orbs */}
       <div className="absolute inset-0 z-0">
         <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-100 w-100 rounded-full bg-primary/15 blur-[120px] animate-pulse-glow" />
@@ -73,7 +73,7 @@ export function Hero() {
             width={120}
             height={120}
             priority
-            className="mb-6 h-28 w-28 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 md:h-32 md:w-32"
+            className="mb-4 h-28 w-28 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 md:h-32 md:w-32"
           />
         </motion.div>
 
@@ -97,7 +97,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-8 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
+          className="mt-6 md:mt-10 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
         >
           <span className="block text-foreground">Hi, I&apos;m</span>
           <span className="gradient-text mt-2 block">Gautam Kumar</span>
@@ -107,7 +107,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
+          className="mt-4 md:mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
         >
           Full Stack Developer with a{" "}
           <span className="font-semibold text-foreground">
@@ -126,7 +126,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
+          className="mt-8 md:mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
         >
           {/* Mobile: Resume | Desktop: View My Work */}
           <Button
@@ -170,7 +170,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-10"
+          className="mt-10 md:mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-10"
         >
           {stats.map((stat, i) => (
             <motion.div
@@ -195,7 +195,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-14 flex gap-4"
+          className="mt-8 md:mt-14 flex gap-4"
         >
           {socialLinks.map((link) => {
             const Icon = link.icon;
