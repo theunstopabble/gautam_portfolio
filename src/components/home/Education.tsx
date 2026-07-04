@@ -80,7 +80,7 @@ export function Education() {
                 </div>
 
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  Pursuing B.Tech with a focus on software development, AI/ML,
+                  Pursuing B.Tech with a focus on software development
                   and building production-grade SaaS applications. Completed 3
                   industry internships while maintaining academic excellence.
                 </p>
