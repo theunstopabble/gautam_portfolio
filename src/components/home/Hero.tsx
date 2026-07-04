@@ -48,7 +48,7 @@ const socialLinks = [
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 py-16 md:py-24">
+    <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 py-12 md:py-24">
       {/* Animated background orbs */}
       <div className="absolute inset-0 z-0">
         <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-100 w-100 rounded-full bg-primary/15 blur-[120px] animate-pulse-glow" />
@@ -73,7 +73,7 @@ export function Hero() {
             width={120}
             height={120}
             priority
-            className="mb-4 h-28 w-28 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 md:h-32 md:w-32"
+            className="mb-3 h-24 w-24 rounded-full border-2 border-primary/30 object-cover shadow-xl shadow-primary/20 md:h-32 md:w-32"
           />
         </motion.div>
 
@@ -83,7 +83,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-sm">
+          <span className="mb-3 md:mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
@@ -97,7 +97,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-6 md:mt-10 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
+          className="mt-4 md:mt-10 text-3xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
         >
           <span className="block text-foreground">Hi, I&apos;m</span>
           <span className="gradient-text mt-2 block">Gautam Kumar</span>
@@ -107,7 +107,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-4 md:mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
+          className="mt-3 md:mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
         >
           Full Stack Developer with a{" "}
           <span className="font-semibold text-foreground">
@@ -126,7 +126,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-8 md:mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
+          className="mt-6 md:mt-10 flex flex-col items-center gap-2 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
         >
           {/* Mobile: Resume | Desktop: View My Work */}
           <Button
@@ -170,7 +170,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-10 md:mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-10"
+          className="mt-8 md:mt-16 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-10"
         >
           {stats.map((stat, i) => (
             <motion.div
@@ -195,7 +195,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-8 md:mt-14 flex gap-4"
+          className="mt-6 md:mt-14 flex gap-3"
         >
           {socialLinks.map((link) => {
             const Icon = link.icon;
