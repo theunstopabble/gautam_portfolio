@@ -110,7 +110,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-3 md:mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
         >
-          Full Stack Developer with a{" "}
+          Full-Stack Developer with a{" "}
           <span className="font-semibold text-foreground">
             Microsoft Elevate
           </span>{" "}

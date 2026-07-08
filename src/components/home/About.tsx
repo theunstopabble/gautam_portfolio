@@ -66,7 +66,7 @@ export function About() {
                 </span>{" "}
                 at Jagannath University, Jaipur, and a{" "}
                 <span className="font-semibold text-foreground">
-                  Full Stack Developer
+                  Full-Stack Developer
                 </span>{" "}
                 passionate about building products that make a real impact.
               </p>
@@ -86,7 +86,7 @@ export function About() {
               <p>
                 I thrive at the intersection of{" "}
                 <span className="font-semibold text-foreground">
-                  AI/ML and Full Stack Development
+                  AI/ML and Full-Stack Development
                 </span>
                 , using technologies like React, Node.js, Python, LLMs (Llama 3,
                 LangGraph), and DevOps tools (Docker, TurboRepo) to build

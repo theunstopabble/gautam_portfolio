@@ -52,7 +52,7 @@ export function Footer() {
               Gautam Kumar<span className="gradient-text">.</span>
             </Link>
             <p className="mx-auto mt-2 max-w-xs text-sm text-muted-foreground md:mx-0">
-              Full Stack Developer crafting production-grade SaaS products with
+              Full-Stack Developer crafting production-grade SaaS products with
               AI integration.
             </p>
           </div>
