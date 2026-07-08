@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { HelpCircle, ChevronDown } from "lucide-react";
 
-const faqs = [
+const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "Who is Gautam Kumar?",
     answer:
@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What projects has Gautam Kumar built?",
     answer:
-      "Gautam Kumar has built SaaS products: InterviewMinds (AI mock interview platform at interviewminds.vercel.app), SwadKart (multi-vendor food delivery platform at swadkart.vercel.app), Satark-AI (deepfake detection platform at satark-deepfake.vercel.app), and TexFolio (AI-powered LaTeX resume builder at texfolio.vercel.app).",
+      <>Gautam Kumar has built SaaS products: InterviewMinds (AI mock interview platform at{' '}<a href="https://interviewminds.vercel.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">interviewminds.vercel.app</a>), SwadKart (multi-vendor food delivery platform at{' '}<a href="https://swadkart.vercel.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">swadkart.vercel.app</a>), Satark-AI (deepfake detection platform at{' '}<a href="https://satark-deepfake.vercel.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">satark-deepfake.vercel.app</a>), and TexFolio (AI-powered LaTeX resume builder at{' '}<a href="https://texfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">texfolio.vercel.app</a>).</>,
   },
   {
     question: "What is Gautam Kumar's tech stack?",
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "How to contact Gautam Kumar?",
     answer:
-      "You can contact Gautam Kumar via email at gautamkumar43421@gmail.com, on LinkedIn at linkedin.com/in/gautamkr62, on GitHub at github.com/theunstopabble, or on Twitter/X at x.com/_unstopabble. His portfolio is at gautam-kr.vercel.app.",
+      <>You can contact Gautam Kumar via email at{' '}<a href="mailto:gautamkumar43421@gmail.com" className="text-primary hover:underline">gautamkumar43421@gmail.com</a>, on LinkedIn at{' '}<a href="https://linkedin.com/in/gautamkr62" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">linkedin.com/in/gautamkr62</a>, on GitHub at{' '}<a href="https://github.com/theunstopabble" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">github.com/theunstopabble</a>, or on Twitter/X at{' '}<a href="https://x.com/_unstopabble" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">x.com/_unstopabble</a>. His portfolio is at{' '}<a href="https://gautam-kr.vercel.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">gautam-kr.vercel.app</a>.</>,
   },
 ];
 
