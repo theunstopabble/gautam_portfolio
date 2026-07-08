@@ -13,7 +13,7 @@
 - Twitter/X: [x.com/_unstopabble](https://x.com/_unstopabble)
 
 ## Summary
-Gautam Kumar is a Full-Stack Developer who has solo-shipped 4 production SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/experience) and has experience with real-time systems and microservice architecture.
+Gautam Kumar is a Full-Stack Developer who has solo-shipped SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/experience) and has experience with real-time systems and microservice architecture.
 
 ## Navigation
 - [Home](https://gautam-kr.vercel.app)
