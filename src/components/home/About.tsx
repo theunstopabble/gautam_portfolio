@@ -78,7 +78,7 @@ export function About() {
                 and 3 production internships under my belt, I&apos;ve built and
                 deployed{" "}
                 <span className="font-semibold text-foreground">
-                  4 AI-integrated SaaS products
+                  with AI-integrated SaaS products
                 </span>{" "}
                 — from deepfake detection systems to AI-powered mock interview
                 platforms.

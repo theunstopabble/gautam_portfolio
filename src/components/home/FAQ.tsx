@@ -7,12 +7,12 @@ const faqs = [
   {
     question: "Who is Gautam Kumar?",
     answer:
-      "Gautam Kumar is a Full-Stack Developer who has solo-shipped production SaaS applications with AI integration, based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
+      "Gautam Kumar is a Full-Stack Developer who has solo-shipped SaaS applications with AI integration, based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
   },
   {
     question: "What projects has Gautam Kumar built?",
     answer:
-      "Gautam Kumar has built 4 major production SaaS products: InterviewMinds (AI mock interview platform at interviewminds.vercel.app), SwadKart (multi-vendor food delivery platform at swadkart.vercel.app), Satark-AI (deepfake detection platform at satark-deepfake.vercel.app), and TexFolio (AI-powered LaTeX resume builder at texfolio.vercel.app).",
+      "Gautam Kumar has built SaaS products: InterviewMinds (AI mock interview platform at interviewminds.vercel.app), SwadKart (multi-vendor food delivery platform at swadkart.vercel.app), Satark-AI (deepfake detection platform at satark-deepfake.vercel.app), and TexFolio (AI-powered LaTeX resume builder at texfolio.vercel.app).",
   },
   {
     question: "What is Gautam Kumar's tech stack?",
