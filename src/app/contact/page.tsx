@@ -4,11 +4,11 @@ import { Contact } from "@/components/home/Contact";
 export const metadata: Metadata = {
   title: "Contact | Gautam Kumar",
   description:
-    "Get in touch with Gautam Kumar — Full-Stack Developer | Solo-shipped 4 SaaS products | AI integration. Email, LinkedIn, GitHub, Twitter, or portfolio contact form.",
+    "Get in touch with Gautam Kumar — Full-Stack Developer | Solo-shipped SaaS products | AI integration. Email, LinkedIn, GitHub, Twitter, or portfolio contact form.",
   openGraph: {
     title: "Contact — Gautam Kumar",
     description:
-      "Get in touch with Gautam Kumar — Full-Stack Developer | Solo-shipped 4 SaaS products | AI integration.",
+      "Get in touch with Gautam Kumar — Full-Stack Developer | Solo-shipped SaaS products | AI integration.",
   },
 };
 

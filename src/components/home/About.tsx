@@ -6,7 +6,7 @@ import { User, Rocket, Code2, Coffee } from "lucide-react";
 const highlights = [
   {
     icon: Rocket,
-    label: "4 SaaS Products",
+    label: "SaaS Products",
     desc: "Deployed to production",
   },
   {
