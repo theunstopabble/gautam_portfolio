@@ -29,7 +29,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/theunstopabble/InterviewMinds",
     demo: "https://interviewminds.vercel.app/",
-    image: "/projects/InterviewMinds.png",
+    image: "/projects/InterviewMinds.webp",
     featured: true,
     color: "from-purple-500 to-indigo-600",
     stats: {
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/theunstopabble/Satark-AI",
     demo: "https://satark-deepfake.vercel.app/",
-    image: "/projects/Satark-AI.png",
+    image: "/projects/Satark-AI.webp",
     featured: true,
     color: "from-red-500 to-rose-600",
     stats: {
@@ -175,7 +175,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/theunstopabble/TexFolio",
     demo: "https://texfolio.vercel.app/",
-    image: "/projects/TexFolio.png",
+    image: "/projects/TexFolio.webp",
     featured: true,
     color: "from-blue-500 to-cyan-600",
     stats: {
@@ -250,7 +250,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/theunstopabble/swadkart",
     demo: "https://swadkart.vercel.app/",
-    image: "/projects/SwadKart.png",
+    image: "/projects/SwadKart.webp",
     featured: true,
     color: "from-orange-500 to-amber-600",
     stats: {
