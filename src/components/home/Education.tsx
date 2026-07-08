@@ -51,8 +51,15 @@ export function Education() {
                 🎓
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">
-                  Jagannath University
+                <h3 className="text-xl font-bold">
+                  <a
+                    href="https://www.jagannathuniversity.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:text-primary transition-colors"
+                  >
+                    Jagannath University
+                  </a>
                 </h3>
                 <p className="mt-1 text-base font-medium text-primary">
                   Bachelor of Technology (B.Tech) in Computer Science

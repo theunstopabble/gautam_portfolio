@@ -7,7 +7,9 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "Who is Gautam Kumar?",
     answer:
-      "Gautam Kumar is a Full-Stack Developer who has solo-shipped SaaS applications with AI integration, based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
+      <>Gautam Kumar is a Full-Stack Developer who has solo-shipped SaaS applications with AI integration, based in Jaipur, India. He is a student at{' '}
+        <a href="https://www.jagannathuniversity.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Jagannath University</a>
+        {' '}and a Microsoft Elevate Intern. He specializes in building SaaS products with React, Node.js, TypeScript, Python, and LLM integration.</>,
   },
   {
     question: "What projects has Gautam Kumar built?",
@@ -22,7 +24,9 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "Where does Gautam Kumar study?",
     answer:
-      "Gautam Kumar studies at Jagannath University in Jaipur, Rajasthan, India. He is also a Microsoft Elevate Intern through the AICTE program.",
+      <>Gautam Kumar studies at{' '}
+        <a href="https://www.jagannathuniversity.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Jagannath University</a>
+        {' '}in Jaipur, Rajasthan, India. He is also a Microsoft Elevate Intern through the AICTE program.</>,
   },
   {
     question: "How to contact Gautam Kumar?",
