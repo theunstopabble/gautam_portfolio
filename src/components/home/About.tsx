@@ -64,7 +64,16 @@ export function About() {
                 <span className="font-semibold text-foreground">
                   Computer Science student
                 </span>{" "}
-                at Jagannath University, Jaipur, and a{" "}
+                at{" "}
+                <a
+                  href="https://www.jagannathuniversity.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-primary hover:underline"
+                >
+                  Jagannath University
+                </a>
+                , Jaipur, and a{" "}
                 <span className="font-semibold text-foreground">
                   Full-Stack Developer
                 </span>{" "}
