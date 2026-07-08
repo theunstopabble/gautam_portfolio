@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { buildProjectSchema } from "@/lib/structured-data";
+import { projectDiagrams } from "@/data/diagrams";
+import { MermaidDiagram } from "@/components/MermaidDiagram";
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -174,6 +176,37 @@ export default async function ProjectPage({
               ))}
             </div>
           </div>
+
+          {/* Visual Architecture Diagrams */}
+          {projectDiagrams[id] && (
+            <div>
+              <h2 className="text-2xl font-semibold text-white">
+                Visual Architecture
+              </h2>
+              <p className="mt-2 text-sm text-zinc-400">
+                System architecture, data flow, and deployment topology
+                visualized for quick understanding.
+              </p>
+              <div className="mt-6 grid gap-6">
+                <MermaidDiagram
+                  chart={projectDiagrams[id].architecture}
+                  title="System Architecture"
+                />
+                <MermaidDiagram
+                  chart={projectDiagrams[id].workflow}
+                  title="Data Flow / Workflow"
+                />
+                <MermaidDiagram
+                  chart={projectDiagrams[id].deployment}
+                  title="Deployment Topology"
+                />
+                <MermaidDiagram
+                  chart={projectDiagrams[id].dbSchema}
+                  title="Database Schema"
+                />
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </main>
