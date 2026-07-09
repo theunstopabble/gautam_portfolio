@@ -8,38 +8,41 @@ export interface ProjectDiagrams {
 export const projectDiagrams: Record<string, ProjectDiagrams> = {
   interviewminds: {
     architecture: `graph TB
-      subgraph CLIENTS["Clients"]
+      subgraph ROOT[" "]
         direction TB
-        B["Browser"]
-        M["Mobile"]
-        W["Webhook"]
-      end
-      subgraph CDN["CDN / Load Balancer"]
-        direction TB
-        LB["Vercel Edge / Cloudflare"]
-      end
-      subgraph BACKEND["Backend"]
-        direction TB
-        FE["Frontend<br/>React 18 + Vite<br/>Tailwind"]
-        API["API Server<br/>Express + GraphQL<br/>81 Services"]
-        WS["WebSocket<br/>Socket.IO<br/>Collaboration"]
-      end
-      subgraph DATA["Data Layer"]
-        direction TB
-        MG["MongoDB Atlas<br/>60+ Models<br/>Pool: 20"]
-        RD["Redis Cloud<br/>Sessions | BullMQ<br/>Rate Limits"]
-        EXT["External APIs<br/>Groq LLM | Piston<br/>Cloudinary | Azure"]
-      end
-      B --> LB
-      M --> LB
-      W --> LB
-      LB --> FE
-      LB --> API
-      LB --> WS
-      API --> MG
-      API --> RD
-      WS --> RD
-      API --> EXT`,
+        subgraph CLIENTS["Clients"]
+          direction TB
+          B["Browser"]
+          M["Mobile"]
+          W["Webhook"]
+        end
+        subgraph GATEWAY["CDN / Edge"]
+          direction TB
+          LB["Vercel Edge / Cloudflare"]
+        end
+        subgraph SERVICES["Backend"]
+          direction TB
+          FE["Frontend<br/>React 18 + Vite<br/>Tailwind"]
+          API["API Server<br/>Express + GraphQL<br/>81 Services"]
+          WS["WebSocket<br/>Socket.IO<br/>Collaboration"]
+        end
+        subgraph DATA["Data Layer"]
+          direction TB
+          MG["MongoDB Atlas<br/>60+ Models<br/>Pool: 20"]
+          RD["Redis Cloud<br/>Sessions | BullMQ<br/>Rate Limits"]
+          EXT["External APIs<br/>Groq LLM | Piston<br/>Cloudinary | Azure"]
+        end
+        B --> LB
+        M --> LB
+        W --> LB
+        LB --> FE
+        LB --> API
+        LB --> WS
+        API --> MG
+        API --> RD
+        WS --> RD
+        API --> EXT
+      end`,
 
     workflow: `graph TB
       subgraph SETUP["Setup"]
@@ -105,34 +108,37 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
 
   "satark-ai": {
     architecture: `graph TB
-      subgraph CLIENT["Client (Browser / PWA)"]
+      subgraph ROOT[" "]
         direction TB
-        FE["React 18 + Vite<br/>Tailwind CSS<br/>Wavesurfer.js"]
-      end
-      subgraph API["Hono API Gateway (Node.js)"]
-        direction TB
-        GW["JWT Verify<br/>Rate Limiting<br/>SHA-256 Dedup"]
-        DB["PostgreSQL<br/>Drizzle ORM"]
-      end
-      subgraph ENGINE["FastAPI AI Engine (Python 3.11)"]
-        direction TB
-        WV["Wav2Vec2<br/>Audio Detection"]
-        EC["ECAPA-TDNN<br/>Speaker Embeddings<br/>192-dim"]
-        SA["Spectral Analysis<br/>Librosa"]
-      end
-      subgraph EDGE["Cloudflare Worker"]
-        direction TB
-        CF["Image Proxy<br/>NVIDIA NIM Proxy"]
-      end
-      subgraph NIM["NVIDIA NIM API"]
-        direction TB
-        NV["Llama 3.2-90B Vision<br/>Deepfake Detection"]
-      end
-      FE --> GW
-      GW --> DB
-      GW --> ENGINE
-      FE --> EDGE
-      EDGE --> NIM`,
+        subgraph CLIENT["Client (Browser / PWA)"]
+          direction TB
+          FE["React 18 + Vite<br/>Tailwind CSS<br/>Wavesurfer.js"]
+        end
+        subgraph EDGE["Edge Layer"]
+          direction TB
+          CF["Cloudflare Worker<br/>Image Proxy / NIM Proxy"]
+        end
+        subgraph API_G["API Gateway (Node.js)"]
+          direction TB
+          GW["Hono Server<br/>JWT Verify | Rate Limit<br/>SHA-256 Dedup"]
+          DB["PostgreSQL<br/>Drizzle ORM"]
+        end
+        subgraph ENGINE["AI Engine (Python)"]
+          direction TB
+          WV["Wav2Vec2<br/>Audio Detection"]
+          EC["ECAPA-TDNN<br/>Speaker Embeddings"]
+          SA["Spectral Analysis<br/>Librosa"]
+        end
+        subgraph NIM["NVIDIA NIM"]
+          direction TB
+          NV["Llama 3.2-90B Vision<br/>Deepfake Detection"]
+        end
+        FE --> GW
+        GW --> DB
+        GW --> ENGINE
+        FE --> CF
+        CF --> NIM
+      end`,
 
     workflow: `graph TD
       A["User Uploads Audio"] --> B["POST /scan-upload"]
@@ -180,33 +186,36 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
 
   texfolio: {
     architecture: `graph TB
-      subgraph CLIENTS["Client"]
+      subgraph ROOT[" "]
         direction TB
-        BR["Browser<br/>React 19 + Vite<br/>Zustand + React Query"]
-      end
-      subgraph API_SERVER["Hono v4 API Server"]
-        direction TB
-        MW["Middleware Pipeline<br/>CORS | Logger | Rate Limit<br/>Input Sanitizer"]
-        AUTH["Auth Layer<br/>Clerk JWT | RBAC<br/>API Key (HMAC)"]
-        ROUTES["Route Handlers<br/>/resumes /ai /agents<br/>/organizations /payments"]
-        SVC["Services<br/>Resume | PDF | AI<br/>Organization | Audit"]
-      end
-      subgraph DATA_L["Data Layer"]
-        direction TB
-        MG["MongoDB Atlas<br/>6 Collections<br/>Users | Resumes | Orgs<br/>AuditLogs | ApiKeys"]
-        RD["Redis<br/>Rate Limits<br/>BullMQ Queue"]
-        EXT["LLM Providers<br/>NVIDIA NIM → Gemini → Groq"]
-      end
-      subgraph PDF["PDF Engine"]
-        direction TB
-        LATEX["pdflatex<br/>Docker Container"]
-        BULL["BullMQ Worker<br/>Async PDF Gen<br/>Concurrency: 2"]
-      end
-      BR --> MW --> AUTH --> ROUTES --> SVC
-      SVC --> MG
-      SVC --> RD
-      SVC --> EXT
-      SVC --> BULL --> LATEX`,
+        subgraph CLIENTS["Client"]
+          direction TB
+          BR["Browser<br/>React 19 + Vite<br/>Zustand + React Query"]
+        end
+        subgraph SERVER["Hono v4 API Server"]
+          direction TB
+          MW["Middleware<br/>CORS | Logger | Rate Limit"]
+          AUTH["Auth Layer<br/>Clerk JWT | RBAC | API Key"]
+          ROUTES["Route Handlers<br/>/resumes /ai /agents /payments"]
+          SVC["Services<br/>Resume | PDF | AI | Audit"]
+        end
+        subgraph DATA_L["Data & Queue Layer"]
+          direction TB
+          MG["MongoDB Atlas<br/>6 Collections"]
+          RD["Redis<br/>Rate Limits | BullMQ"]
+          EXT["LLM Providers<br/>NVIDIA NIM → Gemini → Groq"]
+        end
+        subgraph PDF["PDF Engine"]
+          direction TB
+          BULL["BullMQ Worker<br/>Async PDF Gen"]
+          LATEX["pdflatex<br/>Docker Container"]
+        end
+        BR --> MW --> AUTH --> ROUTES --> SVC
+        SVC --> MG
+        SVC --> RD
+        SVC --> EXT
+        SVC --> BULL --> LATEX
+      end`,
 
     workflow: `graph TD
       subgraph AUTH["Auth Flow"]
@@ -273,29 +282,32 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
 
   swadkart: {
     architecture: `graph TB
-      subgraph FRONTEND["Frontend (React 19 PWA)"]
+      subgraph ROOT[" "]
         direction TB
-        PWA["<b>PWA Shell</b><br/>Service Worker"]
-        REDUX["<b>Redux Toolkit</b><br/>userSlice + cartSlice"]
-        UI["<b>UI Layer</b><br/>Tailwind + Leaflet + Recharts"]
-      end
-      subgraph BACKEND["Backend (Node.js 22 + Express 5)"]
-        direction TB
-        MW["<b>Middleware</b><br/>Helmet | CORS | Rate Limit"]
-        CTRL["<b>Controllers</b><br/>Auth | Order | Payment | Delivery"]
-        AI_C["<b>AI Pipeline</b><br/>Groq LLM + Tools"]
-        SOCK["<b>WebSocket</b><br/>Socket.IO Tracking"]
-      end
-      subgraph DATA["Data Layer"]
-        direction TB
-        MG["<b>MongoDB Atlas</b><br/>Users | Orders | Restaurants"]
-        RD["<b>Redis</b><br/>Cache | Rate Limits"]
-        EXT["<b>External APIs</b><br/>Razorpay | Cloudinary | Brevo"]
-      end
-      FRONTEND --> BACKEND
-      BACKEND --> MG
-      BACKEND --> RD
-      BACKEND --> EXT`,
+        subgraph FRONTEND["Frontend (React 19 PWA)"]
+          direction TB
+          PWA["<b>PWA Shell</b><br/>Service Worker"]
+          REDUX["<b>Redux Toolkit</b><br/>userSlice + cartSlice"]
+          UI["<b>UI Layer</b><br/>Tailwind + Leaflet + Recharts"]
+        end
+        subgraph BACKEND["Backend (Node.js 22 + Express 5)"]
+          direction TB
+          MW["<b>Middleware</b><br/>Helmet | CORS | Rate Limit"]
+          CTRL["<b>Controllers</b><br/>Auth | Order | Payment | Delivery"]
+          AI_C["<b>AI Pipeline</b><br/>Groq LLM + Tools"]
+          SOCK["<b>WebSocket</b><br/>Socket.IO Tracking"]
+        end
+        subgraph DATA["Data Layer"]
+          direction TB
+          MG["<b>MongoDB Atlas</b><br/>Users | Orders | Restaurants"]
+          RD["<b>Redis</b><br/>Cache | Rate Limits"]
+          EXT["<b>External APIs</b><br/>Razorpay | Cloudinary | Brevo"]
+        end
+        FRONTEND --> BACKEND
+        BACKEND --> MG
+        BACKEND --> RD
+        BACKEND --> EXT
+      end`,
 
     workflow: `graph TD
       A["Open App / PWA Install"] --> B{"Account?"}
