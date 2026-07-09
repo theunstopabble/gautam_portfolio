@@ -24,9 +24,9 @@ mermaid.initialize({
     edgeLabelBackground: "#18181B",
     nodeTextColor: "#E4E4E7",
   },
-  flowchart: { useMaxWidth: true, htmlLabels: true, curve: "basis" },
-  sequence: { useMaxWidth: true },
-  gantt: { useMaxWidth: true },
+  flowchart: { useMaxWidth: false, htmlLabels: true, curve: "basis" },
+  sequence: { useMaxWidth: false },
+  gantt: { useMaxWidth: false },
 });
 
 interface MermaidDiagramProps {
@@ -58,7 +58,7 @@ export function MermaidDiagram({ chart, title }: MermaidDiagramProps) {
       )}
       <div
         ref={ref}
-        className="flex justify-center overflow-x-auto [&_svg]:max-w-full"
+        className="overflow-x-auto overflow-y-auto [&_svg]:block [&_svg]:mx-auto"
       />
     </div>
   );
