@@ -38,6 +38,7 @@ export function MermaidDiagram({ chart, title }: MermaidDiagramProps) {
   const ref = useRef<HTMLDivElement>(null);
   const uid = useId();
   const id = `mermaid-${uid}`;
+  const startsWithSubgraph = /^graph\s+(TB|TD)\s*\n\s*subgraph/m.test(chart);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -45,9 +46,13 @@ export function MermaidDiagram({ chart, title }: MermaidDiagramProps) {
       ref.current!.innerHTML = "";
       const { svg } = await mermaid.render(id, chart);
       ref.current!.innerHTML = svg;
+      if (startsWithSubgraph) {
+        const el = ref.current!.querySelector("svg");
+        if (el) el.style.marginTop = "-28px";
+      }
     };
     render();
-  }, [chart, id]);
+  }, [chart, id, startsWithSubgraph]);
 
   return (
     <div className="rounded-xl border border-white/5 bg-white/2 p-4 md:p-6">
@@ -58,7 +63,7 @@ export function MermaidDiagram({ chart, title }: MermaidDiagramProps) {
       )}
       <div
         ref={ref}
-        className="overflow-x-auto overflow-y-auto lg:overflow-visible [&_svg]:block [&_svg]:mx-auto lg:[&_svg]:max-w-full"
+        className="overflow-x-auto overflow-y-hidden [&_svg]:block [&_svg]:mx-auto lg:[&_svg]:max-w-full"
       />
     </div>
   );
