@@ -184,7 +184,7 @@ export default async function ProjectPage({
                 Visual Architecture
               </h2>
               <p className="mt-2 text-sm text-zinc-400">
-                System architecture, data flow, and deployment topology
+                System architecture, data flow, deployment topology, and database schema
                 visualized for quick understanding.
               </p>
               <div className="mt-6 grid gap-6">

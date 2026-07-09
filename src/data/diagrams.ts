@@ -9,20 +9,24 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
   interviewminds: {
     architecture: `graph TB
       subgraph CLIENTS["Clients"]
+        direction TB
         B["Browser"]
         M["Mobile"]
         W["Webhook"]
       end
       subgraph CDN["CDN / Load Balancer"]
+        direction TB
         LB["Vercel Edge / Cloudflare"]
       end
       subgraph BACKEND["Backend"]
+        direction TB
         FE["Frontend<br/>React 18 + Vite<br/>Tailwind"]
         API["API Server<br/>Express + GraphQL<br/>81 Services"]
         WS["WebSocket<br/>Socket.IO<br/>Collaboration"]
       end
       subgraph DATA["Data Layer"]
-        MG["MongoDB Atlas<br/>7 Models<br/>Pool: 20"]
+        direction TB
+        MG["MongoDB Atlas<br/>60+ Models<br/>Pool: 20"]
         RD["Redis Cloud<br/>Sessions | BullMQ<br/>Rate Limits"]
         EXT["External APIs<br/>Groq LLM | Piston<br/>Cloudinary | Azure"]
       end
@@ -37,32 +41,34 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
       WS --> RD
       API --> EXT`,
 
-    workflow: `graph LR
-      A["Clone Repo"] --> B["npm install"]
-      B --> C["cp .env.example .env"]
-      C --> D["npm run dev"]
+    workflow: `graph TB
+      subgraph SETUP["Setup"]
+        direction TB
+        A["Clone Repo"] --> B["npm install"]
+        B --> C["cp .env"]
+        C --> D["npm run dev"]
+      end
       D --> E["Backend :8000"]
       D --> F["Frontend :5173"]
-      E --> G["Middleware Pipeline"]
-      G --> H["Auth (Clerk JWT)"]
-      G --> I["Rate Limiting"]
-      G --> J["RBAC"]
-      H --> K["Route Handler"]
-      I --> K
-      J --> K
-      K --> L["Service Layer"]
-      L --> M["MongoDB / Redis"]
-      K --> N["BullMQ Workers"]
-      N --> O["Async PDF / Video"]`,
+      E --> G["Auth (Clerk JWT)"]
+      G --> H["Rate Limiting"]
+      H --> I["RBAC Check"]
+      I --> J["Route Handler"]
+      J --> K["Service Layer"]
+      K --> L["MongoDB / Redis"]
+      K --> M["BullMQ Workers"]
+      M --> N["Async PDF / Video"]`,
 
     deployment: `graph TB
       subgraph PROD["Production"]
+        direction TB
         VERCEL["Vercel<br/>Frontend SPA<br/>CDN Edge"]
         RENDER["Render<br/>Backend API<br/>Docker / Node 20"]
         MONGO["MongoDB Atlas<br/>M10+ Cluster<br/>Replica Set"]
         REDIS_C["Redis Cloud<br/>Sessions<br/>BullMQ Queue"]
       end
       subgraph CI["CI/CD"]
+        direction TB
         GH["GitHub Actions"]
         TC["Typecheck"]
         TEST["Test (39 tests)"]
@@ -76,48 +82,50 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
       VERCEL --> RENDER`,
 
     dbSchema: `graph TB
-      subgraph MONGO["MongoDB Atlas - 7 Collections"]
-        I["Interviews<br/>userId, status, score<br/>messages, feedback"]
-        R["Resumes<br/>userId, content<br/>chunks[embedding]"]
-        U["UserRoles<br/>userId (unique)<br/>candidate|interviewer|admin"]
-        A["AuditLogs<br/>userId, action<br/>resource, status"]
-        M["Messages<br/>roomId, senderId<br/>content, type"]
-        P["PracticeInterviews<br/>userId, role<br/>difficulty, questions"]
-        H["Webhooks<br/>userId, url<br/>events, secret"]
+      subgraph MONGO["MongoDB Atlas - 60+ Collections"]
+        direction TB
+        CORE["Core Engine<br/>Interviews | Questions | Resumes"]
+        USER["Identity & Access<br/>Profiles | Tenants | Roles"]
+        SYS["Enterprise Infra<br/>AuditLogs | Traces | Uptime"]
+        COMM["Comm & State<br/>Messages | Notifications | Webhooks"]
       end
-      subgraph REDIS["Redis"]
-        S["Sessions (24h TTL)"]
-        RL["Rate Limits (Window)"]
-        C["Cache (Varies)"]
-        Q["BullMQ Job Data"]
+      subgraph REDIS["Redis Layer"]
+        direction TB
+        S["Sessions"]
+        RL["Rate Limits"]
+        Q["BullMQ Jobs"]
       end
-      U --> I
-      U --> R
-      U --> A
-      U --> P
-      U --> H
-      I --> M`,
+      CORE --> COMM
+      USER --> CORE
+      CORE --> SYS
+      Q --> CORE
+      S --> USER`,
 
   },
 
   "satark-ai": {
     architecture: `graph TB
       subgraph CLIENT["Client (Browser / PWA)"]
+        direction TB
         FE["React 18 + Vite<br/>Tailwind CSS<br/>Wavesurfer.js"]
       end
       subgraph API["Hono API Gateway (Node.js)"]
+        direction TB
         GW["JWT Verify<br/>Rate Limiting<br/>SHA-256 Dedup"]
         DB["PostgreSQL<br/>Drizzle ORM"]
       end
       subgraph ENGINE["FastAPI AI Engine (Python 3.11)"]
+        direction TB
         WV["Wav2Vec2<br/>Audio Detection"]
         EC["ECAPA-TDNN<br/>Speaker Embeddings<br/>192-dim"]
         SA["Spectral Analysis<br/>Librosa"]
       end
       subgraph EDGE["Cloudflare Worker"]
+        direction TB
         CF["Image Proxy<br/>NVIDIA NIM Proxy"]
       end
       subgraph NIM["NVIDIA NIM API"]
+        direction TB
         NV["Llama 3.2-90B Vision<br/>Deepfake Detection"]
       end
       FE --> GW
@@ -143,6 +151,7 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
 
     deployment: `graph TB
       subgraph SERVICES["Services"]
+        direction TB
         WEB["Vercel<br/>satark-deepfake.vercel.app"]
         API_G["Render<br/>API Gateway<br/>Hono / Node.js"]
         ENG["Render<br/>AI Engine<br/>FastAPI / Docker"]
@@ -150,6 +159,7 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
         DB_PG["Supabase / Neon<br/>PostgreSQL 14+<br/>SSL"]
       end
       subgraph CI_CD["Automation"]
+        direction TB
         CRON["Keep-Alive Cron<br/>Every 14 min"]
       end
       WEB --> API_G
@@ -161,31 +171,34 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
 
     dbSchema: `graph TB
       subgraph PG["PostgreSQL"]
-        SC["scans<br/>id (serial PK)<br/>user_id (text, indexed)<br/>scan_type (indexed)<br/>is_deepfake (boolean)<br/>confidence_score (float)<br/>file_hash (indexed, dedup)<br/>audio_data (base64 text)<br/>analysis_details (XAI)<br/>created_at (indexed)<br/>feedback (text)"]
-        SP["speakers<br/>id (uuid PK)<br/>user_id (text, indexed)<br/>name (text)<br/>embedding (json - 192dim)<br/>created_at (timestamp)"]
+        direction TB
+        SC["<b>scans</b><br/>PK: id, user_id<br/>is_deepfake, confidence<br/>file_hash, audio_data<br/>analysis_details"]
+        SP["<b>speakers</b><br/>PK: id, user_id<br/>name, embedding<br/>created_at"]
       end
-      SC -->|user_id| SP
-      style SC fill:#1a1a2e,stroke:#8B5CF6
-      style SP fill:#1a1a2e,stroke:#06B6D4`,
+      SC -->|user_id| SP`,
   },
 
   texfolio: {
     architecture: `graph TB
       subgraph CLIENTS["Client"]
+        direction TB
         BR["Browser<br/>React 19 + Vite<br/>Zustand + React Query"]
       end
       subgraph API_SERVER["Hono v4 API Server"]
+        direction TB
         MW["Middleware Pipeline<br/>CORS | Logger | Rate Limit<br/>Input Sanitizer"]
         AUTH["Auth Layer<br/>Clerk JWT | RBAC<br/>API Key (HMAC)"]
         ROUTES["Route Handlers<br/>/resumes /ai /agents<br/>/organizations /payments"]
         SVC["Services<br/>Resume | PDF | AI<br/>Organization | Audit"]
       end
       subgraph DATA_L["Data Layer"]
+        direction TB
         MG["MongoDB Atlas<br/>6 Collections<br/>Users | Resumes | Orgs<br/>AuditLogs | ApiKeys"]
         RD["Redis<br/>Rate Limits<br/>BullMQ Queue"]
         EXT["LLM Providers<br/>NVIDIA NIM → Gemini → Groq"]
       end
       subgraph PDF["PDF Engine"]
+        direction TB
         LATEX["pdflatex<br/>Docker Container"]
         BULL["BullMQ Worker<br/>Async PDF Gen<br/>Concurrency: 2"]
       end
@@ -195,31 +208,31 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
       SVC --> EXT
       SVC --> BULL --> LATEX`,
 
-    workflow: `graph LR
+    workflow: `graph TD
       subgraph AUTH["Auth Flow"]
+        direction TB
         CL["Clerk JWT"] --> AU["authMiddleware"]
-        AU --> ORG["RBAC: owner / admin<br/>editor / viewer"]
+        AU --> ORG["RBAC Check<br/>owner | admin | editor | viewer"]
       end
       subgraph RESUME["Resume Management"]
-        CR["Create"] --> ED["Edit (drag-drop)"]
+        direction TB
+        CR["Create Resume"] --> ED["Edit (drag-drop)"]
         ED --> CO["AI Coach<br/>LangGraph 4-Stage"]
-        CO --> PDF["PDF Generation<br/>Synchronous / Async"]
+        CO --> PDF["PDF Generation"]
       end
-      subgraph AI["AI Coach Pipeline"]
-        C["1. Content Analysis<br/>(30%)"] --> ATS["2. ATS Analysis<br/>(25%)"]
-        ATS --> F["3. Format Analysis<br/>(20%)"]
-        F --> I["4. Impact Analysis<br/>(25%)"]
+      subgraph AICOACH["AI Coach Pipeline"]
+        direction TB
+        C["1. Content Analysis"] --> ATS["2. ATS Analysis"]
+        ATS --> F["3. Format Analysis"]
+        F --> I["4. Impact Analysis"]
         I --> S["5. Synthesize<br/>Final Score + Recs"]
       end
-      subgraph ORG["Organizations"]
-        TM["Team Management"] --> RB["Role-Based Access"]
-        RB --> BRAND["Branding<br/>Templates | Colors"]
-      end
-      CR --> ED
-      ORG --> RB`,
+      AUTH --> RESUME
+      RESUME --> AICOACH`,
 
     deployment: `graph TB
       subgraph PROD["Production"]
+        direction TB
         VERCEL["Vercel<br/>texfolio.vercel.app<br/>React SPA / CDN"]
         RENDER["Render<br/>texfolio-api.onrender.com<br/>Hono + Node.js / Docker"]
         ATLAS["MongoDB Atlas<br/>M0+ Cluster<br/>auto-indexing"]
@@ -227,6 +240,7 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
         LATEX_C["LaTeX Renderer<br/>Docker Sidecar<br/>pdflatex"]
       end
       subgraph CI_CD["CI/CD Pipeline"]
+        direction TB
         GH["GitHub Actions"]
         LINT["Lint"]
         BUILD_D["Build:deploy"]
@@ -240,12 +254,13 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
 
     dbSchema: `graph TB
       subgraph MONGO["MongoDB Atlas - 6 Collections"]
-        U["users<br/>email (unique)<br/>clerkId (sparse)<br/>isPro, subscriptionId"]
-        R["resumes<br/>userId (indexed)<br/>personalInfo, experience<br/>education, skills<br/>shareId (sparse)<br/>organizationId (sparse)<br/>visibility"]
-        O["organizations<br/>slug (unique)<br/>ownerId<br/>branding, settings"]
-        OM["organizationmembers<br/>(orgId+userId) unique<br/>role: owner|admin|editor|viewer"]
-        AL["auditlogs<br/>actorId (indexed)<br/>action, resourceType<br/>TTL: 90 days"]
-        AK["apikeys<br/>keyHash (indexed)<br/>userId, scopes<br/>expiresAt, revokedAt"]
+        direction TB
+        U["<b>users</b><br/>email, clerkId<br/>isPro, subscriptionId"]
+        R["<b>resumes</b><br/>userId, personalInfo<br/>experience, education<br/>skills, visibility"]
+        O["<b>organizations</b><br/>slug, ownerId<br/>branding, settings"]
+        OM["<b>members</b><br/>orgId + userId<br/>role: owner|editor"]
+        AL["<b>auditlogs</b><br/>actorId, action<br/>resourceType, TTL"]
+        AK["<b>apikeys</b><br/>keyHash, scopes<br/>expiresAt, revokedAt"]
       end
       U --> R
       U --> O
@@ -259,26 +274,28 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
   swadkart: {
     architecture: `graph TB
       subgraph FRONTEND["Frontend (React 19 PWA)"]
-        PWA["PWA Shell<br/>Service Worker"]
-        REDUX["Redux Toolkit<br/>userSlice + cartSlice"]
-        UI["Tailwind CSS v3<br/>Leaflet Maps<br/>Recharts"]
+        direction TB
+        PWA["<b>PWA Shell</b><br/>Service Worker"]
+        REDUX["<b>Redux Toolkit</b><br/>userSlice + cartSlice"]
+        UI["<b>UI Layer</b><br/>Tailwind + Leaflet + Recharts"]
       end
       subgraph BACKEND["Backend (Node.js 22 + Express 5)"]
-        MW["Middleware Pipeline<br/>Helmet | CORS | Rate Limit<br/>NoSQL Sanitizer"]
-        CTRL["Controllers (30+)<br/>Auth | Order | Payment<br/>Restaurant | Delivery"]
-        AI_C["AI Chat Pipeline<br/>Groq LLM<br/>Multi-Tool Registry"]
-        SOCK["Socket.IO<br/>Real-time Tracking<br/>Order Updates"]
+        direction TB
+        MW["<b>Middleware</b><br/>Helmet | CORS | Rate Limit"]
+        CTRL["<b>Controllers</b><br/>Auth | Order | Payment | Delivery"]
+        AI_C["<b>AI Pipeline</b><br/>Groq LLM + Tools"]
+        SOCK["<b>WebSocket</b><br/>Socket.IO Tracking"]
       end
       subgraph DATA["Data Layer"]
-        MG["MongoDB Atlas<br/>Users | Restaurants (GeoJSON)<br/>Products | Orders | Coupons<br/>Subscriptions | Payouts"]
-        RD["Redis / In-Memory<br/>Cache | Rate Limits"]
-        EXT_S["External<br/>Razorpay | Cloudinary<br/>Firebase | Brevo"]
+        direction TB
+        MG["<b>MongoDB Atlas</b><br/>Users | Orders | Restaurants"]
+        RD["<b>Redis</b><br/>Cache | Rate Limits"]
+        EXT["<b>External APIs</b><br/>Razorpay | Cloudinary | Brevo"]
       end
       FRONTEND --> BACKEND
       BACKEND --> MG
       BACKEND --> RD
-      BACKEND --> EXT_S
-      BACKEND --> SOCK`,
+      BACKEND --> EXT`,
 
     workflow: `graph TD
       A["Open App / PWA Install"] --> B{"Account?"}
@@ -302,6 +319,7 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
 
     deployment: `graph TB
       subgraph PROD["Production"]
+        direction TB
         V["Vercel<br/>swadkart.vercel.app<br/>PWA / CDN Edge"]
         R["Render<br/>swadkart-backend.onrender.com<br/>Express + Socket.IO"]
         MA["MongoDB Atlas<br/>Replica Set<br/>10+ Collections"]
@@ -310,6 +328,7 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
         RZ["Razorpay<br/>Payments"]
       end
       subgraph CI["CI/CD"]
+        direction TB
         GH["Git Push → main"]
         AD["Auto Deploy"]
       end
@@ -324,20 +343,19 @@ export const projectDiagrams: Record<string, ProjectDiagrams> = {
 
     dbSchema: `graph TB
       subgraph MONGO["MongoDB Atlas - 10+ Collections"]
-        USR["users<br/>name, email, phone<br/>password (hashed)<br/>walletBalance<br/>biometricCreds"]
-        RST["restaurants<br/>name, address<br/>GeoJSON location<br/>status, isOpen"]
-        PRD["products<br/>restaurantId<br/>name, price, variants<br/>countInStock, schedule<br/>category"]
-        ORD["orders<br/>userId, restaurantId<br/>status lifecycle<br/>deliveryOTP, surgePrice<br/>paymentInfo"]
-        CPN["coupons<br/>code (unique)<br/>discountType, value<br/>minOrderValue<br/>usedBy[]"]
-        SUB["subscriptions (SwadPass)<br/>userId, plan<br/>startDate, endDate<br/>autoRenew"]
-        NOT["notifications<br/>userId, type<br/>title, message<br/>read, createdAt"]
-        GRP["grouporders<br/>hostId, shareLink<br/>participants[]<br/>items[]"]
-        PAY["payouts<br/>restaurantId<br/>amount, status<br/>bankDetails"]
-        REV["reviews<br/>userId, orderId<br/>rating, comment<br/>createdAt"]
+        direction TB
+        USR["<b>users</b><br/>name, email, phone<br/>walletBalance, biometricCreds"]
+        RST["<b>restaurants</b><br/>GeoJSON location<br/>status, isOpen"]
+        PRD["<b>products</b><br/>restaurantId, price<br/>variants, countInStock"]
+        ORD["<b>orders</b><br/>status lifecycle<br/>deliveryOTP, paymentInfo"]
+        CPN["<b>coupons</b><br/>code (unique)<br/>discountType, minOrderValue"]
+        SUB["<b>subscriptions</b><br/>plan, start/endDate<br/>autoRenew"]
+        NOT["<b>notifications</b><br/>type, title<br/>message, read"]
+        PAY["<b>payouts</b><br/>restaurantId, amount<br/>status, bankDetails"]
+        REV["<b>reviews</b><br/>rating, comment<br/>createdAt"]
       end
       USR --> ORD
       USR --> SUB
-      USR --> GRP
       RST --> PRD
       RST --> ORD
       ORD --> REV

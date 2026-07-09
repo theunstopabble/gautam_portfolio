@@ -14,7 +14,7 @@ mermaid.initialize({
     primaryTextColor: "#E4E4E7",
     secondaryTextColor: "#A1A1AA",
     lineColor: "#52525B",
-    fontSize: "14px",
+    fontSize: "20px",
     fontFamily: "ui-monospace, monospace",
     mainBkg: "#18181B",
     nodeBorder: "#27272A",
