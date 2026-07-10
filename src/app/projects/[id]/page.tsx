@@ -3,8 +3,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { buildProjectSchema } from "@/lib/structured-data";
-import { projectDiagrams } from "@/data/diagrams";
-import { MermaidDiagram } from "@/components/MermaidDiagram";
+import { projectDiagrams, projectDiagramsMobile } from "@/data/diagrams";
+import {
+  VerticalArchitectureDiagram,
+  WorkflowDiagram,
+  DeploymentDiagram,
+  DatabaseSchemaDiagram,
+} from "@/components/diagrams";
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -188,20 +193,24 @@ export default async function ProjectPage({
                 visualized for quick understanding.
               </p>
               <div className="mt-6 grid gap-6">
-                <MermaidDiagram
-                  chart={projectDiagrams[id].architecture}
+                <VerticalArchitectureDiagram
+                  data={projectDiagrams[id].architecture}
+                  mobileData={projectDiagramsMobile[id]?.architecture}
                   title="System Architecture"
                 />
-                <MermaidDiagram
-                  chart={projectDiagrams[id].workflow}
+                <WorkflowDiagram
+                  data={projectDiagrams[id].workflow}
+                  mobileData={projectDiagramsMobile[id]?.workflow}
                   title="Data Flow / Workflow"
                 />
-                <MermaidDiagram
-                  chart={projectDiagrams[id].deployment}
+                <DeploymentDiagram
+                  data={projectDiagrams[id].deployment}
+                  mobileData={projectDiagramsMobile[id]?.deployment}
                   title="Deployment Topology"
                 />
-                <MermaidDiagram
-                  chart={projectDiagrams[id].dbSchema}
+                <DatabaseSchemaDiagram
+                  data={projectDiagrams[id].dbSchema}
+                  mobileData={projectDiagramsMobile[id]?.dbSchema}
                   title="Database Schema"
                 />
               </div>
