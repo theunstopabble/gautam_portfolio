@@ -3,13 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { buildProjectSchema } from "@/lib/structured-data";
-import { projectDiagrams, projectDiagramsMobile } from "@/data/diagrams";
-import {
-  VerticalArchitectureDiagram,
-  WorkflowDiagram,
-  DeploymentDiagram,
-  DatabaseSchemaDiagram,
-} from "@/components/diagrams";
+
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -182,40 +176,6 @@ export default async function ProjectPage({
             </div>
           </div>
 
-          {/* Visual Architecture Diagrams */}
-          {projectDiagrams[id] && (
-            <div>
-              <h2 className="text-2xl font-semibold text-white">
-                Visual Architecture
-              </h2>
-              <p className="mt-2 text-sm text-zinc-400">
-                System architecture, data flow, deployment topology, and database schema
-                visualized for quick understanding.
-              </p>
-              <div className="mt-6 grid gap-6">
-                <VerticalArchitectureDiagram
-                  data={projectDiagrams[id].architecture}
-                  mobileData={projectDiagramsMobile[id]?.architecture}
-                  title="System Architecture"
-                />
-                <WorkflowDiagram
-                  data={projectDiagrams[id].workflow}
-                  mobileData={projectDiagramsMobile[id]?.workflow}
-                  title="Data Flow / Workflow"
-                />
-                <DeploymentDiagram
-                  data={projectDiagrams[id].deployment}
-                  mobileData={projectDiagramsMobile[id]?.deployment}
-                  title="Deployment Topology"
-                />
-                <DatabaseSchemaDiagram
-                  data={projectDiagrams[id].dbSchema}
-                  mobileData={projectDiagramsMobile[id]?.dbSchema}
-                  title="Database Schema"
-                />
-              </div>
-            </div>
-          )}
         </div>
       </section>
     </main>

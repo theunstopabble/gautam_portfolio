@@ -262,22 +262,3 @@ html {
   );
   background-size: 30px 30px;
 }
-
-/* React Flow dark theme overrides */
-.react-flow__background {
-  background: #0a0a0a !important;
-}
-
-.react-flow__controls {
-  box-shadow: none !important;
-}
-
-.react-flow__controls-button {
-  border-color: #27272A !important;
-  background: #18181B !important;
-  fill: #A1A1AA !important;
-}
-
-.react-flow__controls-button:hover {
-  background: #27272A !important;
-}
