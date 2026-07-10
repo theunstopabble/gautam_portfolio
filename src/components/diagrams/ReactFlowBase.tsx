@@ -67,7 +67,7 @@ function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeW
           id: n.id,
           type: (n.isSubgraph ? "subgraph" : "default") as string,
           position: p ? { x: p.x, y: p.y } : { x: 0, y: 0 },
-          data: n.data,
+          data: { ...n.data, direction },
           draggable: false,
           selectable: false,
           focusable: false,
@@ -79,7 +79,7 @@ function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeW
         if (p) node.style = { width: p.w, height: p.h };
         return node;
       }),
-    [nodeDefs, posMap]
+    [nodeDefs, posMap, direction]
   );
 
   const rfEdges: Edge[] = useMemo(
