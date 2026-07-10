@@ -64,7 +64,7 @@ export function computeLayout(
     }
   }
 
-  // Compute subgraph bounds in depth order (deepest first) so parent bounds use updated child sizes
+  // Helper: depth of a node in the parent tree
   function getDepth(id: string, cache: Map<string, number>): number {
     if (cache.has(id)) return cache.get(id)!;
     const p = parentMap.get(id) ?? null;
@@ -73,12 +73,17 @@ export function computeLayout(
     cache.set(id, d);
     return d;
   }
+
+  // Sort subgraph IDs deepest-first for bounds computation
   const depthCache = new Map<string, number>();
   const sortedSub = [...subChildren.entries()].sort(
     (a, b) => getDepth(b[0], depthCache) - getDepth(a[0], depthCache)
   );
 
-  for (const [subId, childIds] of sortedSub) {
+  // Compute bounding box for a subgraph from its children's current positions
+  function computeSubBounds(subId: string) {
+    const childIds = subChildren.get(subId);
+    if (!childIds) return;
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     for (const cId of childIds) {
       const p = out.get(cId);
@@ -88,17 +93,21 @@ export function computeLayout(
       maxX = Math.max(maxX, p.x + p.w);
       maxY = Math.max(maxY, p.y + p.h);
     }
-    if (minX === Infinity) continue;
-
-    const sx = minX - subPad;
-    const sy = minY - subPad - subTitleH;
-    const sw = maxX - minX + subPad * 2;
-    const sh = maxY - minY + subPad + SUB_BOTTOM + subTitleH;
-
-    out.set(subId, { x: sx, y: sy, w: sw, h: sh });
+    if (minX === Infinity) return;
+    out.set(subId, {
+      x: minX - subPad,
+      y: minY - subPad - subTitleH,
+      w: maxX - minX + subPad * 2,
+      h: maxY - minY + subPad + SUB_BOTTOM + subTitleH,
+    });
   }
 
-  // Resolve subgraph overlap — only compare subgraphs at the same parent level
+  // First pass: compute bounds deepest-first
+  for (const [subId] of sortedSub) {
+    computeSubBounds(subId);
+  }
+
+  // Resolve sibling overlap — only compare subgraphs at the same parent level
   const isLR = direction === "LR";
   const byParent = new Map<string | null, { id: string; children: string[] }[]>();
   for (const [subId, children] of subChildren) {
@@ -107,6 +116,7 @@ export function computeLayout(
     byParent.get(p)!.push({ id: subId, children });
   }
 
+  let anyShifted = false;
   for (const [, group] of byParent) {
     if (group.length < 2) continue;
     if (!isLR) {
@@ -118,6 +128,7 @@ export function computeLayout(
         if (curr.y >= prevEdge) continue;
         const shift = prevEdge - curr.y + 8;
         curr.y += shift;
+        anyShifted = true;
         for (const cId of group[i].children) {
           const p = out.get(cId);
           if (p) p.y += shift;
@@ -132,6 +143,7 @@ export function computeLayout(
         if (curr.x >= prevEdge) continue;
         const shift = prevEdge - curr.x + 8;
         curr.x += shift;
+        anyShifted = true;
         for (const cId of group[i].children) {
           const p = out.get(cId);
           if (p) p.x += shift;
@@ -140,9 +152,23 @@ export function computeLayout(
     }
   }
 
-  // Offset children relative to their parent subgraph
+  // Second pass: recompute bounds deepest-first to propagate sibling shifts up to parents
+  if (anyShifted) {
+    for (const [subId] of sortedSub) {
+      computeSubBounds(subId);
+    }
+  }
+
+  // Preserve absolute subgraph positions before offsetting children
+  const absPos = new Map<string, Pos>();
+  for (const [subId] of subChildren) {
+    const p = out.get(subId);
+    if (p) absPos.set(subId, { x: p.x, y: p.y, w: p.w, h: p.h });
+  }
+
+  // Offset children relative to their parent's ABSOLUTE (pre-offset) position
   for (const [subId, childIds] of subChildren) {
-    const sp = out.get(subId);
+    const sp = absPos.get(subId);
     if (!sp) continue;
     for (const cId of childIds) {
       const p = out.get(cId);
