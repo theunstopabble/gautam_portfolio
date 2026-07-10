@@ -26,7 +26,7 @@ export function WorkflowDiagram({ data, mobileData, title }: Props) {
       edgeDefs={active.edgeDefs}
       direction={active.direction ?? "TB"}
       title={title}
-      minHeight={isMobile ? 450 : 600}
+      minHeight={isMobile ? 320 : 400}
       nodeWidth={isMobile ? 100 : undefined}
       nodeHeight={isMobile ? 80 : undefined}
       subPad={isMobile ? 10 : undefined}

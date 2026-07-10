@@ -26,8 +26,8 @@ export function DatabaseSchemaDiagram({ data, mobileData, title }: Props) {
       edgeDefs={active.edgeDefs}
       direction={active.direction ?? "TB"}
       title={title}
-      minHeight={isMobile ? 380 : 550}
-      fitViewPadding={isMobile ? 0.02 : undefined}
+      minHeight={isMobile ? 250 : 320}
+      fitViewPadding={isMobile ? 0.01 : 0.02}
       nodeWidth={isMobile ? 130 : undefined}
       nodeHeight={isMobile ? 70 : undefined}
       rankSep={isMobile ? 24 : undefined}

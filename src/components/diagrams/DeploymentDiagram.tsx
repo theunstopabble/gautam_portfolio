@@ -26,8 +26,8 @@ export function DeploymentDiagram({ data, mobileData, title }: Props) {
       edgeDefs={active.edgeDefs}
       direction={active.direction ?? "TB"}
       title={title}
-      minHeight={isMobile ? 400 : 650}
-      fitViewPadding={isMobile ? 0.02 : undefined}
+      minHeight={isMobile ? 300 : 400}
+      fitViewPadding={isMobile ? 0.01 : 0.02}
       nodeWidth={isMobile ? 110 : undefined}
       nodeHeight={isMobile ? 80 : undefined}
       subPad={isMobile ? 10 : undefined}
