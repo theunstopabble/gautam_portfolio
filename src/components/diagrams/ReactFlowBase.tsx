@@ -45,9 +45,10 @@ interface FlowInnerProps {
   containerH?: number;
   onContentHeight?: (h: number) => void;
   isMobile?: boolean;
+  zoomRefH?: number;
 }
 
-function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeWidth, nodeHeight, subPad, subTitleH, rankSep, containerW = 300, containerH = 500, onContentHeight, isMobile = false }: FlowInnerProps) {
+function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeWidth, nodeHeight, subPad, subTitleH, rankSep, containerW = 300, containerH = 500, onContentHeight, isMobile = false, zoomRefH = 500 }: FlowInnerProps) {
   const { setViewport } = useReactFlow();
 
   const layoutNodeDefs = useMemo(
@@ -128,7 +129,7 @@ function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeW
     const pad = fitViewPadding;
     let zoom = Math.min(
       containerW / (flowBounds.w * (1 + 2 * pad)),
-      containerH / (flowBounds.h * (1 + 2 * pad))
+      zoomRefH / (flowBounds.h * (1 + 2 * pad))
     );
     zoom = Math.max(0.3, Math.min(2.0, zoom));
     setViewport({
@@ -228,6 +229,7 @@ export function ReactFlowBase({ nodeDefs, edgeDefs, direction = "TB", title, min
             onContentHeight={setContentH}
             containerH={dims.h}
             isMobile={isMobile}
+            zoomRefH={minHeight}
           />
         </ReactFlowProvider>
       </div>
