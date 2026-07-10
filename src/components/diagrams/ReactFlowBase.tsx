@@ -95,15 +95,25 @@ function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeW
     [edgeDefs]
   );
 
+  // Build parent chain map for accurate absolute position computation
+  const parentMap = useMemo(() => {
+    const m = new Map<string, string | null>();
+    for (const n of nodeDefs) m.set(n.id, n.parentId ?? null);
+    return m;
+  }, [nodeDefs]);
+
   const flowBounds = useMemo(() => {
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     for (const n of nodeDefs) {
       const p = posMap.get(n.id);
       if (!p) continue;
       let ax = p.x, ay = p.y;
-      if (n.parentId) {
-        const pp = posMap.get(n.parentId);
+      // Walk full parent chain for deeply nested subgraphs
+      let pid = parentMap.get(n.id) ?? null;
+      while (pid) {
+        const pp = posMap.get(pid);
         if (pp) { ax += pp.x; ay += pp.y; }
+        pid = parentMap.get(pid) ?? null;
       }
       minX = Math.min(minX, ax);
       minY = Math.min(minY, ay);
@@ -111,7 +121,7 @@ function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeW
       maxY = Math.max(maxY, ay + p.h);
     }
     return { x: minX, y: minY, w: maxX - minX, h: maxY - minY };
-  }, [nodeDefs, posMap]);
+  }, [nodeDefs, posMap, parentMap]);
 
   useEffect(() => {
     if (flowBounds.w === 0 || flowBounds.h === 0) return;
