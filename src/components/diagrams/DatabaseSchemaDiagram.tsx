@@ -26,7 +26,11 @@ export function DatabaseSchemaDiagram({ data, mobileData, title }: Props) {
       edgeDefs={active.edgeDefs}
       direction={active.direction ?? "TB"}
       title={title}
-      minHeight={550}
+      minHeight={isMobile ? 380 : 550}
+      fitViewPadding={isMobile ? 0.02 : undefined}
+      nodeWidth={isMobile ? 130 : undefined}
+      nodeHeight={isMobile ? 70 : undefined}
+      rankSep={isMobile ? 24 : undefined}
     />
   );
 }

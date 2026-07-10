@@ -26,7 +26,13 @@ export function WorkflowDiagram({ data, mobileData, title }: Props) {
       edgeDefs={active.edgeDefs}
       direction={active.direction ?? "TB"}
       title={title}
-      minHeight={700}
+      minHeight={isMobile ? 450 : 600}
+      nodeWidth={isMobile ? 100 : undefined}
+      nodeHeight={isMobile ? 80 : undefined}
+      subPad={isMobile ? 10 : undefined}
+      subTitleH={isMobile ? 20 : undefined}
+      rankSep={isMobile ? 24 : undefined}
+      fitViewPadding={0.05}
     />
   );
 }

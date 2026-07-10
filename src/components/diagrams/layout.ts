@@ -82,22 +82,40 @@ export function computeLayout(
     out.set(subId, { x: sx, y: sy, w: sw, h: sh });
   }
 
-  // Resolve vertical overlap — shift subgraph + its children together
+  // Resolve subgraph overlap (vertical for TB, horizontal for LR)
+  const isLR = direction === "LR";
   const subEntries = [...subChildren.entries()].filter(
     ([id]) => out.has(id)
   );
-  subEntries.sort((a, b) => out.get(a[0])!.y - out.get(b[0])!.y);
-  for (let i = 1; i < subEntries.length; i++) {
-    const prev = out.get(subEntries[i - 1][0])!;
-    const [currId] = subEntries[i];
-    const curr = out.get(currId)!;
-    const prevBottom = prev.y + prev.h;
-    if (curr.y >= prevBottom) continue;
-    const shift = prevBottom - curr.y + 8;
-    curr.y += shift;
-    for (const cId of subChildren.get(currId)!) {
-      const p = out.get(cId);
-      if (p) p.y += shift;
+  if (!isLR) {
+    subEntries.sort((a, b) => out.get(a[0])!.y - out.get(b[0])!.y);
+    for (let i = 1; i < subEntries.length; i++) {
+      const prev = out.get(subEntries[i - 1][0])!;
+      const [currId] = subEntries[i];
+      const curr = out.get(currId)!;
+      const prevEdge = prev.y + prev.h;
+      if (curr.y >= prevEdge) continue;
+      const shift = prevEdge - curr.y + 8;
+      curr.y += shift;
+      for (const cId of subChildren.get(currId)!) {
+        const p = out.get(cId);
+        if (p) p.y += shift;
+      }
+    }
+  } else {
+    subEntries.sort((a, b) => out.get(a[0])!.x - out.get(b[0])!.x);
+    for (let i = 1; i < subEntries.length; i++) {
+      const prev = out.get(subEntries[i - 1][0])!;
+      const [currId] = subEntries[i];
+      const curr = out.get(currId)!;
+      const prevEdge = prev.x + prev.w;
+      if (curr.x >= prevEdge) continue;
+      const shift = prevEdge - curr.x + 8;
+      curr.x += shift;
+      for (const cId of subChildren.get(currId)!) {
+        const p = out.get(cId);
+        if (p) p.x += shift;
+      }
     }
   }
 

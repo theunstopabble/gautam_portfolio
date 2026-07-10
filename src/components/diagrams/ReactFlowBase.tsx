@@ -119,14 +119,14 @@ function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeW
       containerW / (flowBounds.w * (1 + 2 * pad)),
       containerH / (flowBounds.h * (1 + 2 * pad))
     );
-    zoom = Math.max(0.4, Math.min(1.2, zoom));
+    zoom = Math.max(0.3, Math.min(2.0, zoom));
     setViewport({
       x: -flowBounds.x * zoom + containerW * pad,
       y: -flowBounds.y * zoom + containerH * pad,
       zoom,
     });
     const needed = Math.ceil(flowBounds.h * zoom + flowBounds.y * zoom + containerW * pad * 2);
-    onContentHeight?.(Math.min(Math.max(needed, 200), 800));
+    onContentHeight?.(Math.min(Math.max(needed, 200), 2000));
   }, [flowBounds, fitViewPadding, setViewport, containerW, containerH, onContentHeight]);
 
   return (
@@ -135,14 +135,14 @@ function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeW
       edges={rfEdges}
       nodeTypes={RF_NODE_TYPES}
       fitView={false}
-      minZoom={0.4}
-      maxZoom={1.2}
+      minZoom={0.3}
+      maxZoom={2.0}
       nodesDraggable={false}
       nodesConnectable={false}
       elementsSelectable={false}
-      panOnDrag={false}
-      zoomOnScroll={false}
-      zoomOnPinch={false}
+      panOnDrag={true}
+      zoomOnScroll={true}
+      zoomOnPinch={true}
       preventScrolling={true}
       proOptions={{ hideAttribution: true }}
       colorMode="dark"
