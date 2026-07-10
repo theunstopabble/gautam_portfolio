@@ -55,14 +55,30 @@ export function computeLayout(
   }
 
   const subChildren = new Map<string, string[]>();
+  const parentMap = new Map<string, string | null>();
   for (const n of nodeDefs) {
+    parentMap.set(n.id, n.parentId ?? null);
     if (n.parentId) {
       if (!subChildren.has(n.parentId)) subChildren.set(n.parentId, []);
       subChildren.get(n.parentId)!.push(n.id);
     }
   }
 
-  for (const [subId, childIds] of subChildren) {
+  // Compute subgraph bounds in depth order (deepest first) so parent bounds use updated child sizes
+  function getDepth(id: string, cache: Map<string, number>): number {
+    if (cache.has(id)) return cache.get(id)!;
+    const p = parentMap.get(id) ?? null;
+    if (!p) { cache.set(id, 0); return 0; }
+    const d = getDepth(p, cache) + 1;
+    cache.set(id, d);
+    return d;
+  }
+  const depthCache = new Map<string, number>();
+  const sortedSub = [...subChildren.entries()].sort(
+    (a, b) => getDepth(b[0], depthCache) - getDepth(a[0], depthCache)
+  );
+
+  for (const [subId, childIds] of sortedSub) {
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     for (const cId of childIds) {
       const p = out.get(cId);
@@ -82,39 +98,44 @@ export function computeLayout(
     out.set(subId, { x: sx, y: sy, w: sw, h: sh });
   }
 
-  // Resolve subgraph overlap (vertical for TB, horizontal for LR)
+  // Resolve subgraph overlap — only compare subgraphs at the same parent level
   const isLR = direction === "LR";
-  const subEntries = [...subChildren.entries()].filter(
-    ([id]) => out.has(id)
-  );
-  if (!isLR) {
-    subEntries.sort((a, b) => out.get(a[0])!.y - out.get(b[0])!.y);
-    for (let i = 1; i < subEntries.length; i++) {
-      const prev = out.get(subEntries[i - 1][0])!;
-      const [currId] = subEntries[i];
-      const curr = out.get(currId)!;
-      const prevEdge = prev.y + prev.h;
-      if (curr.y >= prevEdge) continue;
-      const shift = prevEdge - curr.y + 8;
-      curr.y += shift;
-      for (const cId of subChildren.get(currId)!) {
-        const p = out.get(cId);
-        if (p) p.y += shift;
+  const byParent = new Map<string | null, { id: string; children: string[] }[]>();
+  for (const [subId, children] of subChildren) {
+    const p = parentMap.get(subId) ?? null;
+    if (!byParent.has(p)) byParent.set(p, []);
+    byParent.get(p)!.push({ id: subId, children });
+  }
+
+  for (const [, group] of byParent) {
+    if (group.length < 2) continue;
+    if (!isLR) {
+      group.sort((a, b) => out.get(a.id)!.y - out.get(b.id)!.y);
+      for (let i = 1; i < group.length; i++) {
+        const prev = out.get(group[i - 1].id)!;
+        const curr = out.get(group[i].id)!;
+        const prevEdge = prev.y + prev.h;
+        if (curr.y >= prevEdge) continue;
+        const shift = prevEdge - curr.y + 8;
+        curr.y += shift;
+        for (const cId of group[i].children) {
+          const p = out.get(cId);
+          if (p) p.y += shift;
+        }
       }
-    }
-  } else {
-    subEntries.sort((a, b) => out.get(a[0])!.x - out.get(b[0])!.x);
-    for (let i = 1; i < subEntries.length; i++) {
-      const prev = out.get(subEntries[i - 1][0])!;
-      const [currId] = subEntries[i];
-      const curr = out.get(currId)!;
-      const prevEdge = prev.x + prev.w;
-      if (curr.x >= prevEdge) continue;
-      const shift = prevEdge - curr.x + 8;
-      curr.x += shift;
-      for (const cId of subChildren.get(currId)!) {
-        const p = out.get(cId);
-        if (p) p.x += shift;
+    } else {
+      group.sort((a, b) => out.get(a.id)!.x - out.get(b.id)!.x);
+      for (let i = 1; i < group.length; i++) {
+        const prev = out.get(group[i - 1].id)!;
+        const curr = out.get(group[i].id)!;
+        const prevEdge = prev.x + prev.w;
+        if (curr.x >= prevEdge) continue;
+        const shift = prevEdge - curr.x + 8;
+        curr.x += shift;
+        for (const cId of group[i].children) {
+          const p = out.get(cId);
+          if (p) p.x += shift;
+        }
       }
     }
   }
