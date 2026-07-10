@@ -44,11 +44,10 @@ interface FlowInnerProps {
   containerW?: number;
   containerH?: number;
   onContentHeight?: (h: number) => void;
-  isMobile?: boolean;
   zoomRefH?: number;
 }
 
-function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeWidth, nodeHeight, subPad, subTitleH, rankSep, containerW = 300, containerH = 500, onContentHeight, isMobile = false, zoomRefH = 500 }: FlowInnerProps) {
+function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeWidth, nodeHeight, subPad, subTitleH, rankSep, containerW = 300, containerH = 500, onContentHeight, zoomRefH = 500 }: FlowInnerProps) {
   const { setViewport } = useReactFlow();
 
   const layoutNodeDefs = useMemo(
@@ -152,10 +151,10 @@ function FlowInner({ nodeDefs, edgeDefs, direction, fitViewPadding = 0.08, nodeW
       nodesDraggable={false}
       nodesConnectable={false}
       elementsSelectable={false}
-      panOnDrag={!isMobile}
-      zoomOnScroll={!isMobile}
+      panOnDrag={true}
+      zoomOnScroll={true}
       zoomOnPinch={true}
-      preventScrolling={!isMobile}
+      preventScrolling={true}
       proOptions={{ hideAttribution: true }}
       colorMode="dark"
     >
@@ -182,14 +181,6 @@ export function ReactFlowBase({ nodeDefs, edgeDefs, direction = "TB", title, min
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [dims, setDims] = useState({ w: 300, h: minHeight });
   const [contentH, setContentH] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 1024);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   useEffect(() => {
     const el = wrapperRef.current;
@@ -228,7 +219,6 @@ export function ReactFlowBase({ nodeDefs, edgeDefs, direction = "TB", title, min
             containerW={dims.w}
             onContentHeight={setContentH}
             containerH={dims.h}
-            isMobile={isMobile}
             zoomRefH={minHeight}
           />
         </ReactFlowProvider>
