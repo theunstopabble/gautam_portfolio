@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { buildProjectSchema } from "@/lib/structured-data";
+import { ProjectDiagrams } from "@/components/projects/ProjectDiagrams";
 
 
 export function generateStaticParams() {
@@ -176,6 +177,10 @@ export default async function ProjectPage({
             </div>
           </div>
 
+          {/* Diagrams */}
+          <div>
+            <ProjectDiagrams projectId={project.id} />
+          </div>
         </div>
       </section>
     </main>
