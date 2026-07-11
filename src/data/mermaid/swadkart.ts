@@ -1,4 +1,4 @@
-export const swadkartArchitecture = `%%{init: {"flowchart": {"subGraphTitleMargin": {"top": 10, "bottom": 40}, "rankSpacing": 80}} }%%
+export const swadkartArchitecture = `%%{init: {"flowchart": {"subGraphTitleMargin": {"top": 10, "bottom": 40}, "rankSpacing": 80}, "themeVariables": {"fontSize": "26px"}} }%%
 graph TB
   subgraph FRONTEND["Frontend — React 19 PWA"]
     UI["UI Layer<br/><small>Tailwind CSS + Lucide</small>"]
