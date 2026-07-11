@@ -1,4 +1,5 @@
-export const swadkartArchitecture = `graph TB
+export const swadkartArchitecture = `%%{init: {"flowchart": {"subGraphTitleMargin": {"top": 10, "bottom": 40}, "rankSpacing": 80}} }%%
+graph TB
   subgraph FRONTEND["Frontend — React 19 PWA"]
     UI["UI Layer<br/><small>Tailwind CSS + Lucide</small>"]
     ST["State Mgmt<br/><small>Redux Toolkit + RTK Query</small>"]
@@ -23,15 +24,14 @@ export const swadkartArchitecture = `graph TB
   GW --> CT
   GW --> SK
   GW --> AI
-  GW --> PW
   GW --> BJ
-  RT --> SK
   CT --> MG
   CT --> CL
   SK --> RD
   AI --> MG
   BJ --> MG
-  BJ --> RD`;
+  BJ --> RD
+  FRONTEND ~~~ BACKEND`;
 
 export const swadkartWorkflow = `graph TB
   subgraph AUTH["Auth"]
