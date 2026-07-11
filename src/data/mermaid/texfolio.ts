@@ -54,13 +54,15 @@ export const texfolioWorkflow = `graph TB
   C --> ATS
   ATS --> F
   F --> I
-  I --> S`;
+  I --> S
+  ORG --> CR
+  PDF --> C`;
 
 export const texfolioDeployment = `graph TB
   subgraph CI_CD["CI/CD Pipeline"]
     GH["GitHub Actions"]
     LINT["Lint"]
-    BUILD_D["Build:deploy"]
+    BUILD_D["Build:<br/>deploy"]
   end
   subgraph PROD["Production Services"]
     V["Vercel<br/><small>texfolio.vercel.app, React SPA</small>"]
