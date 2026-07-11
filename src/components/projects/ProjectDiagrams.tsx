@@ -41,7 +41,7 @@ export function ProjectDiagrams({ projectId }: { projectId: string }) {
             src={`/diagrams/${projectId}-${t.id}.svg`}
             alt={`${projectId} ${t.label}`}
             className="block h-auto mx-auto"
-            style={{ maxWidth: "none", width: "auto" }}
+            style={{ maxWidth: "100%", width: "auto", height: "auto" }}
           />
         </div>
       ))}
