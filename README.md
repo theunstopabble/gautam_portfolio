@@ -36,7 +36,7 @@ A premium, recruiter-friendly portfolio built with Next.js 16, React 19 & Framer
 
 ## 📸 Preview
 
-![Gautam Kumar Portfolio](public/gautam-portfolio.png)
+![Gautam Kumar Portfolio](public/og-image.png)
 
 Each project card displays an actual screenshot of the deployed application with a smooth hover-zoom effect. Visit the [live demo](https://gautam-kr.vercel.app/) to explore.
 

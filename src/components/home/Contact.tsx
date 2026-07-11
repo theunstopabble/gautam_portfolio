@@ -11,7 +11,12 @@ import {
   ArrowUpRight,
   Send,
   MapPin,
+  Eye,
 } from "lucide-react";
+import { trackResumeClick } from "@/components/Analytics";
+
+const RESUME_LINK =
+  "https://drive.google.com/file/d/12F5GfuBqgwUaTbbWNnx7YHUIHJ5L1NxF/view?usp=sharing";
 
 const socialLinks = [
   {
@@ -157,15 +162,30 @@ export function Contact() {
               })}
             </div>
 
-            {/* Main CTA */}
-            <div className="text-center">
+            {/* Main CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 size="lg"
-                className="h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+                className="h-13 w-full sm:w-auto gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
                 asChild
               >
                 <a href="mailto:gautamkumar43421@gmail.com">
                   Say Hello <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="md:hidden h-13 w-full sm:w-auto gap-2 rounded-xl border-primary/30 px-8 text-base font-semibold transition-all hover:bg-primary/10"
+                asChild
+                onClick={trackResumeClick}
+              >
+                <a
+                  href={RESUME_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Eye className="h-4 w-4" /> View Resume
                 </a>
               </Button>
             </div>
