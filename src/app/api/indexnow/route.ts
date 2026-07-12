@@ -42,7 +42,6 @@ async function submitBatch(host: string, urls: string[]) {
   const payload = {
     host,
     key: INDEXNOW_KEY,
-    keyLocation: `https://${PORTFOLIO_HOST}/${INDEXNOW_KEY}.txt`,
     urlList: urls,
   };
 
