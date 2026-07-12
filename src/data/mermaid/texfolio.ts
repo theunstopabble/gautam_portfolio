@@ -11,7 +11,7 @@ export const texfolioArchitecture = `graph TB
   subgraph DATA_L["Data & Queue Layer"]
     MG[("MongoDB Atlas<br/><small>6 Collections</small>")]
     RD[("Redis<br/><small>Rate Limits · BullMQ</small>")]
-    EXT[("LLM Providers<br/><small>NVIDIA NIM · Gemini · Groq</small>")]
+    EXT[("LLM Providers<br/><small>Gemini · Groq</small>")]
   end
   subgraph PDF["PDF Engine"]
     BULL["BullMQ Worker<br/><small>Async PDF Gen</small>"]

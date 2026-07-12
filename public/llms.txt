@@ -29,15 +29,15 @@ Gautam Kumar is a Full-Stack Developer from Sitamarhi, Bihar, currently based in
 
 ### [Satark-AI](https://satark-deepfake.vercel.app)
 - GitHub: [github.com/theunstopabble/Satark-AI](https://github.com/theunstopabble/Satark-AI)
-- Description: Production-grade deepfake detection and speaker verification platform using Wav2Vec2, NVIDIA NIM (Llama 3.2-90B Vision), and ECAPA-TDNN voice biometrics.
+- Description: Production-grade deepfake detection and speaker verification platform using Wav2Vec2, Hugging Face Inference API (face deepfake + AI-image detectors), and ECAPA-TDNN voice biometrics.
 - Tech Stack: React 18, TypeScript, Vite, FastAPI, Python, PyTorch, Hono, PostgreSQL, Drizzle ORM, Cloudflare Workers, Clerk Auth, Turborepo, Docker
-- Key Features: Audio deepfake detection (Wav2Vec2 + MFCC + Spectral Analysis), image deepfake detection (NVIDIA NIM Llama 3.2-90B Vision), speaker verification (ECAPA-TDNN 192-dim embeddings), live microphone monitoring, explainable AI results, PDF report generation, PWA support
+- Key Features: Audio deepfake detection (Wav2Vec2 + MFCC + Spectral Analysis), image deepfake detection (Hugging Face Inference API), speaker verification (ECAPA-TDNN 192-dim embeddings), live microphone monitoring, explainable AI results, PDF report generation, PWA support
 - [Portfolio Page](https://gautam-kr.vercel.app/projects/satark-ai)
 
 ### [TexFolio](https://texfolio.vercel.app)
 - GitHub: [github.com/theunstopabble/TexFolio](https://github.com/theunstopabble/TexFolio)
 - Description: AI-powered LaTeX resume builder SaaS with LangGraph multi-agent resume coach, real LaTeX PDF rendering, Organizations with RBAC, and GDPR compliance.
-- Tech Stack: React 19, Vite, TypeScript, Hono, MongoDB, Redis, BullMQ, LangChain, LangGraph, NVIDIA NIM, Groq, Clerk Auth, Razorpay, Tailwind CSS, Docker
+- Tech Stack: React 19, Vite, TypeScript, Hono, MongoDB, Redis, BullMQ, LangChain, LangGraph, Groq, Clerk Auth, Razorpay, Tailwind CSS, Docker
 - Key Features: LangGraph resume coach (Content, Impact, Format, ATS scoring), real pdflatex compilation, FAANG-ready templates, drag-and-drop editor, Organizations with RBAC (Owner/Admin/Editor/Viewer), BullMQ async PDF generation, distributed Redis rate limiting, API key auth (HMAC), GDPR data export and erasure, Razorpay payments
 - [Portfolio Page](https://gautam-kr.vercel.app/projects/texfolio)
 
@@ -66,7 +66,7 @@ Gautam Kumar is a Full-Stack Developer from Sitamarhi, Bihar, currently based in
 - MongoDB (Mongoose), PostgreSQL (Drizzle ORM), Redis (ioredis)
 
 ### AI & Machine Learning
-- Groq (Llama 3.3-70b), NVIDIA NIM, LangChain, LangGraph, TensorFlow.js, face-api.js, PyTorch, SpeechBrain, Wav2Vec2, ECAPA-TDNN
+- Groq (Llama 3.3-70b), Hugging Face, LangChain, LangGraph, TensorFlow.js, face-api.js, PyTorch, SpeechBrain, Wav2Vec2, ECAPA-TDNN
 
 ### DevOps & Infrastructure
 - Docker, Turborepo, GitHub Actions, Vercel, Render, Cloudflare Workers, Nginx

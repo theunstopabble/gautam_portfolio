@@ -19,7 +19,7 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "What is Gautam Kumar's tech stack?",
     answer:
-      "Gautam Kumar's tech stack includes React, Next.js, Node.js, TypeScript, Python, MongoDB, PostgreSQL, Redis, Docker, Tailwind CSS, Socket.IO, GraphQL, FastAPI, Hono, and AI/ML tools like Groq LLM, NVIDIA NIM, LangChain, LangGraph, TensorFlow.js, and PyTorch.",
+      "Gautam Kumar's tech stack includes React, Next.js, Node.js, TypeScript, Python, MongoDB, PostgreSQL, Redis, Docker, Tailwind CSS, Socket.IO, GraphQL, FastAPI, Hono, and AI/ML tools like Groq LLM, LangChain, LangGraph, TensorFlow.js, and PyTorch.",
   },
   {
     question: "Where does Gautam Kumar study?",

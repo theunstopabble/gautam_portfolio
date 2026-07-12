@@ -129,7 +129,7 @@ export default function RootLayout({
                   name: "What is Gautam Kumar's tech stack?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Gautam Kumar's tech stack includes React, Next.js, Node.js, TypeScript, Python, MongoDB, PostgreSQL, Redis, Docker, Tailwind CSS, Socket.IO, GraphQL, FastAPI, Hono, and AI/ML tools like Groq LLM, NVIDIA NIM, LangChain, LangGraph, TensorFlow.js, and PyTorch.",
+                    text: "Gautam Kumar's tech stack includes React, Next.js, Node.js, TypeScript, Python, MongoDB, PostgreSQL, Redis, Docker, Tailwind CSS, Socket.IO, GraphQL, FastAPI, Hono, and AI/ML tools like Groq LLM, LangChain, LangGraph, TensorFlow.js, and PyTorch.",
                   },
                 },
                 {
@@ -291,7 +291,7 @@ export default function RootLayout({
                     "Docker",
                     "LangChain",
                     "LangGraph",
-                    "NVIDIA NIM",
+                    "Hugging Face",
                     "PyTorch",
                     "TensorFlow.js",
                     "Deepfake Detection",
@@ -325,12 +325,12 @@ export default function RootLayout({
                   applicationCategory: "SecurityApplication",
                   operatingSystem: "Web",
                   description:
-                    "Multi-model deepfake detection platform. Detects synthetic audio via Wav2Vec2, deepfake images via NVIDIA NIM (Llama 3.2-90B Vision) through Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN biometrics with 192-dim embeddings.",
+                    "Multi-model deepfake detection platform. Detects synthetic audio via Wav2Vec2, deepfake images via Hugging Face Inference API through Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN biometrics with 192-dim embeddings.",
                   author: { "@id": "https://gautam-kr.vercel.app/#person" },
                   programmingLanguage: ["TypeScript", "Python"],
                   codeRepository: "https://github.com/theunstopabble/Satark-AI",
                   keywords:
-                    "deepfake detection, speaker verification, NVIDIA NIM, Wav2Vec2, AI safety, voice biometrics",
+                    "deepfake detection, speaker verification, Hugging Face, Wav2Vec2, AI safety, voice biometrics",
                 },
                 {
                   "@type": "SoftwareApplication",

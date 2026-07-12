@@ -85,7 +85,7 @@ export const projects: Project[] = [
     seoDescription:
       "A comprehensive AI-driven security platform built with Python, FastAPI, and Supabase for real-time deepfake audio detection, synthetic voice identification, and secure voice verification.",
     description:
-      "A production-grade deepfake detection platform built as a Turborepo microservices monorepo. Detects synthetic audio via Wav2Vec2 + MFCC spectral forensics, deepfake images via NVIDIA NIM (Llama 3.2-90B Vision) through a Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN voice biometrics with 192-dim embeddings and cosine similarity matching. Ships as a PWA with real-time microphone monitoring, analytics dashboard, and PDF report exports.",
+      "A production-grade deepfake detection platform built as a Turborepo microservices monorepo. Detects synthetic audio via Wav2Vec2 + MFCC spectral forensics, deepfake images via Hugging Face Inference API (face deepfake + AI-image detectors) through a Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN voice biometrics with 192-dim embeddings and cosine similarity matching. Ships as a PWA with real-time microphone monitoring, analytics dashboard, and PDF report exports.",
     icon: Share2,
     tags: [
       "React 18",
@@ -94,7 +94,7 @@ export const projects: Project[] = [
       "PyTorch",
       "Hono",
       "PostgreSQL",
-      "NVIDIA NIM",
+      "Hugging Face",
       "Cloudflare Workers",
       "Turborepo",
       "SpeechBrain",
@@ -114,9 +114,9 @@ export const projects: Project[] = [
       problem:
         "Generative AI has made it trivially easy to clone voices, fabricate images, and spread synthetic media. Existing detection tools are siloed — they handle either audio or images, never both — and often require expensive infrastructure or remain offline-only.",
       solution:
-        "Architected a scalable Turborepo monorepo with three independent microservices: a React 18 PWA frontend, a Hono (Node.js) API gateway backed by PostgreSQL via Drizzle ORM with Clerk JWT auth, and a Python 3.11 FastAPI AI engine for audio deepfake detection (Wav2Vec2) and speaker biometrics (ECAPA-TDNN). Image deepfake detection runs on a fully serverless Cloudflare Worker proxy that forwards requests to NVIDIA NIM (Llama 3.2-90B Vision), completely independent of the Python engine. A GitHub Actions cron job pings both Render services every 14 minutes to prevent free-tier cold starts.",
+        "Architected a scalable Turborepo monorepo with three independent microservices: a React 18 PWA frontend, a Hono (Node.js) API gateway backed by PostgreSQL via Drizzle ORM with Clerk JWT auth, and a Python 3.11 FastAPI AI engine for audio deepfake detection (Wav2Vec2) and speaker biometrics (ECAPA-TDNN). Image deepfake detection runs on a fully serverless Cloudflare Worker proxy that forwards requests to the Hugging Face Inference API, completely independent of the Python engine. A GitHub Actions cron job pings both Render services every 14 minutes to prevent free-tier cold starts.",
       challenges: [
-        "Designing a serverless image detection pipeline via Cloudflare Workers with strict CORS whitelisting, 5MB double-layer size enforcement, and 30s AbortController timeout against NVIDIA NIM — all without touching the Python engine.",
+        "Designing a serverless image detection pipeline via Cloudflare Workers with strict CORS whitelisting, 5MB double-layer size enforcement, and 45s AbortController timeout against the Hugging Face Inference API — all without touching the Python engine.",
         "Implementing lazy model loading and thread executor offloading in FastAPI to prevent OOM crashes and keep the async event loop non-blocking on free-tier Render instances.",
         "Building per-user scoped speaker isolation — users can only verify against their own enrolled voice prints — with 192-dim ECAPA-TDNN embeddings stored in PostgreSQL and cosine similarity computed server-side (threshold: 0.75).",
       ],
@@ -139,7 +139,7 @@ export const projects: Project[] = [
         {
           name: "Vision Pipeline",
           tools:
-            "NVIDIA NIM (Llama 3.2-90B Vision Instruct), Cloudflare Workers (serverless proxy)",
+            "Hugging Face Inference API (prithivMLmods + umm-maybe), Cloudflare Workers (serverless proxy)",
         },
         {
           name: "Infrastructure",
@@ -165,7 +165,6 @@ export const projects: Project[] = [
       "Hono",
       "MongoDB",
       "LangGraph",
-      "NVIDIA NIM",
       "Groq",
       "BullMQ",
       "Redis",
@@ -190,7 +189,7 @@ export const projects: Project[] = [
       solution:
         'Created a "No-Code LaTeX" SaaS with a Hono backend that injects user data into .tex templates via Mustache and compiles them using a Dockerized pdflatex environment. Integrated a LangGraph multi-agent pipeline (4 stages: Content, Impact, Format, ATS) for intelligent resume coaching. Added Organizations with full RBAC hierarchy, BullMQ async PDF generation with progress tracking, distributed Redis rate limiting, and GDPR-compliant data export/deletion.',
       challenges: [
-        "Building a LangGraph multi-agent pipeline with circuit breaker failover (NVIDIA NIM → Groq) that scores resumes across 4 dimensions and provides actionable feedback.",
+        "Building a LangGraph multi-agent pipeline with circuit breaker failover (Groq) that scores resumes across 4 dimensions and provides actionable feedback.",
         "Implementing Organizations with RBAC — ownership transfer, org-scoped resume visibility, branding overrides (locked templates, company fonts, colors) applied during PDF generation.",
         "Designing BullMQ async PDF generation with progress tracking (10% → 30% → 100%), automatic retries with exponential backoff, and rate-limited worker concurrency.",
         "Sandboxing LaTeX compilation using spawn (not exec) to prevent shell injection while supporting custom templates.",
@@ -209,7 +208,7 @@ export const projects: Project[] = [
         {
           name: "AI",
           tools:
-            "LangChain + LangGraph (multi-agent), NVIDIA NIM, Google Gemini, Groq (failover chain)",
+            "LangChain + LangGraph (multi-agent), Google Gemini, Groq (failover chain)",
         },
         {
           name: "PDF Engine",

@@ -3,7 +3,7 @@ export const satarkAiArchitecture = `graph TB
     FE["React 18 + Vite<br/><small>Tailwind CSS, Wavesurfer.js</small>"]
   end
   subgraph EDGE["Edge Layer"]
-    CF["Cloudflare Worker<br/><small>Image Proxy / NIM Proxy</small>"]
+    CF["Cloudflare Worker<br/><small>Image Proxy / HF Proxy</small>"]
   end
   subgraph API_G["API Gateway"]
     GW["Hono Server<br/><small>JWT · Rate Limit · SHA-256 Dedup</small>"]
@@ -14,14 +14,14 @@ export const satarkAiArchitecture = `graph TB
     EC["ECAPA-TDNN<br/><small>Speaker Embeddings</small>"]
     SA["Spectral Analysis<br/><small>Librosa</small>"]
   end
-  subgraph NIM["NVIDIA NIM"]
-    NV["Llama 3.2-90B Vision<br/><small>Deepfake Detection</small>"]
+  subgraph HF["Hugging Face API"]
+    NV["Deepfake Detection Models<br/><small>prithivMLmods + umm-maybe</small>"]
   end
   FE --> GW
   GW --> DB
   GW --> ENGINE
   FE --> CF
-  CF --> NIM`;
+  CF --> HF`;
 
 export const satarkAiWorkflow = `graph TB
   A["User Uploads Audio"]

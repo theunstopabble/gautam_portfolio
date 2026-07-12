@@ -67,15 +67,15 @@ Gautam Kumar is a Full-Stack Developer from Sitamarhi, Bihar, currently based in
 - GitHub: [github.com/theunstopabble/Satark-AI](https://github.com/theunstopabble/Satark-AI)
 - [Portfolio Page](https://gautam-kr.vercel.app/projects/satark-ai)
 - Type: Deepfake Detection & Speaker Verification Platform
-- Description: Multi-model deepfake detection as Turborepo microservices monorepo. Detects synthetic audio via Wav2Vec2 + MFCC spectral forensics, deepfake images via NVIDIA NIM (Llama 3.2-90B Vision) through Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN voice biometrics with 192-dim embeddings and cosine similarity matching (threshold: 0.75). PWA with real-time microphone monitoring, analytics dashboard, PDF report exports. Per-user scoped speaker isolation.
-- Tech Stack: React 18, TypeScript, Vite, FastAPI (Python), PyTorch, Hono (Node.js), PostgreSQL, Drizzle ORM, NVIDIA NIM, Cloudflare Workers, Turborepo, Docker, ECAPA-TDNN, Wav2Vec2, SpeechBrain
+- Description: Multi-model deepfake detection as Turborepo microservices monorepo. Detects synthetic audio via Wav2Vec2 + MFCC spectral forensics, deepfake images via Hugging Face Inference API through Cloudflare Worker proxy, and verifies speaker identity using ECAPA-TDNN voice biometrics with 192-dim embeddings and cosine similarity matching (threshold: 0.75). PWA with real-time microphone monitoring, analytics dashboard, PDF report exports. Per-user scoped speaker isolation.
+- Tech Stack: React 18, TypeScript, Vite, FastAPI (Python), PyTorch, Hono (Node.js), PostgreSQL, Drizzle ORM, Hugging Face, Cloudflare Workers, Turborepo, Docker, ECAPA-TDNN, Wav2Vec2, SpeechBrain
 
 ### [TexFolio](https://texfolio.vercel.app)
 - GitHub: [github.com/theunstopabble/TexFolio](https://github.com/theunstopabble/TexFolio)
 - [Portfolio Page](https://gautam-kr.vercel.app/projects/texfolio)
 - Type: AI-Powered LaTeX Resume Builder SaaS
 - Description: Combines real LaTeX PDF rendering with LLM intelligence. LangGraph multi-agent resume coach (4-stage: Content, Impact, Format, ATS scoring), LinkedIn PDF import via Llama 3.3, FAANG-ready templates, drag-and-drop editor, Organizations with RBAC (Owner/Admin/Editor/Viewer), BullMQ async PDF generation with progress tracking, distributed Redis rate limiting, Razorpay payments, GDPR compliance (data export + PII anonymization). Sandboxed LaTeX compilation using spawn.
-- Tech Stack: React 19, Vite, TypeScript, Hono (Node.js), MongoDB, Redis, BullMQ, LangChain, LangGraph, NVIDIA NIM, Groq, Clerk Auth, Razorpay, Tailwind CSS, Docker, pdflatex
+- Tech Stack: React 19, Vite, TypeScript, Hono (Node.js), MongoDB, Redis, BullMQ, LangChain, LangGraph, Groq, Clerk Auth, Razorpay, Tailwind CSS, Docker, pdflatex
 
 ## Full Skills & Expertise
 
@@ -92,7 +92,7 @@ Node.js 22, Express 5, Hono v4, FastAPI, Socket.IO 4, GraphQL (Apollo Server), B
 MongoDB (Mongoose 8/9), PostgreSQL (Drizzle ORM), Redis (ioredis)
 
 ### AI & Machine Learning
-Groq (Llama 3.3-70b), NVIDIA NIM (Llama 3.2-90B Vision), LangChain, LangGraph, TensorFlow.js, face-api.js, PyTorch, SpeechBrain, Wav2Vec2, ECAPA-TDNN, Azure Speech SDK, Google Gemini, Xenova Transformers
+Groq (Llama 3.3-70b), Hugging Face, LangChain, LangGraph, TensorFlow.js, face-api.js, PyTorch, SpeechBrain, Wav2Vec2, ECAPA-TDNN, Azure Speech SDK, Google Gemini, Xenova Transformers
 
 ### DevOps & Infrastructure
 Docker, Docker Compose, Turborepo, GitHub Actions CI/CD, Vercel, Render, Cloudflare Workers, Nginx, Prometheus, Sentry

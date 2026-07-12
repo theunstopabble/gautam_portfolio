@@ -53,7 +53,7 @@ const skillCategories = [
       "Groq (Llama 3.3)",
       "LangChain",
       "LangGraph",
-      "NVIDIA NIM",
+      "Hugging Face",
       "TensorFlow.js",
       "PyTorch",
       "SpeechBrain",
