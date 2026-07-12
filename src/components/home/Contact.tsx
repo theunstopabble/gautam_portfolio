@@ -93,10 +93,10 @@ export function Contact() {
             className="glass-strong rounded-2xl p-5 sm:p-8 md:p-10"
           >
             {/* Contact Info */}
-            <div className="mb-8 grid gap-4 grid-cols-1 sm:grid-cols-2">
+            <div className="mb-8 flex justify-center">
               <a
                 href="mailto:gautamkumar43421@gmail.com"
-                className="group flex items-center gap-3 rounded-xl border border-white/5 bg-white/2 p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/5 overflow-hidden"
+                className="group flex w-full max-w-sm items-center gap-3 rounded-xl border border-white/5 bg-white/2 p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/5 overflow-hidden"
               >
                 <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-primary to-accent shadow-lg">
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
@@ -110,7 +110,6 @@ export function Contact() {
                   </p>
                 </div>
               </a>
-
             </div>
 
             {/* Location */}
