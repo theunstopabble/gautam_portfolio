@@ -116,7 +116,7 @@ export function Contact() {
             {/* Location */}
             <div className="mb-8 flex items-center justify-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4" />
-              Jaipur, Rajasthan, India
+              From Sitamarhi, Bihar · Based in Jaipur, Rajasthan
             </div>
 
             {/* Social Links */}
