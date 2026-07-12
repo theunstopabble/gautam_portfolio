@@ -222,7 +222,6 @@ export default function RootLayout({
                 "Full-Stack Developer from Sitamarhi, Bihar, based in Jaipur — solo-shipped SaaS products with AI integration.",
               url: "https://gautam-kr.vercel.app",
               email: "gautamkumar43421@gmail.com",
-              telephone: "+91-6207793196",
               image: "https://gautam-kr.vercel.app/profile.webp",
               address: {
                 "@type": "PostalAddress",

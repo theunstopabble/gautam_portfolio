@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Mail,
-  Phone,
   GitFork,
   LinkedinIcon,
   TwitterIcon,
@@ -112,22 +111,6 @@ export function Contact() {
                 </div>
               </a>
 
-              <a
-                href="tel:+916207793196"
-                className="group flex items-center gap-3 rounded-xl border border-white/5 bg-white/2 p-3 sm:p-4 transition-all hover:border-primary/30 hover:bg-white/5 overflow-hidden"
-              >
-                <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-emerald-500 to-teal-500 shadow-lg">
-                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="text-xs font-medium text-muted-foreground">
-                    Phone
-                  </p>
-                  <p className="truncate text-xs sm:text-sm font-semibold text-foreground">
-                    +91-6207793196
-                  </p>
-                </div>
-              </a>
             </div>
 
             {/* Location */}
