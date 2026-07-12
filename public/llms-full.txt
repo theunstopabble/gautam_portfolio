@@ -3,7 +3,8 @@
 ## Identity
 - Name: Gautam Kumar
 - Title: Full-Stack Developer | Solo-shipped SaaS products | AI integration
-- Location: Jaipur, Rajasthan, India
+- Origin: Sitamarhi, Bihar, India
+- Current: Jaipur, Rajasthan, India
 - University: [Jagannath University, Jaipur](https://www.jagannathuniversity.org) (B.Tech CSE, 2023-2027)
 - [Portfolio](https://gautam-kr.vercel.app)
 - Email: [gautamkumar43421@gmail.com](mailto:gautamkumar43421@gmail.com)
@@ -13,7 +14,7 @@
 - Twitter/X: [x.com/_unstopabble](https://x.com/_unstopabble)
 
 ## Summary
-Gautam Kumar is a Full-Stack Developer who has solo-shipped SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/experience) and has experience with real-time systems and microservice architecture.
+Gautam Kumar is a Full-Stack Developer from Sitamarhi, Bihar, currently based in Jaipur. He has solo-shipped SaaS applications with AI integration, combining React, Node.js, TypeScript, Python, and LLM-powered features. He completed a [Microsoft Elevate × AICTE internship](https://gautam-kr.vercel.app/experience) and has experience with real-time systems and microservice architecture.
 
 ## Navigation
 - [Home](https://gautam-kr.vercel.app)

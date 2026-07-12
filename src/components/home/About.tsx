@@ -64,7 +64,11 @@ export function About() {
                 <span className="font-semibold text-foreground">
                   Computer Science student
                 </span>{" "}
-                at{" "}
+                from{" "}
+                <span className="font-semibold text-foreground">
+                  Sitamarhi, Bihar
+                </span>
+                , currently based in Jaipur, Rajasthan at{" "}
                 <a
                   href="https://www.jagannathuniversity.org/"
                   target="_blank"
@@ -73,7 +77,7 @@ export function About() {
                 >
                   Jagannath University
                 </a>
-                , Jaipur, and a{" "}
+                , and a{" "}
                 <span className="font-semibold text-foreground">
                   Full-Stack Developer
                 </span>{" "}

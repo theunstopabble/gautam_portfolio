@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title:
     "Gautam Kumar | Full-Stack Developer | Solo-shipped SaaS products | AI integration — Portfolio",
   description:
-    "Full-Stack Developer · Solo-shipped SaaS Products · Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio — React, Node, Python & LLMs.",
+    "Full-Stack Developer from Sitamarhi, Bihar, based in Jaipur — solo-shipped SaaS products, Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio.",
   keywords: [
     "Gautam Kumar",
     "Gautam Kumar developer",
@@ -37,6 +37,12 @@ export const metadata: Metadata = {
     "TexFolio",
     "InterviewMinds",
     "SwadKart",
+    "Sitamarhi",
+    "Bihar",
+    "Sitamarhi Bihar developer",
+    "Bihar developer",
+    "Sitamarhi coder",
+    "from Sitamarhi",
   ],
   authors: [{ name: "Gautam Kumar", url: "https://gautam-kr.vercel.app" }],
   creator: "Gautam Kumar",
@@ -49,7 +55,7 @@ export const metadata: Metadata = {
     title:
       "Gautam Kumar | Full-Stack Developer | Solo-shipped SaaS products | AI integration",
     description:
-      "Full-Stack Developer · Solo-shipped SaaS Products · Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio — React, Node, Python & LLMs.",
+      "Full-Stack Developer from Sitamarhi, Bihar, based in Jaipur — solo-shipped SaaS products, Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio.",
     type: "website",
     locale: "en_US",
     url: "https://gautam-kr.vercel.app",
@@ -68,7 +74,7 @@ export const metadata: Metadata = {
     title:
       "Gautam Kumar | Full-Stack Developer | Solo-shipped SaaS products | AI integration",
     description:
-      "Full-Stack Developer · Solo-shipped SaaS Products · Microsoft Elevate Intern. Creator of InterviewMinds, SwadKart, Satark AI & TexFolio — React, Node, Python & LLMs.",
+      "Full-Stack Developer from Sitamarhi, Bihar, based in Jaipur — solo-shipped SaaS products, Microsoft Elevate Intern.",
     creator: "@_unstopabble",
   },
   robots: {
@@ -107,7 +113,7 @@ export default function RootLayout({
                   name: "Who is Gautam Kumar?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Gautam Kumar is a Full-Stack Developer who has solo-shipped production SaaS applications with AI integration, based in Jaipur, India. He is a student at Jagannath University and a Microsoft Elevate Intern. He specializes in building production-grade SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
+                    text: "Gautam Kumar is a Full-Stack Developer from Sitamarhi, Bihar, currently based in Jaipur, Rajasthan. He has solo-shipped production SaaS applications with AI integration. He is a student at Jagannath University, Jaipur and a Microsoft Elevate Intern. He specializes in building production-grade SaaS products with React, Node.js, TypeScript, Python, and LLM integration.",
                   },
                 },
                 {
@@ -213,7 +219,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Gautam Kumar",
               description:
-                "Full-Stack Developer who has solo-shipped SaaS products with AI integration.",
+                "Full-Stack Developer from Sitamarhi, Bihar, based in Jaipur — solo-shipped SaaS products with AI integration.",
               url: "https://gautam-kr.vercel.app",
               email: "gautamkumar43421@gmail.com",
               telephone: "+91-6207793196",
@@ -245,12 +251,28 @@ export default function RootLayout({
                   url: "https://gautam-kr.vercel.app",
                   jobTitle: "Full-Stack Developer",
                   description:
-                    "Full-Stack Developer who has solo-shipped production SaaS applications with AI integration. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate × AICTE Intern. B.Tech Computer Science student at Jagannath University, Jaipur (2023–2027).",
+                    "Full-Stack Developer from Sitamarhi, Bihar, currently based in Jaipur, Rajasthan. Solo-shipped production SaaS applications with AI integration. Creator of InterviewMinds, SwadKart, Satark-AI, and TexFolio. Microsoft Elevate × AICTE Intern. B.Tech Computer Science student at Jagannath University, Jaipur (2023–2027).",
                   email: "gautamkumar43421@gmail.com",
                   image: "https://gautam-kr.vercel.app/profile.webp",
                   alumniOf: {
                     "@type": "EducationalOrganization",
                     name: "Jagannath University, Jaipur",
+                  },
+                  birthPlace: {
+                    "@type": "Place",
+                    name: "Sitamarhi, Bihar, India",
+                    address: {
+                      "@type": "PostalAddress",
+                      addressLocality: "Sitamarhi",
+                      addressRegion: "Bihar",
+                      addressCountry: "IN",
+                    },
+                  },
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "Jaipur",
+                    addressRegion: "Rajasthan",
+                    addressCountry: "IN",
                   },
                   sameAs: [
                     "https://github.com/theunstopabble",
@@ -352,6 +374,8 @@ export default function RootLayout({
         <meta itemProp="name" content="Gautam Kumar" />
         <meta itemProp="url" content="https://gautam-kr.vercel.app" />
         <meta itemProp="jobTitle" content="Full-Stack Developer" />
+        <meta itemProp="birthPlace" content="Sitamarhi, Bihar, India" />
+        <meta itemProp="address" content="Jaipur, Rajasthan, India" />
         <Navbar />
         {children}
         <AnalyticsProvider />
