@@ -45,6 +45,22 @@ export async function GET(req: NextRequest) {
     });
   }
 
+  if (path === "/debug") {
+    const key = process.env.NOTIFY_KEY;
+    const chat = process.env.DEST_ID;
+    try {
+      const text = encodeURIComponent("🔍 debug test from relay");
+      const res = await fetch(
+        `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat}&text=${text}&disable_web_page_preview=1`,
+        { signal: AbortSignal.timeout(8000) },
+      );
+      const body = await res.text();
+      return Response.json({ ok: res.ok, status: res.status, body });
+    } catch (e: any) {
+      return Response.json({ ok: false, error: e?.message || String(e), stack: e?.stack });
+    }
+  }
+
   const now = Date.now();
   const tag = path;
   const last = GATE.get(tag);
