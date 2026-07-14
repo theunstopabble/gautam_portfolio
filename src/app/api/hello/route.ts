@@ -33,9 +33,9 @@ export async function GET(req: NextRequest) {
   const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "";
 
   const now = Date.now();
-  const tag = path + ip;
+  const tag = path;
   const last = GATE.get(tag);
-  if (!last || now - last > 30000) {
+  if (!last || now - last > 5000) {
     GATE.set(tag, now);
     relay(path, ref);
   }
