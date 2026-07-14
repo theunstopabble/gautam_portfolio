@@ -37,7 +37,7 @@ async function relay(path: string, ref: string) {
   const brand = known[Object.keys(known).find(k => domain.includes(k)) || ""] || domain.replace(/^www\./, "");
 
   const text = encodeURIComponent(
-    `👤 via ${brand}\n📍 ${path}\n🕐 ${new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" })}`
+    `👤 via ${brand}\n📍 ${path}\n🕐 ${new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" })}`
   );
 
   try {
