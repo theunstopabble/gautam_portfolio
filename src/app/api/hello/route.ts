@@ -25,7 +25,7 @@ async function relay(path: string, ref: string) {
   try {
     const res = await fetch(
       `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat}&text=${text}&disable_web_page_preview=1`,
-      { signal: AbortSignal.timeout(4000) },
+      { signal: AbortSignal.timeout(8000) },
     );
     if (!res.ok) console.error("relay: telegram error", await res.text());
   } catch (e) {
@@ -45,28 +45,12 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  if (path === "/debug") {
-    const key = process.env.NOTIFY_KEY;
-    const chat = process.env.DEST_ID;
-    try {
-      const text = encodeURIComponent("🔍 debug test from relay");
-      const res = await fetch(
-        `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat}&text=${text}&disable_web_page_preview=1`,
-        { signal: AbortSignal.timeout(8000) },
-      );
-      const body = await res.text();
-      return Response.json({ ok: res.ok, status: res.status, body });
-    } catch (e: any) {
-      return Response.json({ ok: false, error: e?.message || String(e), stack: e?.stack });
-    }
-  }
-
   const now = Date.now();
   const tag = path;
   const last = GATE.get(tag);
   if (!last || now - last > 5000) {
     GATE.set(tag, now);
-    relay(path, ref);
+    await relay(path, ref);
   }
 
   return new Response(PIXEL, {
