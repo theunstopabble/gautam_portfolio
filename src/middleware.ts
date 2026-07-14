@@ -25,7 +25,7 @@ function getRef(req: NextRequest) {
   return known[Object.keys(known).find((k) => domain.includes(k)) || ""] || domain.replace(/^www\./, "");
 }
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const brand = getRef(req);
   if (!brand) return NextResponse.next();
 
@@ -37,12 +37,12 @@ export function middleware(req: NextRequest) {
     `👤 via ${brand}\n📍 ${req.nextUrl.pathname}\n🕐 ${new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" })}`
   );
 
-  const p = fetch(
-    `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat}&text=${text}&disable_web_page_preview=1`,
-    { signal: AbortSignal.timeout(4000) }
-  ).catch(() => {});
-
-  if (typeof (globalThis as any).waitUntil === "function") (globalThis as any).waitUntil(p);
+  try {
+    await fetch(
+      `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat}&text=${text}&disable_web_page_preview=1`,
+      { signal: AbortSignal.timeout(8000) },
+    );
+  } catch {}
 
   return NextResponse.next();
 }
