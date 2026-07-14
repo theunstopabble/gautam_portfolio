@@ -13,7 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, GitFork, BookOpen } from "lucide-react";
+import { ArrowUpRight, Github, BookOpen } from "lucide-react";
 import { Project } from "@/types";
 import { trackProjectClick } from "@/components/Analytics";
 
@@ -164,7 +164,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitFork className="h-4 w-4" /> Code
+                <Github className="h-4 w-4" /> Code
               </a>
             </Button>
             <Button

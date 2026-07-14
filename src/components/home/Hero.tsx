@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
-  GitFork,
+  Github,
   LinkedinIcon,
   Mail,
   TwitterIcon,
@@ -27,7 +27,7 @@ const socialLinks = [
   {
     name: "GitHub",
     href: "https://github.com/theunstopabble",
-    icon: GitFork,
+    icon: Github,
   },
   {
     name: "LinkedIn",
