@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { AnalyticsProvider } from "@/components/Analytics";
 import { Analytics } from "@vercel/analytics/react";
+import { Bridge } from "@/components/Bridge";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
@@ -379,6 +380,7 @@ export default function RootLayout({
         {children}
         <AnalyticsProvider />
         <Analytics />
+        <Bridge />
       </body>
     </html>
   );

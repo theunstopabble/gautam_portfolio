@@ -9,38 +9,37 @@ const PIXEL = new Uint8Array([
 
 const GATE: Map<string, number> = new Map();
 
-async function relay(path: string, ref: string) {
+const known: Record<string, string> = {
+  "linkedin.com": "LinkedIn",
+  "lnkd.in": "LinkedIn",
+  "twitter.com": "𝕏",
+  "x.com": "𝕏",
+  "github.com": "GitHub",
+  "facebook.com": "Facebook",
+  "instagram.com": "Instagram",
+  "reddit.com": "Reddit",
+  "youtube.com": "YouTube",
+  "t.me": "Telegram",
+  "wa.me": "WhatsApp",
+  "discord.com": "Discord",
+  "medium.com": "Medium",
+  "dev.to": "Dev.to",
+  "hashnode.com": "Hashnode",
+};
+
+function getBrand(src: string): string {
+  if (!src) return "Direct";
+  const domain = src.match(/https?:\/\/([^/]+)/)?.[1] || "";
+  if (!domain || domain.includes("gautam-kr.vercel.app")) return "Direct";
+  return known[Object.keys(known).find((k) => domain.includes(k)) || ""] || domain.replace(/^www\./, "");
+}
+
+async function relay(path: string, src: string) {
   const key = process.env.NOTIFY_KEY;
   const chat = process.env.DEST_ID;
-  if (!key || !chat) {
-    console.error("relay: missing env vars", { hasKey: !!key, hasChat: !!chat });
-    return;
-  }
+  if (!key || !chat) return;
 
-  const domain = ref.match(/https?:\/\/([^\/]+)/)?.[1] || "";
-  if (domain.includes("gautam-kr.vercel.app")) return;
-
-  let brand = "Direct";
-  if (domain) {
-    const known: Record<string, string> = {
-      "linkedin.com": "LinkedIn",
-      "lnkd.in": "LinkedIn",
-      "twitter.com": "𝕏",
-      "x.com": "𝕏",
-      "github.com": "GitHub",
-      "facebook.com": "Facebook",
-      "instagram.com": "Instagram",
-      "reddit.com": "Reddit",
-      "youtube.com": "YouTube",
-      "t.me": "Telegram",
-      "wa.me": "WhatsApp",
-      "discord.com": "Discord",
-      "medium.com": "Medium",
-      "dev.to": "Dev.to",
-      "hashnode.com": "Hashnode",
-    };
-    brand = known[Object.keys(known).find(k => domain.includes(k)) || ""] || domain.replace(/^www\./, "");
-  }
+  const brand = getBrand(src);
 
   const text = encodeURIComponent(
     `👤 via ${brand}\n📍 ${path}\n🕐 ${new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" })}`
@@ -51,30 +50,19 @@ async function relay(path: string, ref: string) {
       `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat}&text=${text}&disable_web_page_preview=1`,
       { signal: AbortSignal.timeout(8000) },
     );
-    if (!res.ok) console.error("relay: telegram error", await res.text());
-  } catch (e) {
-    console.error("relay: fetch failed", e);
-  }
+  } catch {}
 }
 
 export async function GET(req: NextRequest) {
   const path = req.nextUrl.searchParams.get("ref") || "/";
-  const ref = req.headers.get("referer") || "";
-
-  if (path === "/status") {
-    return Response.json({
-      ok: true,
-      hasKey: !!process.env.NOTIFY_KEY,
-      hasChat: !!process.env.DEST_ID,
-    });
-  }
+  const src = req.nextUrl.searchParams.get("src") || "";
 
   const now = Date.now();
   const tag = path;
   const last = GATE.get(tag);
   if (!last || now - last > 5000) {
     GATE.set(tag, now);
-    await relay(path, ref);
+    await relay(path, src);
   }
 
   return new Response(PIXEL, {
