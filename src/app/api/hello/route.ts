@@ -17,8 +17,14 @@ async function relay(path: string, ref: string) {
     return;
   }
 
+  if (!ref) return;
+
+  const domain = ref.match(/https?:\/\/([^\/]+)/)?.[1] || "";
+  if (!domain || domain.includes("gautam-kr.vercel.app")) return;
+
   const known: Record<string, string> = {
     "linkedin.com": "LinkedIn",
+    "lnkd.in": "LinkedIn",
     "twitter.com": "𝕏",
     "x.com": "𝕏",
     "github.com": "GitHub",
@@ -33,7 +39,6 @@ async function relay(path: string, ref: string) {
     "dev.to": "Dev.to",
     "hashnode.com": "Hashnode",
   };
-  const domain = ref?.match(/https?:\/\/([^\/]+)/)?.[1] || "";
   const brand = known[Object.keys(known).find(k => domain.includes(k)) || ""] || domain.replace(/^www\./, "");
 
   const text = encodeURIComponent(
