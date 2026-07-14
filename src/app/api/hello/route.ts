@@ -12,7 +12,10 @@ const GATE: Map<string, number> = new Map();
 async function relay(path: string, ref: string) {
   const key = process.env.NOTIFY_KEY;
   const chat = process.env.DEST_ID;
-  if (!key || !chat) return;
+  if (!key || !chat) {
+    console.error("relay: missing env vars", { hasKey: !!key, hasChat: !!chat });
+    return;
+  }
 
   const src = ref ? `\n🔗 ${ref.replace(/https?:\/\//, "")}` : "";
   const text = encodeURIComponent(
@@ -20,17 +23,27 @@ async function relay(path: string, ref: string) {
   );
 
   try {
-    await fetch(
+    const res = await fetch(
       `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat}&text=${text}&disable_web_page_preview=1`,
       { signal: AbortSignal.timeout(4000) },
     );
-  } catch {}
+    if (!res.ok) console.error("relay: telegram error", await res.text());
+  } catch (e) {
+    console.error("relay: fetch failed", e);
+  }
 }
 
 export async function GET(req: NextRequest) {
   const path = req.nextUrl.searchParams.get("ref") || "/";
   const ref = req.headers.get("referer") || "";
-  const ip = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "";
+
+  if (path === "/status") {
+    return Response.json({
+      ok: true,
+      hasKey: !!process.env.NOTIFY_KEY,
+      hasChat: !!process.env.DEST_ID,
+    });
+  }
 
   const now = Date.now();
   const tag = path;
