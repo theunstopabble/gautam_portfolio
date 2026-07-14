@@ -17,9 +17,27 @@ async function relay(path: string, ref: string) {
     return;
   }
 
-  const src = ref ? `\n🔗 ${ref.replace(/https?:\/\//, "")}` : "";
+  const known: Record<string, string> = {
+    "linkedin.com": "LinkedIn",
+    "twitter.com": "𝕏",
+    "x.com": "𝕏",
+    "github.com": "GitHub",
+    "facebook.com": "Facebook",
+    "instagram.com": "Instagram",
+    "reddit.com": "Reddit",
+    "youtube.com": "YouTube",
+    "t.me": "Telegram",
+    "wa.me": "WhatsApp",
+    "discord.com": "Discord",
+    "medium.com": "Medium",
+    "dev.to": "Dev.to",
+    "hashnode.com": "Hashnode",
+  };
+  const domain = ref?.match(/https?:\/\/([^\/]+)/)?.[1] || "";
+  const brand = known[Object.keys(known).find(k => domain.includes(k)) || ""] || domain.replace(/^www\./, "");
+
   const text = encodeURIComponent(
-    `👤 Signal\n📍 ${path}\n🕐 ${new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" })}\n${src}`
+    `👤 via ${brand}\n📍 ${path}\n🕐 ${new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" })}`
   );
 
   try {
