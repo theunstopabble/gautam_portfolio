@@ -18,16 +18,20 @@ const known: Record<string, string> = {
   "hashnode.com": "Hashnode",
 };
 
-function getRef(req: NextRequest) {
+function getBrand(req: NextRequest): string {
   const ref = req.headers.get("referer") || "";
   const domain = ref.match(/https?:\/\/([^/]+)/)?.[1] || "";
-  if (!domain || domain.includes("gautam-kr.vercel.app")) return null;
+  if (domain.includes("gautam-kr.vercel.app")) return "";
+  if (!domain) return "Direct";
   return known[Object.keys(known).find((k) => domain.includes(k)) || ""] || domain.replace(/^www\./, "");
 }
 
 export async function middleware(req: NextRequest) {
-  const brand = getRef(req);
+  const brand = getBrand(req);
   if (!brand) return NextResponse.next();
+
+  const last = req.cookies.get("_n")?.value;
+  if (last && Date.now() - Number(last) < 15000) return NextResponse.next();
 
   const key = process.env.NOTIFY_KEY;
   const chat = process.env.DEST_ID;
@@ -44,7 +48,9 @@ export async function middleware(req: NextRequest) {
     );
   } catch {}
 
-  return NextResponse.next();
+  const res = NextResponse.next();
+  res.cookies.set("_n", String(Date.now()), { maxAge: 15, path: "/", sameSite: "lax" });
+  return res;
 }
 
 export const config = {
