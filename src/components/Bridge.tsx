@@ -13,6 +13,7 @@ export function Bridge() {
 
     const src = document.referrer || "";
     const img = new Image();
+    img.onerror = () => {};
     img.src = `/api/hello?ref=${encodeURIComponent(pathname)}&src=${encodeURIComponent(src)}`;
   }, [pathname]);
 

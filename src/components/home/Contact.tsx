@@ -12,7 +12,7 @@ import {
   MapPin,
   Eye,
 } from "lucide-react";
-import { trackResumeClick } from "@/components/Analytics";
+
 
 const RESUME_LINK =
   "https://drive.google.com/file/d/12F5GfuBqgwUaTbbWNnx7YHUIHJ5L1NxF/view?usp=sharing";
@@ -160,7 +160,6 @@ export function Contact() {
                 variant="outline"
                 className="md:hidden h-13 w-full sm:w-auto gap-2 rounded-xl border-primary/30 px-8 text-base font-semibold transition-all hover:bg-primary/10"
                 asChild
-                onClick={trackResumeClick}
               >
                 <a
                   href={RESUME_LINK}

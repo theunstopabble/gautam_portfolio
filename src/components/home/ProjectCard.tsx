@@ -15,7 +15,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Github, BookOpen } from "lucide-react";
 import { Project } from "@/types";
-import { trackProjectClick } from "@/components/Analytics";
 
 interface ProjectCardProps {
   project: Project;
@@ -157,7 +156,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               size="sm"
               className="min-w-[80px] flex-1 gap-2 text-zinc-300 hover:text-white hover:bg-white/5"
               asChild
-              onClick={() => trackProjectClick(`${project.title} Code`)}
             >
               <a
                 href={project.github}
@@ -172,7 +170,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               variant="secondary"
               className="min-w-[100px] flex-1 gap-2 bg-white/5 text-zinc-200 hover:bg-white/10 border border-white/10"
               asChild
-              onClick={() => trackProjectClick(`${project.title} Case Study`)}
             >
               <Link href={`/projects/${project.id}`}>
                 <BookOpen className="h-4 w-4" /> Case Study
@@ -182,7 +179,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               size="sm"
               className="min-w-[80px] flex-1 gap-2 bg-linear-to-r from-primary to-accent text-white shadow-lg shadow-primary/20 font-medium hover:brightness-110"
               asChild
-              onClick={() => trackProjectClick(`${project.title} Live`)}
             >
               <a href={project.demo} target="_blank" rel="noopener noreferrer">
                 Live <ArrowUpRight className="h-3.5 w-3.5" />

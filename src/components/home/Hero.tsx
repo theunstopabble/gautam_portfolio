@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { trackResumeClick, trackContactClick } from "@/components/Analytics";
+
 
 const stats = [
   { label: "Projects Built", value: "4+" },
@@ -134,7 +134,6 @@ export function Hero() {
             size="lg"
             className="sm:hidden h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
             asChild
-            onClick={trackResumeClick}
           >
             <a
               href="https://drive.google.com/file/d/12F5GfuBqgwUaTbbWNnx7YHUIHJ5L1NxF/view?usp=sharing"
@@ -158,7 +157,6 @@ export function Hero() {
             variant="outline"
             className="h-13 rounded-xl border-white/10 px-8 text-base backdrop-blur-sm hover:bg-white/5"
             asChild
-            onClick={trackContactClick}
           >
             <a href="/contact">
               Contact Me <ArrowRight className="ml-2 h-4 w-4" />
