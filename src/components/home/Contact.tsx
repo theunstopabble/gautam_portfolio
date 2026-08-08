@@ -23,21 +23,21 @@ const socialLinks = [
     href: "https://github.com/theunstopabble",
     icon: Github,
     label: "theunstopabble",
-    color: "hover:border-zinc-500/50",
+    color: "hover:border-primary/30",
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/in/gautamkr62",
     icon: LinkedinIcon,
     label: "gautamkr62",
-    color: "hover:border-blue-500/50",
+    color: "hover:border-primary/30",
   },
   {
     name: "Twitter / X",
     href: "https://x.com/_unstopabble",
     icon: TwitterIcon,
     label: "@_unstopabble",
-    color: "hover:border-sky-500/50",
+    color: "hover:border-primary/30",
   },
 ];
 
