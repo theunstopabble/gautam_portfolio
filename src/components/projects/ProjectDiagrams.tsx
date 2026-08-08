@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState } from "react"
 
 const DIAGRAM_TYPES = [
@@ -37,11 +38,14 @@ export function ProjectDiagrams({ projectId }: { projectId: string }) {
             active === t.id ? "block" : "hidden"
           }`}
         >
-          <img
+          <Image
             src={`/diagrams/${projectId}-${t.id}.svg`}
             alt={`${projectId} ${t.label}`}
-            className="block h-auto mx-auto"
-            style={{ maxWidth: "100%", width: "auto", height: "auto" }}
+            unoptimized
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="block h-auto w-full mx-auto"
           />
         </div>
       ))}

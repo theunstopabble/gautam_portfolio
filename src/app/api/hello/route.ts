@@ -46,7 +46,7 @@ async function relay(path: string, src: string) {
   );
 
   try {
-    const res = await fetch(
+    await fetch(
       `https://api.telegram.org/bot${key}/sendMessage?chat_id=${chat}&text=${text}&disable_web_page_preview=1`,
       { signal: AbortSignal.timeout(8000) },
     );
