@@ -15,7 +15,6 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-
 const stats = [
   { label: "Projects Built", value: "4+" },
   { label: "Internships", value: "3" },
@@ -84,7 +83,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="mb-3 md:mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary b[...]
+          <span className="mb-3 md:mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary backdrop-blur-md">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
@@ -95,14 +94,14 @@ export function Hero() {
 
         {/* Name */}
         <motion.div
-       initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, delay: 0.1 }}
-  className="text-3xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
->
-  <p className="text-foreground">Hi, I&apos;m{" "}</p>
-  <h1 className="gradient-text mt-2">Gautam Kumar</h1>
-       </motion.div>
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-3xl font-extrabold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
+        >
+          <p className="text-foreground">Hi, I&apos;m{" "}</p>
+          <h1 className="gradient-text mt-2">Gautam Kumar</h1>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -132,7 +131,7 @@ export function Hero() {
           {/* Mobile: Resume | Desktop: View My Work */}
           <Button
             size="lg"
-            className="sm:hidden h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hov[...]
+            className="sm:hidden h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:scale-[1.02]"
             asChild
           >
             <a
@@ -145,7 +144,7 @@ export function Hero() {
           </Button>
           <Button
             size="lg"
-            className="hidden sm:inline-flex h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:s[...]
+            className="hidden sm:inline-flex h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:scale-[1.02]"
             asChild
           >
             <Link href="/projects">
@@ -205,7 +204,7 @@ export function Hero() {
                 target={link.name !== "Email" ? "_blank" : undefined}
                 rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
                 aria-label={link.name}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition-all hover:border-primary/30 hover:bg-primary/[...]
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-muted-foreground transition-all hover:border-primary/30 hover:bg-primary/10 hover:text-primary"
               >
                 <Icon className="h-4 w-4" />
               </a>
