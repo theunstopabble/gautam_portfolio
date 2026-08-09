@@ -84,7 +84,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="mb-3 md:mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary backdrop-blur-sm">
+          <span className="mb-3 md:mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 md:px-4 py-1 md:py-1.5 text-xs md:text-sm font-medium text-primary b[...]
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
@@ -132,7 +132,7 @@ export function Hero() {
           {/* Mobile: Resume | Desktop: View My Work */}
           <Button
             size="lg"
-            className="sm:hidden h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+            className="sm:hidden h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hov[...]
             asChild
           >
             <a
@@ -145,7 +145,7 @@ export function Hero() {
           </Button>
           <Button
             size="lg"
-            className="hidden sm:inline-flex h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:brightness-110"
+            className="hidden sm:inline-flex h-13 gap-2 rounded-xl bg-linear-to-r from-primary to-accent px-8 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:s[...]
             asChild
           >
             <Link href="/projects">
@@ -205,7 +205,7 @@ export function Hero() {
                 target={link.name !== "Email" ? "_blank" : undefined}
                 rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
                 aria-label={link.name}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition-all hover:border-primary/30 hover:bg-primary/10 hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition-all hover:border-primary/30 hover:bg-primary/[...]
               >
                 <Icon className="h-4 w-4" />
               </a>
