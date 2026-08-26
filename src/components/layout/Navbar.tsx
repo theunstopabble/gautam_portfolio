@@ -11,10 +11,10 @@ import {
   SheetTrigger,
   SheetClose,
   SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 
-const RESUME_LINK =
-  "https://drive.google.com/file/d/12F5GfuBqgwUaTbbWNnx7YHUIHJ5L1NxF/view?usp=sharing";
+const RESUME_LINK = "/resume/Gautam_Kumar_Resume.pdf";
 
 export function Navbar() {
   const { scrollY } = useScroll();
@@ -89,6 +89,9 @@ export function Navbar() {
             className="bg-background/95 border-l border-white/5 backdrop-blur-xl w-[60%] sm:max-w-70 min-w-64"
           >
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+            <SheetDescription className="sr-only">
+              Main navigation links and resume button
+            </SheetDescription>
             <nav className="flex flex-col items-center gap-6 mt-10">
               {/* ✅ Fix 2: SheetClose wraps each link so sheet auto-closes on tap */}
               {links.map((link) => (

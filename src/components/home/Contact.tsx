@@ -14,8 +14,7 @@ import {
 } from "lucide-react";
 
 
-const RESUME_LINK =
-  "https://drive.google.com/file/d/12F5GfuBqgwUaTbbWNnx7YHUIHJ5L1NxF/view?usp=sharing";
+const RESUME_LINK = "/resume/Gautam_Kumar_Resume.pdf";
 
 const socialLinks = [
   {

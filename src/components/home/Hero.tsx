@@ -135,7 +135,7 @@ export function Hero() {
             asChild
           >
             <a
-              href="https://drive.google.com/file/d/12F5GfuBqgwUaTbbWNnx7YHUIHJ5L1NxF/view?usp=sharing"
+              href="/resume/Gautam_Kumar_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

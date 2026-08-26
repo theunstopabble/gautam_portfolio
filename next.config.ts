@@ -25,6 +25,15 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: "/resume/:path*",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: "inline",
+          },
+        ],
+      },
     ];
   },
 };
