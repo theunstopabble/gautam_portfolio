@@ -14,7 +14,7 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 
-const RESUME_LINK = "/resume/Gautam_Kumar_Resume.pdf";
+const RESUME_LINK = "/resume";
 
 export function Navbar() {
   const { scrollY } = useScroll();

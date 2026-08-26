@@ -135,7 +135,7 @@ export function Hero() {
             asChild
           >
             <a
-              href="/resume/Gautam_Kumar_Resume.pdf"
+              href="/resume"
               target="_blank"
               rel="noopener noreferrer"
             >

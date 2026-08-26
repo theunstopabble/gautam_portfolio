@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/resume",
+        destination: "/resume/Gautam_Kumar_Resume.pdf",
+      },
+    ];
+  },
   async redirects() {
     return [
       {
